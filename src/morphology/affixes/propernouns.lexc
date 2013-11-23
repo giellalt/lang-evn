@@ -1,0 +1,11 @@
+!! !!!Proper noun inflection
+!! ----------------------
+!! The Evenki proper nouns inflect in the same cases as regular
+!! nouns
+
+LEXICON ProperNounCases
++N+Prop:   Cases  ;
+        -    Nouns  ;
+
+! vim: set ft=xfst-lexc:
+

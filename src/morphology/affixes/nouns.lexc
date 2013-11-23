@@ -1,0 +1,12 @@
+!! Noun inflection
+!! ---------------
+!! The Evenki nouns inflect in cases.
+
+! Dummy file
+
+LEXICON Cases
++N+Sg+Nom:     #   ;
++N+Sg+Loc:%>н    #   ;
+
+! vim: set ft=xfst-lexc:
+
