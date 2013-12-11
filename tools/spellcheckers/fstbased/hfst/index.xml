@@ -2,19 +2,23 @@
 <hfstspeller dtdversion="1.0" hfstversion="3">
   <info>
     <locale>evn</locale>
-    <title>Giellatekno/divvun/UiT morphological analyser-based speller (Evenki)</title>
-    <description>
+    <title>Giellatekno/Divvun/UiT fst-based speller for Evenki</title>
+    <description>This is an fst-based speller for Evenki. It is based
+    on the normative subset of the morphological analyser for Evenki.
+    The source code can be found at:
+    https://victorio.uit.no/langtech/trunk/langs/evn/
+    License: GPL3+.
     </description>
     <version vcsrev="GT_REVISION">GT_VERSION</version>
     <date>DATE</date>
-    <producer>giellatekno/divvun/UiT contributors</producer>
-    <contact email="bugs@divvun.no" 
+    <producer>giellatekno/Divvun/UiT contributors</producer>
+    <contact email="feedback@divvun.no" 
         website="http://divvun.no"/>
   </info>
   <acceptor type="general" id="acceptor.default.hfst">
-    <title>Giellatekno/divvun/UiT dictionary Evenki</title>
+    <title>Giellatekno/Divvun/UiT dictionary Evenki</title>
     <description>
-        Giellatekno/divvun/UiT dictionary for Evenki compiled for HFST.
+        Giellatekno/Divvun/UiT dictionary for Evenki compiled for HFST.
     </description>
   </acceptor>
   <errmodel id="errmodel.default.hfst">
