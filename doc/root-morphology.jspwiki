@@ -7,15 +7,16 @@
  * +Sg      = Singular
  * +Pl      = Plural
 
- * +Nom     = Nominative 
- * +Abl     = Ablative
+ * +Nom     = Nominative -
+ * +Abl     = Ablative -дук
  * +Ins     = Instrumental
- * +All     = 
- * +Acc     = 
- * +Dat     = 
+ * +All     = местный -ла / -дула
+ * +Prl     = Творительный -ла
+ * +Acc     = Винительный (see +Def/+Ind)
+ * +Dat     = дательный -ду
 
- * +Ind     = 
- * +Def     = 
+ * +Ind     = я indefinite acc
+ * +Def     = ва definite acc
 
  * +PxSg1   = 
  * +PxSg2   = 
@@ -24,6 +25,9 @@
  * +PxPl12  = 
  * +PxPl2   = 
  * +PxPl3   = 
+
+
+
 
 
 

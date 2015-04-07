@@ -3,6 +3,42 @@
 !! Pronouns in Evenki denote references to things.
 
 LEXICON Pronouns
-pronoun    Cases   ;
+
++Pron+Pers: Personal ;
+
+LEXICON Personal 
+ pers_nom ;
+ pers_obl ;
+      
+LEXICON pers_nom
++Sg1+Nom:бӣ K ;
++Pl1+Nom:бӯ K ;
++Pl12+Nom:мит K ;
++Sg2+Nom:сӣ K ;
++Пл2+Nom:сӯ K ;
++Sg3+Nom:нуӈан K ;
++Sg3+Nom:нуӈартын K ;
+
+LEXICON pers_acc
++Sg1+Acc:минэвэ 	 K ;
++Pl1+Acc:мунэвэ 	 K ;
++Pl21+Acc:митвэ 	 K ;
++Sg2+Acc:синэвэ 	 K ;
++Пл2+Acc:сунэвэ 	 K ;
++Sg3+Acc:нуӈанма̄н  K  ;
++Pl3+Acc:нуӈарватын  K ;
+
+LEXICON pers_obl
++Sg1:мин 	pers_case ;
++Pl1:мун 	pers_case ;
++Pl12:мит 	pers_case ;
++Sg2:син 	pers_case ;
++Пл2:сун 	pers_case ;
++Sg3:нуӈан  pers_case ;
++Pl3:нуӈар  pers_case ;
+
+LEXICON pers_case
++Gen:%>э K ;
++Dat:%>%{D%}ӯ K ;
 
 ! vim: set ft=xfst-lexc:

@@ -23,15 +23,16 @@ Multichar_Symbols
 +Sg     !!= * @CODE@ = Singular
 +Pl     !!= * @CODE@ = Plural
 
-+Nom    !!= * @CODE@ = Nominative 
-+Abl    !!= * @CODE@ = Ablative
++Nom    !!= * @CODE@ = Nominative -
++Abl    !!= * @CODE@ = Ablative -дук
 +Ins    !!= * @CODE@ = Instrumental
-+All    !!= * @CODE@ = 
-+Acc    !!= * @CODE@ = 
-+Dat    !!= * @CODE@ = 
++All    !!= * @CODE@ = местный -ла / -дула
++Prl    !!= * @CODE@ = Творительный -ла
++Acc    !!= * @CODE@ = Винительный (see +Def/+Ind)
++Dat    !!= * @CODE@ = дательный -ду
 
-+Ind    !!= * @CODE@ = 
-+Def    !!= * @CODE@ = 
++Ind    !!= * @CODE@ = я indefinite acc
++Def    !!= * @CODE@ = ва definite acc
 
 +PxSg1  !!= * @CODE@ = 
 +PxSg2  !!= * @CODE@ = 
@@ -57,4 +58,9 @@ Multichar_Symbols
 LEXICON Root
 
 Nouns ;
-!Numerals ; 
+Numerals ; 
+
+
+
+LEXICON K
+# ;
