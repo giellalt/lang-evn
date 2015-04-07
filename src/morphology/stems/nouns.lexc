@@ -1,8 +1,82 @@
 !! !!!Nouns
 !  -----
-!! Nouns in Evenki denote things.
+!! Nouns in Evenki have four sets of suffixes. 
+!! Here we divide them in two groups: V- and C-final ones.
 
 LEXICON Nouns
-noun    Cases   ;
+
+урэ N_BIRA "гора" ;    ! +Dat = -дӯ
+бэр N_ASATKAN "лук" ;	   ! +Dat = _дӯ
+дэт N_ASATKAN "тундра" ;  ! +Dat = _тӯ
+орон N_ASATKAN "олень" ;  ! +Dat = _дӯ
+
+
+
+
+дага:дага N_BIRA ; ! "vicinity"
+ха̄:ха%{ː%} N_BIRA ; ! "part"
+до̄:до%{ː%} N_BIRA ; ! "interior"
+тули:тули N_BIRA ; ! "exterior"
+дюлэ:дюлэ N_BIRA ; ! "front"
+амар:амар N_BIRA ; ! "behind"
+
+
+!асаткан:асатка N_ASATKAN ; ! "девушка"
+бира:бира N_BIRA ; ! "река"
+!дыл:дыл N_BIRA ; ! "голова"
+
+дю̄:дю%{ː%} N_BIRA ; ! "дом"
+орон:оро N_ASATKAN ; ! "reindeer"
+сен:се N_ASATKAN ; ! "ear"
+халган:халга N_ASATKAN ; ! "leg"
+бэе:бэе N_BIRA ; ! "человек"
+дяв:дяв N_BIRA ; ! "лодка"
+
+!авданна:авданна N_XXX ; ! "лист"
+!амӈа:амӈа N_XXX ; ! "mouth"
+!багдавки:багдавки N_XXX ; ! "swan"
+!бега:бега N_XXX ; ! "луна, месяц"
+!бираг:бираг N_XXX ; ! "река"
+!буга:буга N_XXX ; ! "sky, heaven"
+!буни:буни N_XXX ; ! "смрт"
+!гара:гара N_XXX ; ! "branch"
+!гирамна:гирамна N_XXX ; ! "bone"
+!долбони:долбони N_XXX ; ! "ночь"
+!дылача:дылача N_XXX ; ! "сольнце"
+!дэг:дэг N_XXX ; ! "птица"
+!дэги:дэги N_XXX ; ! "птица"
+!дэгинӈэктэ:дэгинӈэктэ N_XXX ; ! "гриб"
+!дэрэ:дэрэ N_XXX ; ! "face"
+!дягда:дягда N_XXX ; ! "pine"
+!иктэ:иктэ N_XXX ; ! "зуб"
+!иманна:иманна N_XXX ; ! "снег"
+!инни:инни N_XXX ; ! "язык"
+!инэӈи:инэӈи N_XXX ; ! "день"
+!ирикта:ирикта N_XXX ; ! "ant"
+!му:му N_XXX ; ! "вода"
+!мэӈун:мэӈун N_XXX ; ! "silver"
+!никимна:никимна N_XXX ; ! "neck"
+!няӈна:няӈна N_XXX ; ! "sky, heaven"
+!олло:олло N_XXX ; ! "рыба"
+!оӈокто:оӈокто N_XXX ; ! "nose"
+!сунюрин:сунюрин N_XXX ; ! "pig, swine"
+!сэксэ:сэксэ N_XXX ; ! "blood"
+!того:того N_XXX ; ! "огонь"
+!турэн:турэн N_XXX ; ! "язык, речь"
+!тыргани:тыргани N_XXX ; ! "день"
+!укумни:укумни N_XXX ; ! "молоко"
+!уллэ:уллэ N_XXX ; ! "мясо"
+!умукта:умукта N_XXX ; ! "яйцо"
+!хисэлэ:хисэлэ N_XXX ; ! "lizard"
+!хэдюн:хэдюн N_XXX ; ! "upper lip"
+!хэмун:хэмун N_XXX ; ! "lower lip"
+!чоли:чоли N_XXX ; ! "язык"
+!эрдын:эрдын N_XXX ; ! "ветер"
+!эса:эса N_XXX ; ! "глаз"
+!эӈуктэ:эӈуктэ N_XXX ; ! "лук"
+!ӈалэ:ӈалэ N_XXX ; ! "рука"
+!ӈэри:ӈэри N_XXX ; ! "light"
+
+
 
 ! vim: set ft=xfst-lexc:

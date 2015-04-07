@@ -1,12 +1,73 @@
 !! Noun inflection
 !! ---------------
-!! The Evenki nouns inflect in cases.
 
-! Dummy file
+LEXICON Cases ! to be removed.
+#;
 
-LEXICON Cases
-+N+Sg+Nom:     #   ;
-+N+Sg+Loc:%>н    #   ;
+LEXICON POSS_SG_BIRA
+
++PxSg1:%>%{i%}в # ; 
++PxSg2:%>%{i%}с # ; 
++PxSg3:%>%{i%}н # ; 
++PxPl1:%>%{i%}вун # ; 
++PxPl12:%>%{i%}т # ; 
++PxPl2:%>%{i%}сун # ; 
++PxPl3:%>%{i%}тын # ; 
+
+LEXICON POSS_SG_ORON
+
++PxSg1:%>ми # ; 
++PxSg2:%>ни # ; 
++PxSg3:%>ин # ; 
++PxPl1:%>мун # ; 
++PxPl12:%>ты # ; 
++PxPl2:%>нун # ; 
++PxPl3:%>тын # ; 
+
+LEXICON POSS_PL
+
++PxSg1:%>ви # ; 
++PxSg2:%>%{L%}и # ; 
++PxSg3:%>ин # ; 
++PxPl1:%>вун # ; 
++PxPl12:%>ты # ; 
++PxPl2:%>%{L%}ун # ; 
++PxPl3:%>тын # ; 
+
+! stem _ [alienable poss.] _ number _ case _ [pers/refl. poss.]
+
+LEXICON CASE_OBL
+
++Acc+Ind:%>%{V%}%{A%} POSS_SG_BIRA ;
++Acc+Def:%>%{Я%} POSS_SG_BIRA ;
++Ins:%>%{i%}т POSS_SG_ORON ;
++Dat:%>%{D%}у POSS_SG_BIRA ;
++Abl:%>%{D%}ук POSS_SG_ORON ;
++Ela:%>%{G%}ит POSS_SG_ORON ;
+
+LEXICON N_BIRA
+
++N+Sg+Nom:   # ;
++N+Sg+Nom:  POSS_SG_BIRA ;
++N+Sg:  CASE_OBL ;
++N+Pl+Nom:%>%{i%}л   # ;
++N+Pl+Nom:%>%{i%}л POSS_PL ;
++N+Pl:%>%{i%}л   CASE_OBL ;
+
+LEXICON N_ASATKAN
+
++N+Sg+Nom:%>н # ;
++N+Sg+Nom:%>н POSS_SG_ORON ;
++N+Sg:%>н CASE_OBL ;
++N+Pl+Nom:%>р # ;
++N+Pl+Nom:%>р POSS_PL ;
++N+Pl:%>р CASE_OBL ;
+
+LEXICON N_XXX                               ! Pending categorisation
+
++N+Sg+Nom: # ;
+
+
 
 ! vim: set ft=xfst-lexc:
 
