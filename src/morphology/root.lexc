@@ -13,7 +13,7 @@
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
 ! ========================================================================== !
-! !!            !!!Evenki morphological analyser                      !
+! !!            !!!Evenki morphological analyser                      
 ! ========================================================================== !
 Multichar_Symbols
 
@@ -23,15 +23,19 @@ Multichar_Symbols
 +Sg     !!= * @CODE@ = Singular
 +Pl     !!= * @CODE@ = Plural
 
-+Nom    !!= * @CODE@ = Nominative -
-+Abl    !!= * @CODE@ = Ablative -дук
-+Ins    !!= * @CODE@ = Instrumental
-+All    !!= * @CODE@ = местный -ла / -дула
-+Prl    !!= * @CODE@ = Творительный -ла
-+Acc    !!= * @CODE@ = Винительный (see +Def/+Ind)
-+Dat    !!= * @CODE@ = дательный -ду
++Acc   !!= * @CODE@ = Винительный Accusative
++Dat   !!= * @CODE@ = Дателный Dative
++Loc   !!= * @CODE@ = Местный Locative
++All   !!= * @CODE@ = Направителый Allative
++Prl   !!= * @CODE@ = Продольный Prolative
++Ter   !!= * @CODE@ = Направительно-местный Terminative
++Dir   !!= * @CODE@ = Направительно-продольный Directive
++Abl   !!= * @CODE@ = Отложительный Ablative
++Ela   !!= * @CODE@ = Исходный Elative
++Ins   !!= * @CODE@ = Творительный Instrumental
++Com   !!= * @CODE@ = Совместный Comitative
 
-+Ind    !!= * @CODE@ = я indefinite acc
++Ind    !!= * @CODE@ = Винительный-неопределёний Indefinite Accusative
 +Def    !!= * @CODE@ = ва definite acc
 
 +PxSg1  !!= * @CODE@ = 
@@ -42,9 +46,14 @@ Multichar_Symbols
 +PxPl2  !!= * @CODE@ = 
 +PxPl3  !!= * @CODE@ = 
 
+
+
+
+
+
+%{j%}                ! -и -ø
 %{i%}                ! -и -ø
 %{A%}                ! -а -э -о
-%{Я%}                ! -я -е -ё
 %{L%}                ! -л -р
 %{D%}                ! -д -т
 %{V%}                ! -в -м

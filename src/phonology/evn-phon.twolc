@@ -16,11 +16,11 @@ Alphabet
  %{L%}:л %{L%}:р
  %{G%}:г %{G%}:к %{G%}:ӈ
  %{D%}:д %{D%}:т 
- %{A%}:а %{A%}:э %{A%}:о
+ %{A%}:а %{A%}:э %{A%}:о  
  %{Я%}:я %{Я%}:е %{Я%}:ё %{Я%}:а %{Я%}:э %{Я%}:о
  %{V%}:в %{V%}:м
 
- %{j%}:0 %{j%}:й
+ %{j%}:0
  %{i%}:0 %{i%}:и 
 
  %>:0  ;
@@ -38,10 +38,16 @@ Cns = б в г д ж з й к л м н ӈ п р с т ф х ц ч ш щ
 Nasal = м н ӈ
         М Н Ӈ ; 
 
+NonLN = б в г д ж з й к м ӈ п р с т ф х ц ч ш щ 
+        Б В Г Д Ж З Й К М Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;
+
 VoicelessCns = к с т п ;
 
+
+!! !!!Rules
 Rules 
 
+!! !!Assimilation rules
 "Remove suffix vowel with vowel-ending stem"
 %{i%}:0 <=>  :Vow (%{ː%}:) %>: _ ;
 
@@ -58,36 +64,46 @@ Rules
 "Voicing assimilation"
 %{D%}:т <=> :VoicelessCns %>: _ ; 
 
+"Nasal assimilation of {V}" 
+%{V%}:м <=> :Nasal %>: _ ; 
+
+
+
+!! !!Palatalisation
+
+"Realising hard sign"
+%{j%}:ъ <=> NonLN %>: _ [ Vow | %{A%}: ] ;
+
+!€ урэ>{j}{A}
+!€ урэ00е
+
+!€ бэр>{j}{A}
+!€ бэр0ъе
+
+
+
+!! !!Vowel harmony
 ! TODO: Short/Long
 "Long vowel harmony for {A}"
-%{A%}:Vy <=> :Vx %{ː%}: [ :Cns* :Cns ]/:0* _ ;
+%{A%}:Vy <=> :Vx %{ː%}: [ :Cns* :Cns ]/:0*  _ ;
          where Vx in ( а е ё о э ю я )
-               Vy in ( е а о а а е е )
+               Vy in ( э а о а а э э )
          matched ;
 
 "Short vowel harmony for {A}"
 %{A%}:Vy <=> :Vx [ :Cns* :Cns ]/:0* _ ;
-         except 
-             :Vx %{ː%}: [ :Cns* :Cns ]/:0* _ ;
          where Vx in ( а е ё о ы э я )
-               Vy in ( а е о о е е а )
+               Vy in ( а э о о э э а )
          matched ;
 
-"Nasal assimilation of {V}" 
-%{V%}:м <=> :Nasal %>: _ ; 
+"Palatalised short vowel harmony for {A}"
+%{A%}:Vy <=> :Vx [ :Cns* :Cns ]/:0* :ъ _ ;
+         where Vx in ( а е ё о ы э я )
+               Vy in ( я е ё ё е е я )
+         matched ;
 
-!"Yotised vowel harmony for %{Я%}"
-!%{Я%}:Vy <=> :Vx [ :Cns* :Cns ]/:0* _ ;
-!         except 
-!             :Vx %{ː%}: [ :Cns* :Cns ]/:0* _ ;
-!            :Vx :н %>: _ ;
-!         where Vx in ( а е ё о ы э я )
-!               Vy in ( я е ё ё е е я )
-!         matched ;
-!
 !# дяв>{Я}>{i}в
 !# дяв0я00в
-!@ д я в >:0 {Я}:я >:0 {i}:0 в
 
 "Non-yotised vowel harmony for %{Я%}"
 %{Я%}:Vy <=> Vx: н %>: _ ;

@@ -3,12 +3,22 @@
 !! Nouns in Evenki have four sets of suffixes. 
 !! Here we divide them in two groups: V- and C-final ones.
 
+!! Three stem types
+
+!! * N_BIRA vowel stems
+!! * N_UMUK consonant stems (voiced and unvoiced)
+!! * N_ORON stems ending in n
+
 LEXICON Nouns
 
-урэ N_BIRA "гора" ;    ! +Dat = -дӯ
-бэр N_ASATKAN "лук" ;	   ! +Dat = _дӯ
-дэт N_ASATKAN "тундра" ;  ! +Dat = _тӯ
-орон N_ASATKAN "олень" ;  ! +Dat = _дӯ
+бира:бира N_BIRA ; ! "река"
+умук:умук N_UMUK ; ! "nest"
+
+
+урэ N_BIRA ;      ! "гора" +Dat = -дӯ
+бэр N_UMUK ;	  ! "лук"  +Dat = _дӯ
+дэт N_UMUK ;      ! "тундра" +Dat = _тӯ
+орон:оро N_ORON ; !  "олень" +Dat = _дӯ
 
 
 
@@ -18,17 +28,15 @@ LEXICON Nouns
 до̄:до%{ː%} N_BIRA ; ! "interior"
 тули:тули N_BIRA ; ! "exterior"
 дюлэ:дюлэ N_BIRA ; ! "front"
-амар:амар N_BIRA ; ! "behind"
+амар:амар N_UMUK ; ! "behind"
 
 
-!асаткан:асатка N_ASATKAN ; ! "девушка"
-бира:бира N_BIRA ; ! "река"
+!асаткан:асатка N_ORON ; ! "девушка"
 !дыл:дыл N_BIRA ; ! "голова"
 
 дю̄:дю%{ː%} N_BIRA ; ! "дом"
-орон:оро N_ASATKAN ; ! "reindeer"
-сен:се N_ASATKAN ; ! "ear"
-халган:халга N_ASATKAN ; ! "leg"
+сен:се N_ORON ; ! "ear"
+халган:халга N_ORON ; ! "leg"
 бэе:бэе N_BIRA ; ! "человек"
 дяв:дяв N_BIRA ; ! "лодка"
 

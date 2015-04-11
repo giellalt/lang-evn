@@ -5,7 +5,7 @@ LEXICON Cases ! to be removed.
 #;
 
 LEXICON POSS_SG_BIRA
-
+# ;
 +PxSg1:%>%{i%}в # ; 
 +PxSg2:%>%{i%}с # ; 
 +PxSg3:%>%{i%}н # ; 
@@ -38,14 +38,28 @@ LEXICON POSS_PL
 
 LEXICON CASE_OBL
 
-+Acc+Ind:%>%{V%}%{A%} POSS_SG_BIRA ;
-+Acc+Def:%>%{Я%} POSS_SG_BIRA ;
-+Ins:%>%{i%}т POSS_SG_ORON ;
-+Dat:%>%{D%}у POSS_SG_BIRA ;
-+Abl:%>%{D%}ук POSS_SG_ORON ;
-+Ela:%>%{G%}ит POSS_SG_ORON ;
++Acc+Def:%>%{V%}%{A%} POSS_SG_BIRA ;		 ! Винительный Accusative
++Acc+Ind:%>%{j%}%{A%} POSS_SG_BIRA ; ! Винительный-неопределёний Indefinite Acc
++Dat:%>%{D%}у{ː%} POSS_SG_BIRA ;		 ! Дателный Dative
++Loc:%>л%{А%} POSS_SG_BIRA ;         ! Местный Locative
++All:%>ткӣ POSS_SG_BIRA ;            ! Направителый Allative
++Prl:%>лӣ POSS_SG_BIRA ;            ! Продольный Prolative
++Ter:%>кл%{A%}{ː%} POSS_SG_BIRA ;    ! Направительно-местный Terminative
++Dir:%>кли{ː%} POSS_SG_BIRA ;        ! Направительно-продольный Directive
++Abl:%>%{D%}ук POSS_SG_ORON ;		 ! Отложительный Ablative
++Ela:%>%{G%}ит POSS_SG_ORON ;		 ! Исходный Elative
++Ins:%>%{i%}т POSS_SG_ORON ;		 ! Творительный Instrumental
++Com:%>кл%{A%} POSS_SG_BIRA ;        ! Совместный Comitative
 
 LEXICON N_BIRA
++N+Sg+Nom:   # ;
++N+Sg+Nom:  POSS_SG_BIRA ;
++N+Sg:  CASE_OBL ;
++N+Pl+Nom:%>%{i%}л   # ;
++N+Pl+Nom:%>%{i%}л POSS_PL ;
++N+Pl:%>%{i%}л   CASE_OBL ;
+
+LEXICON N_UMUK
 
 +N+Sg+Nom:   # ;
 +N+Sg+Nom:  POSS_SG_BIRA ;
@@ -54,7 +68,7 @@ LEXICON N_BIRA
 +N+Pl+Nom:%>%{i%}л POSS_PL ;
 +N+Pl:%>%{i%}л   CASE_OBL ;
 
-LEXICON N_ASATKAN
+LEXICON N_ORON
 
 +N+Sg+Nom:%>н # ;
 +N+Sg+Nom:%>н POSS_SG_ORON ;
