@@ -4,78 +4,100 @@
 LEXICON Cases ! to be removed.
 #;
 
-LEXICON POSS_SG_BIRA
+LEXICON POSS_SG_OTHER
 # ;
 +PxSg1:%>%{i%}в # ; 
 +PxSg2:%>%{i%}с # ; 
 +PxSg3:%>%{i%}н # ; 
-+PxPl1:%>%{i%}вун # ; 
++PxPl1:%>%{V%}ун # ; 
 +PxPl12:%>%{i%}т # ; 
 +PxPl2:%>%{i%}сун # ; 
 +PxPl3:%>%{i%}тын # ; 
 
-LEXICON POSS_SG_ORON
-
-+PxSg1:%>ми # ; 
-+PxSg2:%>ни # ; 
-+PxSg3:%>ин # ; 
-+PxPl1:%>мун # ; 
-+PxPl12:%>ты # ; 
-+PxPl2:%>нун # ; 
-+PxPl3:%>тын # ; 
-
-LEXICON POSS_PL
-
-+PxSg1:%>ви # ; 
+LEXICON POSS_LN
+# ;
++PxSg1:%>%{V%}и%{ː%} # ; 
 +PxSg2:%>%{L%}и # ; 
 +PxSg3:%>ин # ; 
-+PxPl1:%>вун # ; 
-+PxPl12:%>ты # ; 
-+PxPl2:%>%{L%}ун # ; 
-+PxPl3:%>тын # ; 
++PxPl1:%>%{V%}ун # ; 
++PxPl12:%>%{V%}ун # ; 
++PxPl2:%>%{D%}ы # ; 
++PxPl3:%>%{L%}ун # ; 
+
 
 ! stem _ [alienable poss.] _ number _ case _ [pers/refl. poss.]
 
-LEXICON CASE_OBL
+LEXICON CASE_OBL_VOW
+CASE_OBL_VOW_ONLY ;
+CASE_OBL_COMMON ;
+INS_OTHER ;
 
-+Acc+Def:%>%{V%}%{A%} POSS_SG_BIRA ;		 ! Винительный Accusative
-+Acc+Ind:%>%{j%}%{A%} POSS_SG_BIRA ; ! Винительный-неопределёний Indefinite Acc
-+Dat:%>%{D%}у{ː%} POSS_SG_BIRA ;		 ! Дателный Dative
-+Loc:%>л%{А%} POSS_SG_BIRA ;         ! Местный Locative
-+All:%>ткӣ POSS_SG_BIRA ;            ! Направителый Allative
-+Prl:%>лӣ POSS_SG_BIRA ;            ! Продольный Prolative
-+Ter:%>кл%{A%}{ː%} POSS_SG_BIRA ;    ! Направительно-местный Terminative
-+Dir:%>кли{ː%} POSS_SG_BIRA ;        ! Направительно-продольный Directive
-+Abl:%>%{D%}ук POSS_SG_ORON ;		 ! Отложительный Ablative
-+Ela:%>%{G%}ит POSS_SG_ORON ;		 ! Исходный Elative
-+Ins:%>%{i%}т POSS_SG_ORON ;		 ! Творительный Instrumental
-+Com:%>кл%{A%} POSS_SG_BIRA ;        ! Совместный Comitative
+LEXICON CASE_OBL_CNS
+CASE_OBL_CNS_ONLY ;
+CASE_OBL_COMMON ;
+INS_OTHER ;
+
+LEXICON CASE_OBL_LN
+CASE_OBL_CNS_ONLY ;
+CASE_OBL_COMMON ;
+INS_LN ;
+
+
+
+LEXICON CASE_OBL_VOW_ONLY
++Loc:%>л%{A%}{ː%} POSS_SG_OTHER ;         ! Местный Locative
++All:%>тки{ː%} POSS_SG_OTHER ;            ! Направителый Allative
++Prl:%>ли{ː%} POSS_SG_OTHER ;            ! Продольный Prolative
+
+LEXICON CASE_OBL_CNS_ONLY
++Loc:%>%{D%}ул%{A%}{ː%} POSS_SG_OTHER ;         ! Местный Locative
++All:%>тыки{ː%} POSS_SG_OTHER ;            ! Направителый Allative
++Prl:%>%{D%}ули{ː%} POSS_SG_OTHER ;            ! Продольный Prolative
+
+LEXICON CASE_OBL_COMMON
++Acc+Def:%>%{V%}%{A%} POSS_SG_OTHER ;		 ! Винительный Accusative
++Acc+Ind:%>%{j%}%{A%} POSS_SG_OTHER ; ! Винительный-неопределёний Indefinite Acc
++Dat:%>%{D%}у%{ː%} POSS_SG_OTHER ;		 ! Дателный Dative
++Ter:%>%{i%}кл%{A%}%{ː%} POSS_SG_OTHER ;    ! Направительно-местный Terminative
++Dir:%>%{i%}кли%{ː%} POSS_SG_OTHER ;        ! Направительно-продольный Directive
++Abl:%>%{D%}ук POSS_SG_OTHER ;		 ! Отложительный Ablative
++Ela:%>%{G%}ит POSS_SG_OTHER ;		 ! Исходный Elative
++Com:%>нун POSS_SG_OTHER ;        ! Совместный Comitative
+
+
+LEXICON INS_LN
++Ins:%>ди POSS_SG_OTHER ;		 ! Творительный Instrumental
+
+LEXICON INS_OTHER
++Ins:%>%{i%}т POSS_SG_OTHER ;		 ! Творительный Instrumental
+
+
 
 LEXICON N_BIRA
 +N+Sg+Nom:   # ;
-+N+Sg+Nom:  POSS_SG_BIRA ;
-+N+Sg:  CASE_OBL ;
++N+Sg+Nom:  POSS_SG_OTHER ;
++N+Sg:  CASE_OBL_VOW ;
 +N+Pl+Nom:%>%{i%}л   # ;
-+N+Pl+Nom:%>%{i%}л POSS_PL ;
-+N+Pl:%>%{i%}л   CASE_OBL ;
++N+Pl+Nom:%>%{i%}л POSS_LN ;
++N+Pl:%>%{i%}л   CASE_OBL_LN ;
 
 LEXICON N_UMUK
 
 +N+Sg+Nom:   # ;
-+N+Sg+Nom:  POSS_SG_BIRA ;
-+N+Sg:  CASE_OBL ;
++N+Sg+Nom:  POSS_SG_OTHER ;
++N+Sg:  CASE_OBL_CNS ;
 +N+Pl+Nom:%>%{i%}л   # ;
-+N+Pl+Nom:%>%{i%}л POSS_PL ;
-+N+Pl:%>%{i%}л   CASE_OBL ;
++N+Pl+Nom:%>%{i%}л POSS_LN ;
++N+Pl:%>%{i%}л   CASE_OBL_LN ;
 
 LEXICON N_ORON
 
-+N+Sg+Nom:%>н # ;
-+N+Sg+Nom:%>н POSS_SG_ORON ;
-+N+Sg:%>н CASE_OBL ;
++N+Sg+Nom:н # ;
++N+Sg+Nom:н POSS_LN ;
++N+Sg:н CASE_OBL_LN ;
 +N+Pl+Nom:%>р # ;
-+N+Pl+Nom:%>р POSS_PL ;
-+N+Pl:%>р CASE_OBL ;
++N+Pl+Nom:%>р POSS_LN ;
++N+Pl:%>р CASE_OBL_LN ;
 
 LEXICON N_XXX                               ! Pending categorisation
 

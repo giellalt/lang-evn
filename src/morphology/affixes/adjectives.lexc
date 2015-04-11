@@ -3,9 +3,10 @@
 !! The Evenki adjectives compare.
 
 LEXICON Comparisons
-+A+pos:0        Cases   ;
-+A+cmp:XXX       Cases   ;
-+A+sup:YYY      Cases   ;
++A+Sg+Nom:ка # ;
+!+A+pos:0        Cases   ;
+!+A+cmp:XXX       Cases   ;
+!+A+sup:YYY      Cases   ;
 
 ! vim: set ft=xfst-lexc:
 

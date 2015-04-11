@@ -1,0 +1,61 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+
+Tests:
+
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+
+  Noun - дю̄: # vowel
+    дю̄+N+Sg+Nom+PxSg1:     дю̄в
+    дю̄+N+Sg+Acc+Def+PxSg1: дю̄вав
+    дю̄+N+Sg+Acc+Ind+PxSg1: дю̄яв
+    дю̄+N+Sg+Dat+PxSg1:     дю̄дӯв
+    дю̄+N+Sg+Loc+PxSg1:     дю̄ла̄в
+    дю̄+N+Sg+All+PxSg1:     дю̄ткӣв
+    дю̄+N+Sg+Prl+PxSg1:     дю̄лӣв
+    дю̄+N+Sg+Ter+PxSg1:     дю̄кла̄в
+    дю̄+N+Sg+Dir+PxSg1:     дю̄клӣв
+    дю̄+N+Sg+Abl+PxSg1:     дю̄дукив
+    дю̄+N+Sg+Ela+PxSg1:     дю̄гидив
+    дю̄+N+Sg+Ins+PxSg1:     дю̄див
+    дю̄+N+Sg+Com+PxSg1:     дю̄нунми
+
+    дю̄+N+Sg+Nom+PxSg2:     дю̄с
+    дю̄+N+Sg+Acc+Def+PxSg2: дю̄вас
+    дю̄+N+Sg+Acc+Ind+PxSg2: дю̄яс
+    дю̄+N+Sg+Dat+PxSg2:     дю̄дӯс
+    дю̄+N+Sg+Loc+PxSg2:     дю̄ла̄с
+    дю̄+N+Sg+All+PxSg2:     дю̄ткӣс
+    дю̄+N+Sg+Prl+PxSg2:     дю̄лӣс
+    дю̄+N+Sg+Ter+PxSg2:     дю̄кла̄с
+    дю̄+N+Sg+Dir+PxSg2:     дю̄клӣс
+    дю̄+N+Sg+Abl+PxSg2:     дю̄дукис
+    дю̄+N+Sg+Ela+PxSg2:     дю̄гидис
+    дю̄+N+Sg+Ins+PxSg2:     дю̄дис
+    дю̄+N+Sg+Com+PxSg2:     дю̄нунис
+
+    дю̄+N+Sg+Nom+PxSg3:     дю̄н
+    дю̄+N+Sg+Acc+Def+PxSg3: дю̄ван
+    дю̄+N+Sg+Acc+Ind+PxSg3: дю̄ян
+    дю̄+N+Sg+Dat+PxSg3:     дю̄дӯн
+    дю̄+N+Sg+Loc+PxSg3:     дю̄ла̄н
+    дю̄+N+Sg+All+PxSg3:     дю̄ткӣн
+    дю̄+N+Sg+Prl+PxSg3:     дю̄лӣн
+    дю̄+N+Sg+Ter+PxSg3:     дю̄кла̄н
+    дю̄+N+Sg+Dir+PxSg3:     дю̄клӣн
+    дю̄+N+Sg+Abl+PxSg3:     дю̄дукин
+    дю̄+N+Sg+Ela+PxSg3:     дю̄гидин
+    дю̄+N+Sg+Ins+PxSg3:     дю̄дин
+    дю̄+N+Sg+Com+PxSg3:     дю̄нунин
+
+

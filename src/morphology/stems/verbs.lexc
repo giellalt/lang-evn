@@ -3,7 +3,7 @@
 !! Verbs in Evenki denote actions.
 
 LEXICON Verbs
-verb    Persons   ;
+verb+V+Inf:verb # ;
 
 !би:би V-IV ; ! "быть"
 
