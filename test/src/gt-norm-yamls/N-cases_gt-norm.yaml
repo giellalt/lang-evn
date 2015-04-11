@@ -1,0 +1,39 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+
+Tests:
+
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+
+  Noun - урэ: # vowel
+    урэ+N+Sg+Nom: урэ
+    урэ+N+Sg+Acc+Def: урэвэ
+    урэ+N+Sg+Acc+Ind: урэе
+
+
+  Noun - бэр: # voiced cns
+    бэр+N+Sg+Nom: бэр
+    бэр+N+Sg+Acc+Def: бэрвэ
+    бэр+N+Sg+Acc+Ind: бэръе
+
+
+  Noun - дэт: # unvoiced cns
+    дэт+N+Sg+Nom: дэт
+    дэт+N+Sg+Acc+Def: дэтвэ
+    дэт+N+Sg+Acc+Ind: дэтъе
+
+  Noun - орон: # n
+    орон+N+Sg+Nom: орон
+    орон+N+Sg+Acc+Def: оронмо
+    орон+N+Sg+Acc+Ind: ороно
+
