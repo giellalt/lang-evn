@@ -53,31 +53,31 @@ Rules
 
 "Remove suffix vowel with vowel-ending stem"
 !! __@RULENAME@__  
-%{i%}:0 < :Vow (%{ː%}:) %>: _ ;
+%{i%}:0 <=>  :Vow (%{ː%}:) %>: _ ;
 
 "Realise suffix vowel as y after t"
 !! __@RULENAME@__  
-%{i%}:ы <:т %>: _ ;
+%{i%}:ы <=> :т %>: _ ;
 
 "Realise suffix vowel as i after non-t"
 !! __@RULENAME@__  
-%{i%}:и <[:Cns - :т] %>: _ ;
+%{i%}:и <=> [:Cns - :т] %>: _ ;
 
 "Assimilate possessive to plural"
 !! __@RULENAME@__  
-%{L%}:Cx <Cx %>: _ ;
+%{L%}:Cx <=> Cx %>: _ ;
        where Cx in ( л р ) ;
 
 "Cnsonant assimilation in suffixes"
 !! __@RULENAME@__  
-%{G%}:Cx <Cy %>: _ ;
+%{G%}:Cx <=> Cy %>: _ ;
        where Cy in ( к с т п м н ӈ ) 
              Cx in ( к к к к ӈ ӈ ӈ ) 
        matched ; 
 
 "Unvoicing assimilation"
 !! __@RULENAME@__  
-%{D%}:т <:VoicelessCns %>: _ ; 
+%{D%}:т <=> :VoicelessCns %>: _ ; 
 
 !€ дэт>{D}ук
 !€ дэт0тук
@@ -85,8 +85,8 @@ Rules
 
 "Voicing assimilation"
 !! __@RULENAME@__  
-!%{D%}:д <[:Vow| %{ː%}: | [:Cns - :VoicelessCns]] %>: _ ; 
-%{D%}:д <Vow (%{ː%}:)  %>: _ ; 
+!%{D%}:д <=> [:Vow| %{ː%}: | [:Cns - :VoicelessCns]] %>: _ ; 
+%{D%}:д <=> Vow (%{ː%}:)  %>: _ ; 
 
 !€ ю{ː}>{D}
 !€ ю̄0д
@@ -97,11 +97,11 @@ Rules
 
 "Nasal assimilation of V"
 !! __@RULENAME@__  
-%{V%}:м <:Nasal %>: _ ; 
+%{V%}:м <=> :Nasal %>: _ ; 
 
 "Default realisaton of V" 
 !! __@RULENAME@__  
-%{V%}:в <[ :Vow | %{ː%}: | [:Cns - :Nasal]]  %>: _ ; 
+%{V%}:в <=> [ :Vow | %{ː%}: | [:Cns - :Nasal]]  %>: _ ; 
 
 !€ урэ>{i}л>{V}{A}
 !€ урэ00л0вэ
@@ -115,14 +115,14 @@ Rules
 
 "Not realising hard sign after vowel or n"
 !! __@RULENAME@__  
-%{j%}:0 <[ Vow | н | л | %{ː%}: ] %>: _ ;
+%{j%}:0 <=> [ Vow | н | л | %{ː%}: ] %>: _ ;
 
 !€ дю{ː}>{j}{A}>{i}в
 !€ дю̄00я00в
 
 "Realising hard sign"
 !! __@RULENAME@__  
-%{j%}:ъ <NonLN %>: _ [ Vow | %{A%}: ] ;
+%{j%}:ъ <=> NonLN %>: _ [ Vow | %{A%}: ] ;
 
 !€ урэ>{j}{A}
 !€ урэ00е
@@ -149,14 +149,14 @@ Rules
 ! TODO: Short/Long
 
 !"Long vowel harmony for {A}"
-!%{A%}:Vy <:Vx %{ː%}: [ :Cns* :Cns ]/:0*  _ ;
+!%{A%}:Vy <=> :Vx %{ː%}: [ :Cns* :Cns ]/:0*  _ ;
 !         where Vx in ( а е ё о э ю я )
 !               Vy in ( э а о а а э э )
 !         matched ;
 
 "Short vowel harmony for A"
 !! __@RULENAME@__  
-%{A%}:Vy <:Vx (%{ː%}:) (:Cns) %>: ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)])  _ ;
+%{A%}:Vy <=> :Vx (%{ː%}:) (:Cns) %>: ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)])  _ ;
              :Vx (%{ː%}:) (:Cns) (%>: %{i%}: л) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ;
          where Vx in ( а е ё о э я ю )
                Vy in ( а э о о э а а )
@@ -173,7 +173,7 @@ Rules
 
 !"Short vowel harmony for {A} following i"
 !! __@RULENAME@__  
-!%{A%}:Vy <[:и|:у|:ы] (:Cns)  %>:   ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)])  _ ;
+!%{A%}:Vy <=> [:и|:у|:ы] (:Cns)  %>:   ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)])  _ ;
 !             :Vx (:Cns) (%>: %{i%}: л) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ;
 !         where Vx in ( а е ё о ы э я )
 !               Vy in ( а э о о э э а )
@@ -182,7 +182,7 @@ Rules
 
 "Palatalised short vowel harmony for A"
 !! __@RULENAME@__  
-%{A%}:Vy <:Vx (%{ː%}:) ([:NonLN]) %>: ([(%{i%}:) :NonLN %>:]) %{j%}:  _ ;
+%{A%}:Vy <=> :Vx (%{ː%}:) ([:NonLN]) %>: ([(%{i%}:) :NonLN %>:]) %{j%}:  _ ;
          where Vx in ( а е ё о э я ю )
                Vy in ( я е ё ё е я я )
          matched ;
