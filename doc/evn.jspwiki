@@ -10,7 +10,7 @@
 
 This is free and open source South Sámi morphology.
 
-           !!!Evenki morphological analyser                      !
+           !!!Evenki morphological analyser                      
 
  * +N       = Noun
  * +Num     = Numeral
@@ -18,15 +18,19 @@ This is free and open source South Sámi morphology.
  * +Sg      = Singular
  * +Pl      = Plural
 
- * +Nom     = Nominative -
- * +Abl     = Ablative -дук
- * +Ins     = Instrumental
- * +All     = местный -ла / -дула
- * +Prl     = Творительный -ла
- * +Acc     = Винительный (see +Def/+Ind)
- * +Dat     = дательный -ду
+ * +Acc    = Винительный Accusative
+ * +Dat    = Дателный Dative
+ * +Loc    = Местный Locative
+ * +All    = Направителый Allative
+ * +Prl    = Продольный Prolative
+ * +Ter    = Направительно-местный Terminative
+ * +Dir    = Направительно-продольный Directive
+ * +Abl    = Отложительный Ablative
+ * +Ela    = Исходный Elative
+ * +Ins    = Творительный Instrumental
+ * +Com    = Совместный Comitative
 
- * +Ind     = я indefinite acc
+ * +Ind     = Винительный-неопределёний Indefinite Accusative
  * +Def     = ва definite acc
 
  * +PxSg1   = 
@@ -36,6 +40,11 @@ This is free and open source South Sámi morphology.
  * +PxPl12  = 
  * +PxPl2   = 
  * +PxPl3   = 
+
+
+
+
+
 
 
 
