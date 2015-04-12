@@ -41,4 +41,17 @@ LEXICON PERS_CASE_OBL_VOW
 +Acc+Ind:%>э # ;
 +Dat:%>%{D%}у%{ː%} # ;
 
+
+LEXICON PERS_CASE_OBL_LN 
+#;
+
+LEXICON PERS_CASE_OBL_OTHER
+#;
+
+LEXICON PERS_CASE_OBL_3PL 
+#;
+
+LEXICON PERS_CASE_OBL_3SG 
+#;
+
 ! vim: set ft=xfst-lexc:
