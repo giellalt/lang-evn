@@ -4,41 +4,41 @@
 
 LEXICON Pronouns
 
-+Pron+Pers: Personal ;
+Personal ;
 
 LEXICON Personal 
  pers_nom ;
  pers_obl ;
       
 LEXICON pers_nom
-+Sg1+Nom:бӣ K ;
-+Pl1+Nom:бӯ K ;
-+Pl12+Nom:мит K ;
-+Sg2+Nom:сӣ K ;
-+Пл2+Nom:сӯ K ;
-+Sg3+Nom:нуӈан K ;
-+Sg3+Nom:нуӈартын K ;
+бӣ+Sg1+Nom:би%{ː%} # ;
+бӯ+Pl1+Nom:бу%{ː%} # ;
+мит+Pl12+Nom:мит # ;
+сӣ+Sg2+Nom:си%{ː%} # ;
+сӯ+Пл2+Nom:су%{ː%} # ;
+нуӈан+Sg3+Nom:нуӈан # ;
+нуӈартан+Sg3+Nom:нуӈартын # ;
 
 LEXICON pers_acc
-+Sg1+Acc:минэвэ 	 K ;
-+Pl1+Acc:мунэвэ 	 K ;
-+Pl21+Acc:митвэ 	 K ;
-+Sg2+Acc:синэвэ 	 K ;
-+Пл2+Acc:сунэвэ 	 K ;
-+Sg3+Acc:нуӈанма̄н  K  ;
-+Pl3+Acc:нуӈарватын  K ;
+бӣ+Sg1+Acc+Def:минэвэ 	 # ;
+бӯ+Pl1+Acc+Def:мунэвэ 	 # ;
+мит+Pl21+Acc+Def:митвэ 	 # ;
+сӣ+Sg2+Acc+Def:синэвэ 	 # ;
+сӯ+Пл2+Acc+Def:сунэвэ 	 # ;
+нуӈан+Sg3+Acc+Def:нуӈанма̄н  #  ;
+нуӈартан+Pl3+Acc+Def:нуӈарватын  # ;
 
 LEXICON pers_obl
-+Sg1:мин 	pers_case ;
-+Pl1:мун 	pers_case ;
-+Pl12:мит 	pers_case ;
-+Sg2:син 	pers_case ;
-+Пл2:сун 	pers_case ;
-+Sg3:нуӈан  pers_case ;
-+Pl3:нуӈар  pers_case ;
+бӣ+Sg1:мин 	PERS_CASE_OBL_VOW ;
+бӯ+Pl1:мун 	PERS_CASE_OBL_LN ;
+мит+Pl12:мит 	PERS_CASE_OBL_OTHER ;
+сӣ+Sg2:син 	PERS_CASE_OBL_LN ;
+сӯ+Пл2:сун 	PERS_CASE_OBL_LN ;
+нуӈан+Sg3:нуӈан  PERS_CASE_OBL_3SG ;
+нуӈартан+Pl3:нуӈар  PERS_CASE_OBL_3PL ;
 
-LEXICON pers_case
-+Gen:%>э K ;
-+Dat:%>%{D%}ӯ K ;
+LEXICON PERS_CASE_OBL_VOW
++Acc+Ind:%>э # ;
++Dat:%>%{D%}у%{ː%} # ;
 
 ! vim: set ft=xfst-lexc:
