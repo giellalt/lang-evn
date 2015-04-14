@@ -5,53 +5,118 @@
 LEXICON Pronouns
 
 Personal ;
+Reflexive ;
 
 LEXICON Personal 
  pers_nom ;
  pers_obl ;
       
 LEXICON pers_nom
-бӣ+Sg1+Nom:би%{ː%} # ;
-бӯ+Pl1+Nom:бу%{ː%} # ;
-мит+Pl12+Nom:мит # ;
-сӣ+Sg2+Nom:си%{ː%} # ;
-сӯ+Пл2+Nom:су%{ː%} # ;
-нуӈан+Sg3+Nom:нуӈан # ;
-нуӈартан+Sg3+Nom:нуӈартын # ;
+би%{ː%}+Pron+Pers+Sg1+Nom:би%{ː%} # ;
+бу%{ː%}+Pron+Pers+Pl1+Nom:бу%{ː%} # ;
+мит+Pron+Pers+Pl12+Nom:мит # ;
+си%{ː%}+Pron+Pers+Sg2+Nom:си%{ː%} # ;
+су%{ː%}+Pron+Pers+Pl2+Nom:су%{ː%} # ;
+нуӈан+Pron+Pers+Sg3+Nom:нуӈан # ;
+нуӈартан+Pron+Pers+Sg3+Nom:нуӈартын # ;
 
 LEXICON pers_acc
-бӣ+Sg1+Acc+Def:минэвэ 	 # ;
-бӯ+Pl1+Acc+Def:мунэвэ 	 # ;
-мит+Pl21+Acc+Def:митвэ 	 # ;
-сӣ+Sg2+Acc+Def:синэвэ 	 # ;
-сӯ+Пл2+Acc+Def:сунэвэ 	 # ;
-нуӈан+Sg3+Acc+Def:нуӈанма̄н  #  ;
-нуӈартан+Pl3+Acc+Def:нуӈарватын  # ;
+би%{ː%}+Pron+Pers+Sg1+Acc+Def:минэвэ 	 # ;
+бу%{ː%}+Pron+Pers+Pl1+Acc+Def:мунэвэ 	 # ;
+мит+Pron+Pers+Pl21+Acc+Def:митвэ 	 # ;
+си%{ː%}+Pron+Pers+Sg2+Acc+Def:синэвэ 	 # ;
+су%{ː%}+Pron+Pers+Pl2+Acc+Def:сунэвэ 	 # ;
+нуӈан+Pron+Pers+Sg3+Acc+Def:нуӈанма̄н  #  ;
+нуӈартан+Pron+Pers+Pl3+Acc+Def:нуӈарватын  # ;
 
 LEXICON pers_obl
-бӣ+Sg1:мин 	PERS_CASE_OBL_VOW ;
-бӯ+Pl1:мун 	PERS_CASE_OBL_LN ;
-мит+Pl12:мит 	PERS_CASE_OBL_OTHER ;
-сӣ+Sg2:син 	PERS_CASE_OBL_LN ;
-сӯ+Пл2:сун 	PERS_CASE_OBL_LN ;
-нуӈан+Sg3:нуӈан  PERS_CASE_OBL_3SG ;
-нуӈартан+Pl3:нуӈар  PERS_CASE_OBL_3PL ;
+б%{ː%}+Pron+Pers+Sg1:мин 	PERS_CASE_OBL_LN ;
+б%{ː%}+Pron+Pers+Pl1:мун 	PERS_CASE_OBL_LN ;
+мит+Pron+Pers+Pl12:мит 	PERS_CASE_OBL_MIT ;
+си%{ː%}+Pron+Pers+Sg2:син 	PERS_CASE_OBL_LN ;
+су%{ː%}+Pron+Pers+Пл2:сун 	PERS_CASE_OBL_LN ;
+нуӈан+Pron+Pers+Sg3:нуӈан  PERS_CASE_OBL_3SG ;
+нуӈартан+Pron+Pers+Pl3:нуӈар  PERS_CASE_OBL_3PL ;
 
-LEXICON PERS_CASE_OBL_VOW
-+Acc+Ind:%>э # ;
-+Dat:%>%{D%}у%{ː%} # ;
-
+LEXICON PERS_CASE_OBL_MIT
++Acc+Def:%>вэ # ;
++Acc+Ind:%>ъэ # ;
+PERS_CASE_OBL_COMMON; 
 
 LEXICON PERS_CASE_OBL_LN 
-#;
++Acc+Def:%>эвэ # ;
++Acc+Ind:%>э # ;
+PERS_CASE_OBL_COMMON; 
 
-LEXICON PERS_CASE_OBL_OTHER
-#;
-
-LEXICON PERS_CASE_OBL_3PL 
-#;
+LEXICON PERS_CASE_OBL_COMMON
++Dat:%>%{D%}у%{ː%} # ;		 ! Дателный Dative
++Loc:%>лэ{ː%} # ;         ! Местный Locative
++All:%>тки{ː%} # ;            ! Направителый Allative
++Prl:%>%{D%}ули{ː%} # ;            ! Продольный Prolative
++Ter:%>%{i%}клэ%{ː%} # ;    ! Направительно-местный Terminative
++Dir:%>%{i%}кли%{ː%} # ;        ! Направительно-продольный Directive
++Abl:%>%{D%}ук # ;		 ! Отложительный Ablative
++Ela:%>%{G%}ит # ;		 ! Исходный Elative
++Com:%>нун # ;        ! Совместный Comitative
 
 LEXICON PERS_CASE_OBL_3SG 
-#;
++Acc+Def:%>ма%{ː%}н # ;
++Acc+Ind:%>а # ;
++Dat:%>ду%{ː%}н # ;		 ! Дателный Dative
++Loc:%>дул%а{ː%}н # ;         ! Местный Locative
++All:%>тыки{ː%}н # ;            ! Направителый Allative
++Prl:%>дули{ː%}н # ;            ! Продольный Prolative
++Ter:%>икла%{ː%}н # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}н # ;        ! Направительно-продольный Directive
++Abl:%>дукин # ;		 ! Отложительный Ablative
++Ela:%>ӈидин # ;		 ! Исходный Elative
++Ins:%>дин # ;		 ! Творительный Instrumental
++Com:%>нунин # ;        ! Совместный Comitative
+
+LEXICON PERS_CASE_OBL_3PL 
++Acc+Def:%>vа%{ː%}тын # ;
++Acc+Ind:%>ъя # ;
++Dat:%>ду%{ː%}тын # ;		 ! Дателный Dative
++Loc:%>дул%а{ː%}тын # ;         ! Местный Locative
++All:%>тыки{ː%}тын # ;            ! Направителый Allative
++Prl:%>дули{ː%}тын # ;            ! Продольный Prolative
++Ter:%>икла%{ː%}тын # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}тын # ;        ! Направительно-продольный Directive
++Abl:%>дукитын # ;		 ! Отложительный Ablative
++Ela:%>ӈидитын # ;		 ! Исходный Elative
++Ins:%>дитын # ;		 ! Творительный Instrumental
++Com:%>нунитын # ;        ! Совместный Comitative
+
+LEXICON Reflexive
+мэ%{ː%}нми%{ː%}+Pers+Refl+Sg:мэ%{ː%}н reflcasesg ;
+мэ%{ː%}рвэр+Pers+Refl+Sg:мэ%{ː%}р reflcasepl ;
+
+LEXICON reflcasesg
++Acc+Def:%>м%{ː%} # ;
++Dat:%>%{D%}у%{ː%}ви%{ː%} # ;		 ! Дателный Dative
++Loc:%>л%{A%}{ː%}ви%{ː%} # ;         ! Местный Locative
++All:%>тки{ː%}ви%{ː%} # ;            ! Направителый Allative
++Prl:%>%{D%}ули{ː%}ви%{ː%} # ;            ! Продольный Prolative
++Ter:%>иклэ%{ː%}ви%{ː%} # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}ви%{ː%} # ;        ! Направительно-продольный Directive
++Abl:%>%{D%}укви%{ː%} # ;		 ! Отложительный Ablative
++Abl:%>%{D%}укки%{ː%} # ;		 ! Отложительный Ablative
++Ela:%>ӈитпи%{ː%} # ;		 ! Исходный Elative
++Ins:%>дивии%{ː%} # ;		 ! Творительный Instrumental
++Com:%>нунми%{ː%} # ;        ! Совместный Comitative
+
+LEXICON reflcasepl
++Acc+Def:%>вэр # ;
++Dat:%>%{D%}у%{ː%}вэр # ;		 ! Дателный Dative
++Loc:%>л%{A%}{ː%}вэр # ;         ! Местный Locative
++All:%>тки{ː%}вэр # ;            ! Направителый Allative
++Prl:%>%{D%}ули{ː%}вэр # ;            ! Продольный Prolative
++Ter:%>иклэ%{ː%}вэр # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}вэр # ;        ! Направительно-продольный Directive
++Abl:%>%{D%}уквэр # ;		 ! Отложительный Ablative
++Abl:%>%{D%}уккэр # ;		 ! Отложительный Ablative
++Ela:%>ӈитпэр # ;		 ! Исходный Elative
++Ins:%>дивиэр # ;		 ! Творительный Instrumental
++Com:%>нунмэр # ;        ! Совместный Comitative
 
 ! vim: set ft=xfst-lexc:
