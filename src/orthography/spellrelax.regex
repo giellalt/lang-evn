@@ -1,7 +1,18 @@
-ӯ (->) ӯ, # Cyrillic у + U+0304 (->) precomposed
-ӣ (->) ӣ  # Cyrillic и + U+0304 (->) precomposed
-          # We use composing letters, may get precomposed input
-          # (No other long Cyrillic vowels precomposed)
+ӯ (->) ӯ , # Cyrillic у + U+0304 (->) precomposed
+ӣ (->) ӣ , # Cyrillic и + U+0304 (->) precomposed
+           # We use composing letters, may get precomposed input
+           # (No other long Cyrillic vowels precomposed)
+
+а̄ (->) а, # Tolerate short vowel for correct long
+е̄ (->) е, # Tolerate short vowel for correct long
+о̄ (->) о, # Tolerate short vowel for correct long
+ӯ (->) у, # Tolerate short vowel for correct long
+ы̄ (->) ы, # Tolerate short vowel for correct long
+ю̄ (->) ю, # Tolerate short vowel for correct long
+я̄ (->) я, # Tolerate short vowel for correct long
+ӣ (->) и # Tolerate short vowel for correct long
+
+
 ;
 
 # Explanation:
