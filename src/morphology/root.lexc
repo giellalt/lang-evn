@@ -1,5 +1,5 @@
-! Divvun & Giellatekno - open source grammars for UNDEFINED language
-! Copyright © 2012 The University of Tromsø & the Norwegian Sámi Parliament
+! Divvun & Giellatekno - open source grammars for Evenki
+! Copyright © 2012 The University of Tromsø & Buryaad state university
 ! http://giellatekno.uit.no & http://divvun.no
 !
 ! This program is free software; you can redistribute and/or modify
@@ -13,7 +13,7 @@
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
 ! ========================================================================== !
-! !!            !!!Evenki morphological analyser                      
+!!            !!!Evenki morphological analyser                      
 ! ========================================================================== !
 Multichar_Symbols
 
