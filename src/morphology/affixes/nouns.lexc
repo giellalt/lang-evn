@@ -74,30 +74,37 @@ LEXICON INS_OTHER
 
 
 LEXICON N_BIRA
-+N+Sg+Nom:   # ;
-+N+Sg+Nom:  POSS_SG_OTHER ;
-+N+Sg:  CASE_OBL_VOW ;
-+N+Pl+Nom:%>%{i%}л   # ;
-+N+Pl+Nom:%>%{i%}л POSS_LN ;
-+N+Pl:%>%{i%}л   CASE_OBL_LN ;
++N: X_BIRA ;
+
+LEXICON X_BIRA 
++Sg+Nom:   # ;
++Sg+Nom:  POSS_SG_OTHER ;
++Sg:  CASE_OBL_VOW ;
++Pl+Nom:%>%{i%}л   # ;
++Pl+Nom:%>%{i%}л POSS_LN ;
++Pl:%>%{i%}л   CASE_OBL_LN ;
 
 LEXICON N_UMUK
++N: X_UMUK ;
 
-+N+Sg+Nom:   # ;
-+N+Sg+Nom:  POSS_SG_OTHER ;
-+N+Sg:  CASE_OBL_CNS ;
-+N+Pl+Nom:%>%{i%}л   # ;
-+N+Pl+Nom:%>%{i%}л POSS_LN ;
-+N+Pl:%>%{i%}л   CASE_OBL_LN ;
+LEXICON X_UMUK
++Sg+Nom:   # ;
++Sg+Nom:  POSS_SG_OTHER ;
++Sg:  CASE_OBL_CNS ;
++Pl+Nom:%>%{i%}л   # ;
++Pl+Nom:%>%{i%}л POSS_LN ;
++Pl:%>%{i%}л   CASE_OBL_LN ;
 
 LEXICON N_ORON
++N: X_ORON ;
 
-+N+Sg+Nom:н # ;
-+N+Sg+Nom:н POSS_LN ;
-+N+Sg:н CASE_OBL_LN ;
-+N+Pl+Nom:%>р # ;
-+N+Pl+Nom:%>р POSS_LN ;
-+N+Pl:%>р CASE_OBL_LN ;
+LEXICON X_ORON
++Sg+Nom:н # ;
++Sg+Nom:н POSS_LN ;
++Sg:н CASE_OBL_LN ;
++Pl+Nom:%>р # ;
++Pl+Nom:%>р POSS_LN ;
++Pl:%>р CASE_OBL_LN ;
 
 LEXICON N_XXX                               ! Pending categorisation
 

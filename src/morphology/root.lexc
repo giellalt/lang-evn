@@ -65,12 +65,10 @@ Multichar_Symbols
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON Root
-
+Adjectives ;
 Nouns ;
 Numerals ; 
 Pronouns ;
-
-
 
 LEXICON K
 # ;

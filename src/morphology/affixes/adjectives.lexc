@@ -1,12 +1,12 @@
-!! Adjective inflection
-!! --------------------
-!! The Evenki adjectives compare.
+!! Evenki adjective inflection
+! --------------------
 
-LEXICON Comparisons
-+A+Sg+Nom:ка # ;
-!+A+pos:0        Cases   ;
-!+A+cmp:XXX       Cases   ;
-!+A+sup:YYY      Cases   ;
+!! The Evenki adjectives agree with nouns in case and number
+!! They are thus sent to common nominal lexica X_BIRA etc.  
+!! after having got their +A tag.
+
+LEXICON A_BIRA
++A: X_BIRA ;
 
 ! vim: set ft=xfst-lexc:
 
