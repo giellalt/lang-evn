@@ -2,6 +2,7 @@
 ! --------
 !! Pronouns in Evenki denote references to things.
 
+! э̄ а̄ ӣ о̄ ӯ ю̄ я̄ е̄
 LEXICON Pronouns
 
 Personal ;
@@ -12,20 +13,20 @@ LEXICON Personal
  pers_obl ;
       
 LEXICON pers_nom
-би%{ː%}+Pron+Pers+Sg1+Nom:би%{ː%} # ;
-бу%{ː%}+Pron+Pers+Pl1+Nom:бу%{ː%} # ;
+бӣ+Pron+Pers+Sg1+Nom:би%{ː%} # ;
+бӯ+Pron+Pers+Pl1+Nom:бу%{ː%} # ;
 мит+Pron+Pers+Pl12+Nom:мит # ;
-си%{ː%}+Pron+Pers+Sg2+Nom:си%{ː%} # ;
-су%{ː%}+Pron+Pers+Pl2+Nom:су%{ː%} # ;
+сӣ+Pron+Pers+Sg2+Nom:си%{ː%} # ;
+сӯ+Pron+Pers+Pl2+Nom:су%{ː%} # ;
 нуӈан+Pron+Pers+Sg3+Nom:нуӈан # ;
-нуӈартан+Pron+Pers+Sg3+Nom:нуӈартын # ;
+нуӈартын+Pron+Pers+Pl3+Nom:нуӈартын # ;
 
 LEXICON pers_acc
-би%{ː%}+Pron+Pers+Sg1+Acc+Def:минэвэ 	 # ;
-бу%{ː%}+Pron+Pers+Pl1+Acc+Def:мунэвэ 	 # ;
+бӣ+Pron+Pers+Sg1+Acc+Def:минэвэ 	 # ;
+бӯ+Pron+Pers+Pl1+Acc+Def:мунэвэ 	 # ;
 мит+Pron+Pers+Pl21+Acc+Def:митвэ 	 # ;
-си%{ː%}+Pron+Pers+Sg2+Acc+Def:синэвэ 	 # ;
-су%{ː%}+Pron+Pers+Pl2+Acc+Def:сунэвэ 	 # ;
+сӣ+Pron+Pers+Sg2+Acc+Def:синэвэ 	 # ;
+сӯ+Pron+Pers+Pl2+Acc+Def:сунэвэ 	 # ;
 нуӈан+Pron+Pers+Sg3+Acc+Def:нуӈанма̄н  #  ;
 нуӈартан+Pron+Pers+Pl3+Acc+Def:нуӈарватын  # ;
 
