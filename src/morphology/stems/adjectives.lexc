@@ -8,6 +8,4 @@ LEXICON Adjectives
 гугка:гугда A_BIRA ; ! "высокий высота"
 ӈэ%{ː%}ри A_BIRA ; ! "светлый и свет"
 ала:ала A_BIRA ; ! "вкусный и вкус"
-x@rdy:x@rdy A_BIRA ; ! "большой и беличика"
-
-! vim: set ft=xfst-lexc:
+xэгды:xэгды A_BIRA ; ! "большой и беличика"

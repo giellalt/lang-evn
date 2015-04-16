@@ -7,6 +7,7 @@ LEXICON Pronouns
 
 Personal ;
 Reflexive ;
+Possessive ;
 
 LEXICON Personal 
  pers_nom ;
@@ -119,5 +120,13 @@ LEXICON reflcasepl
 +Ela:%>ӈитпэр # ;		 ! Исходный Elative
 +Ins:%>дивиэр # ;		 ! Творительный Instrumental
 +Com:%>нунмэр # ;        ! Совместный Comitative
+
+LEXICON Possessive
+минӈӣ+Pron+Poss+Sg1:минӈи%{ː%} # ;
+мунӈӣ+Pron+Poss+Pl1:мунӈи%{ː%} # ;
+митӈӣ+Pron+Poss+Pl12:митӈи%{ː%} # ;
+синӈӣ+Pron+Poss+Sg2:синӈи%{ː%} # ;
+сунӈӣ+Pron+Poss+Pl2:сунӈи%{ː%} # ;
+
 
 ! vim: set ft=xfst-lexc:

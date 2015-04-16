@@ -5,6 +5,16 @@
 LEXICON Cases ! to be removed.
 #;
 
+LEXICON POSS_SG_CNS_NOM
+# ;
++PxSg1:%>в%{A%} # ; 
++PxSg2:%>с%{A%} # ; 
++PxSg3:%>н%{A%} # ; 
++PxPl1:%>%{V%}ун # ; 
++PxPl12:%>%{V%}ун # ; 
++PxPl2:%>сун # ; 
++PxPl3:%>тын # ; 
+
 LEXICON POSS_SG_OTHER
 # ;
 +PxSg1:%>%{i%}в # ; 
@@ -89,8 +99,7 @@ LEXICON N_UMUK
 +N: X_UMUK ;
 
 LEXICON X_UMUK
-+Sg+Nom:   # ;
-+Sg+Nom:  POSS_SG_OTHER ;
++Sg+Nom:  POSS_SG_CNS_NOM ;
 +Sg:  CASE_OBL_CNS ;
 +Pl+Nom:%>%{i%}л   # ;
 +Pl+Nom:%>%{i%}л POSS_LN ;

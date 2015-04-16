@@ -17,6 +17,13 @@
 ! ========================================================================== !
 Multichar_Symbols
 
++A	    !!= * @CODE@ = 
++Adv    !!= * @CODE@ = 
++V	    !!= * @CODE@ = 
++Pron   !!= * @CODE@ = 
++Pers   !!= * @CODE@ = 
++Poss   !!= * @CODE@ = 
++Refl   !!= * @CODE@ = 
 +N      !!= * @CODE@ = Noun
 +Num    !!= * @CODE@ = Numeral
 
@@ -65,10 +72,12 @@ Multichar_Symbols
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON Root
+Adverbs ;
 Adjectives ;
 Nouns ;
 Numerals ; 
 Pronouns ;
+Conjunctions ;
 
 LEXICON K
 # ;
