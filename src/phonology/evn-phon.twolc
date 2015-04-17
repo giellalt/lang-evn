@@ -86,7 +86,7 @@ Rules
 "Voicing assimilation"
 !! __@RULENAME@__  
 !%{D%}:д <=> [:Vow| %{ː%}: | [:Cns - :VoicelessCns]] %>: _ ; 
-%{D%}:д <=> Vow (%{ː%}:)  %>: _ ; 
+%{D%}:д <=> [Vow|л|р] (%{ː%}:)  %>: _ ; 
 
 !€ ю{ː}>{D}
 !€ ю̄0д
@@ -156,8 +156,8 @@ Rules
 
 "Short vowel harmony for A"
 !! __@RULENAME@__  
-%{A%}:Vy <=> :Vx (%{ː%}:) (:Cns) %>: ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)])  _ ;
-             :Vx (%{ː%}:) (:Cns) (%>: %{i%}: л) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ;
+%{A%}:Vy <=> :Vx (%{ː%}:) (:Cns)  %>: ([(%{i%}:) :Cns %>:]) ([%{j%}:|:Cns (:Cns)]) () _ ;
+             :Vx (%{ː%}:) (:Cns) (%>: %{i%}: л) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ; !Pl
          where Vx in ( а е ё о э я ю )
                Vy in ( а э о о э а а )
          matched ;
@@ -173,7 +173,7 @@ Rules
 
 !"Short vowel harmony for {A} following i"
 !! __@RULENAME@__  
-!%{A%}:Vy <=> [:и|:у|:ы] (:Cns)  %>:   ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)])  _ ;
+!%{A%}:Vy <=> [:и|:у|:ы] (:Cns)  %>:   ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)] (%>:))  _ ;
 !             :Vx (:Cns) (%>: %{i%}: л) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ;
 !         where Vx in ( а е ё о ы э я )
 !               Vy in ( а э о о э э а )
