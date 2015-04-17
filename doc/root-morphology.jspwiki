@@ -1,6 +1,13 @@
 
            !!!Evenki morphological analyser                      
 
+ * +A	     = 
+ * +Adv     = 
+ * +V	     = 
+ * +Pron    = 
+ * +Pers    = 
+ * +Poss    = 
+ * +Refl    = 
  * +N       = Noun
  * +Num     = Numeral
 

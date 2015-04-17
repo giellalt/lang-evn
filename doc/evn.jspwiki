@@ -12,6 +12,13 @@ This is free and open source South Sámi morphology.
 
            !!!Evenki morphological analyser                      
 
+ * +A	     = 
+ * +Adv     = 
+ * +V	     = 
+ * +Pron    = 
+ * +Pers    = 
+ * +Poss    = 
+ * +Refl    = 
  * +N       = Noun
  * +Num     = Numeral
 
