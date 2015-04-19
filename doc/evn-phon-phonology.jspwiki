@@ -15,13 +15,14 @@
  *  %{A%}:а %{A%}:э %{A%}:о  						     
  *  %{Я%}:я %{Я%}:е %{Я%}:ё %{Я%}:а %{Я%}:э %{Я%}:о     
  *  %{V%}:в %{V%}:м								     
+ *  %{R%}:р %{R%}:0 %{R%}:т %{R%}:л %{R%}:н 		     
 
  *  %{j%}:0  %{j%}:ъ              
  *  %{i%}:0 %{i%}:и %{i%}:ы          
 
  *  %>:0  ;       
 
-!!Sets
+Sets
 
  * Vow = а е ё и о у ы э ю я 						       
  *       А Е Ё И О У Ы Э Ю Я 						       
@@ -52,7 +53,7 @@ __Realise suffix vowel as i after non-t__
 
 __Assimilate possessive to plural__  
 
-__Cnsonant assimilation in suffixes__  
+__Consonant assimilation in suffixes__  
 
 __Unvoicing assimilation__  
 
@@ -77,6 +78,17 @@ __Not realising hard sign after vowel or n__
 
 
 __Realising hard sign__  
+
+
+
+
+
+
+
+
+!Other cns
+
+
 
 
 

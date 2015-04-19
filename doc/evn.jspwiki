@@ -12,6 +12,9 @@ This is free and open source South Sámi morphology.
 
            !!!Evenki morphological analyser                      
 
+!!Tags
+
+!Parts of speech
  * +A	     = 
  * +Adv     = 
  * +V	     = 
@@ -25,6 +28,7 @@ This is free and open source South Sámi morphology.
  * +Sg      = Singular
  * +Pl      = Plural
 
+!Cases
  * +Acc    = Винительный Accusative
  * +Dat    = Дателный Dative
  * +Loc    = Местный Locative
@@ -40,6 +44,7 @@ This is free and open source South Sámi morphology.
  * +Ind     = Винительный-неопределёний Indefinite Accusative
  * +Def     = ва definite acc
 
+!Possessives
  * +PxSg1   = 
  * +PxSg2   = 
  * +PxSg3   = 
@@ -49,6 +54,17 @@ This is free and open source South Sámi morphology.
  * +PxPl3   = 
 
 
+!!Verbal forms
+
+
+
+ * +Sg1   = 
+ * +Sg2   = 
+ * +Sg3   = 
+ * +Pl1   = 
+ * +Pl12  = 
+ * +Pl2   = 
+ * +Pl3   = 
 
 
 
@@ -74,13 +90,14 @@ This is free and open source South Sámi morphology.
  *  %{A%}:а %{A%}:э %{A%}:о  						     
  *  %{Я%}:я %{Я%}:е %{Я%}:ё %{Я%}:а %{Я%}:э %{Я%}:о     
  *  %{V%}:в %{V%}:м								     
+ *  %{R%}:р %{R%}:0 %{R%}:т %{R%}:л %{R%}:н 		     
 
  *  %{j%}:0  %{j%}:ъ              
  *  %{i%}:0 %{i%}:и %{i%}:ы          
 
  *  %>:0  ;       
 
-!!Sets
+Sets
 
  * Vow = а е ё и о у ы э ю я 						       
  *       А Е Ё И О У Ы Э Ю Я 						       
@@ -111,7 +128,7 @@ __Realise suffix vowel as i after non-t__
 
 __Assimilate possessive to plural__  
 
-__Cnsonant assimilation in suffixes__  
+__Consonant assimilation in suffixes__  
 
 __Unvoicing assimilation__  
 
@@ -136,6 +153,17 @@ __Not realising hard sign after vowel or n__
 
 
 __Realising hard sign__  
+
+
+
+
+
+
+
+
+!Other cns
+
+
 
 
 

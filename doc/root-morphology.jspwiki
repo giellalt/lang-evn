@@ -1,6 +1,9 @@
 
            !!!Evenki morphological analyser                      
 
+!!Tags
+
+!Parts of speech
  * +A	     = 
  * +Adv     = 
  * +V	     = 
@@ -14,6 +17,7 @@
  * +Sg      = Singular
  * +Pl      = Plural
 
+!Cases
  * +Acc    = Винительный Accusative
  * +Dat    = Дателный Dative
  * +Loc    = Местный Locative
@@ -29,6 +33,7 @@
  * +Ind     = Винительный-неопределёний Indefinite Accusative
  * +Def     = ва definite acc
 
+!Possessives
  * +PxSg1   = 
  * +PxSg2   = 
  * +PxSg3   = 
@@ -38,6 +43,17 @@
  * +PxPl3   = 
 
 
+!!Verbal forms
+
+
+
+ * +Sg1   = 
+ * +Sg2   = 
+ * +Sg3   = 
+ * +Pl1   = 
+ * +Pl12  = 
+ * +Pl2   = 
+ * +Pl3   = 
 
 
 
