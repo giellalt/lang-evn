@@ -1,22 +1,51 @@
+
+!---------------> affixes
 !! Verb inflection
 !! ---------------
-!! The Evenki verbs inflect in persons.
-
-LEXICON Persons
-+V+1sg:en   #   ;
-+V+2sg:et   #   ;
-+V+3sg:e    #   ;
-+V+1pl:ien  #   ;
-+V+2pl:iet  #   ;
-+V+3pl:iet  #   ;
-+V+inf:0    #   ;
-#:0   Nouns   ;
 
 LEXICON V_IV 
-+V+Inf: # ;
++V+IV+Inf:%>ми # ;
++V+IV: ACCIDENTS ;
 
 LEXICON V_TV 
-+V+Inf: # ;
++V+ТV+Inf:%>ми # ;
++V+TV: ACCIDENTS ;
 
+LEXICON ACCIDENTS
 
++Prs: PERS_A_SG12 ; 
++Prs:%>р%{A%} PERS_A_REST ; 
+
++Prt:%>ч%{A%}%{ː%} PERS_B ; 
++Prt+Hab:%>ӈки PERS_B ; 
++Fut1:%>д%{Я%}ӈ%{A%}%{ː%}  PERS_B ; 
+
++Fut2:%>д%{Я%}ли PERS_A_SG12 ;
++Fut2:%>д%{Я%}лл%{A%} PERS_A_REST ;
+
++Fut3:%>д%{Я%}%{ː%} PERS_B ;
+
+LEXICON PERS_A_SG12
+
++Sg1:%>м # ; 
++Sg2:%>нни # ; 
+
+LEXICON PERS_A_REST
++Sg3:%>н # ; 
+
++Pl1:%>в # ; 
++Pl12:%>п # ; 
++Pl2:%>с # ; 
++Pl3: # ; 
+
+LEXICON PERS_B
+
++Sg1:%>в # ; 
++Sg2:%>с # ; 
++Sg3:%>н # ; 
+
++Pl1:%>вун # ; 
++Pl12:%>т # ; 
++Pl2:%>сун # ; 
++Pl3:%>тын # ; 
 

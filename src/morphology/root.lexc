@@ -17,6 +17,9 @@
 ! ========================================================================== !
 Multichar_Symbols
 
+!! !!Tags
+
+!! !Parts of speech
 +A	    !!= * @CODE@ = 
 +Adv    !!= * @CODE@ = 
 +V	    !!= * @CODE@ = 
@@ -30,6 +33,7 @@ Multichar_Symbols
 +Sg     !!= * @CODE@ = Singular
 +Pl     !!= * @CODE@ = Plural
 
+!! !Cases
 +Acc   !!= * @CODE@ = Винительный Accusative
 +Dat   !!= * @CODE@ = Дателный Dative
 +Loc   !!= * @CODE@ = Местный Locative
@@ -45,6 +49,7 @@ Multichar_Symbols
 +Ind    !!= * @CODE@ = Винительный-неопределёний Indefinite Accusative
 +Def    !!= * @CODE@ = ва definite acc
 
+!! !Possessives
 +PxSg1  !!= * @CODE@ = 
 +PxSg2  !!= * @CODE@ = 
 +PxSg3  !!= * @CODE@ = 
@@ -54,6 +59,26 @@ Multichar_Symbols
 +PxPl3  !!= * @CODE@ = 
 
 
+!! !!Verbal forms
+
++Inf
+IV
+TV
+
++Prs
++Prt
++Hab
++Fut1
++Fut2
++Fut3
+
++Sg1  !!= * @CODE@ = 
++Sg2  !!= * @CODE@ = 
++Sg3  !!= * @CODE@ = 
++Pl1  !!= * @CODE@ = 
++Pl12 !!= * @CODE@ = 
++Pl2  !!= * @CODE@ = 
++Pl3  !!= * @CODE@ = 
 
 
 
@@ -64,6 +89,7 @@ Multichar_Symbols
 %{L%}                ! -л -р -н
 %{D%}                ! -д -т
 %{V%}                ! -в -м
+%{R%}                ! -р, 0
 %{G%}                ! -г -к -ӈ
 
 %{ː%}
@@ -78,6 +104,7 @@ Nouns ;
 Numerals ; 
 Pronouns ;
 Conjunctions ;
+Verbs ;
 
 LEXICON K
 # ;
