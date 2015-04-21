@@ -13,6 +13,7 @@
 
 LEXICON Nouns
 
+эвенки:эвэнки N_BIRA ;
 !асаткан:асатка N_ORON ; ! "девушка"
 !дыл:дыл N_BIRA ; ! "голова"
 авданна:авданна N_BIRA ; ! "лист"
@@ -31,8 +32,8 @@ LEXICON Nouns
 буни:буни N_BIRA ; ! "смрт"
 бурдука N_BIRA ; ! "мука"
 буюксэ N_BIRA ; ! "кровяная колбаса"
-бэе N_BIRA ; ! "человек"
 бэе:бэе N_BIRA ; ! "человек"
+бэе:бэйэ N_BIRA ; ! "человек"
 бэр:бэр N_UMUK ;	  ! "лук"  +Dat = _дӯ
 гара:гара N_BIRA ; ! "branch"
 гирамна:гирамна N_BIRA ; ! "bone"
@@ -133,4 +134,36 @@ LEXICON Nouns
 асаткан:асатка N_ORON ; !"девочка"
 сулаки:сулаки N_BIRA ; !"лиса"
 иргичи:иргичи N_BIRA ; !"волк"
-дылача:дылача N_BIRA ; !"солнце"	
+дылача:дылача N_BIRA ; !"солнце"
+акин:аки N_ORON ; ! " elder brother"
+амин:ами N_ORON ; ! "father"
+ама̄ка:ама%{ː%}ка N_BIRA ; !"grandfather"
+экин:экин	    N_ORON ; ! ""
+энин:энин	    N_ORON ; ! ""
+куӈакан:куӈакан N_ORON ; ! ""
+нэкун		    N_ORON ; ! ""
+омолги		    N_BIRA ; ! ""
+уӈэкэ 		    N_BIRA ; ! ""
+аси		    N_BIRA ; ! ""
+атки	    N_BIRA ; ! ""
+эды		    N_BIRA ; ! ""
+этки	    N_BIRA ; ! ""
+аю		    N_BIRA ; ! "ankle"
+амӈа	    N_BIRA ; ! "mouth"
+бисиме	    N_BIRA ; ! "ring-finger"
+босокто	    N_BIRA ; ! "kidney"
+ча̄:ча%{ː%} N_BIRA ; ! "cerbical tendon"
+чилки	    N_BIRA ; ! "upper arm"
+чоли	    N_BIRA ; ! "tongue"
+
+этыркэнӈэт N_UMUK ; ! ""
+атырканӈат N_UMUK ; ! ""
+асиӈат	   N_UMUK ; ! ""
+
+бокан:бока    N_ORON ; ! ""
+аркан:арка    N_ORON ; ! ""
+анчан:анча    N_ORON ; ! ""
+атыркан:атырка  N_ORON ; ! ""
+кукин:куки    N_ORON ; ! ""
+
+

@@ -8,6 +8,8 @@ LEXICON Pronouns
 Personal ;
 Reflexive ;
 Possessive ;
+Determinative ;
+Interrogative ;
 
 LEXICON Personal 
  pers_nom ;
@@ -32,11 +34,11 @@ LEXICON pers_acc
 нуӈартан+Pron+Pers+Pl3+Acc+Def:нуӈарватын  # ;
 
 LEXICON pers_obl
-б%{ː%}+Pron+Pers+Sg1:мин 	PERS_CASE_OBL_LN ;
-б%{ː%}+Pron+Pers+Pl1:мун 	PERS_CASE_OBL_LN ;
+бӣ+Pron+Pers+Sg1:мин 	PERS_CASE_OBL_LN ;
+бӣ+Pron+Pers+Pl1:мун 	PERS_CASE_OBL_LN ;
 мит+Pron+Pers+Pl12:мит 	PERS_CASE_OBL_MIT ;
-си%{ː%}+Pron+Pers+Sg2:син 	PERS_CASE_OBL_LN ;
-су%{ː%}+Pron+Pers+Пл2:сун 	PERS_CASE_OBL_LN ;
+сӣ+Pron+Pers+Sg2:син 	PERS_CASE_OBL_LN ;
+сӯ+Pron+Pers+Pl2:сун 	PERS_CASE_OBL_LN ;
 нуӈан+Pron+Pers+Sg3:нуӈан  PERS_CASE_OBL_3SG ;
 нуӈартан+Pron+Pers+Pl3:нуӈар  PERS_CASE_OBL_3PL ;
 
@@ -128,5 +130,110 @@ LEXICON Possessive
 синӈӣ+Pron+Poss+Sg2:синӈи%{ː%} # ;
 сунӈӣ+Pron+Poss+Pl2:сунӈи%{ː%} # ;
 
+LEXICON Determinative
+
+а̄ды̄+Det:а%{ː%}ды%{ː%} # ; !"сколько"
+асӯн+Det:асу%{ː%}н # ; !"сколько"
+
+
+эр+Det+Sg+Nom:эр	    # ;
+эр+Det+Sg+Acc+Def:эрэвэ # ;
+эр+Det+Sg+Dat:эрэ	    # ;
+эр+Det+Sg+Loc:эду%{ː%}	    # ;
+эр+Det+Sg+All:элэ%{ː%}	    # ;
+эр+Det+Sg+Prl:эртыки%{ː%}	    # ;
+эр+Det+Sg+Ter:эли%{ː%}	    # ;
+эр+Det+Sg+Dir:эриклэ%{ː%}	    # ;
+эр+Det+Sg+Abl:эрикли%{ː%}	    # ;
+эр+Det+Sg+Abl:эдук	    # ;
+эр+Det+Sg+Ela:эргит	    # ;
+эр+Det+Sg+Ins:эрит	    # ;
+эр+Det+Sg+Com:эрнун	    # ;
+
+эр+Det+Pl+Nom:эрил	    # ;
+эр+Det+Pl+Acc+Def:эрилвэ # ;
+эр+Det+Pl+Dat:эрилэ	    # ;
+эр+Det+Pl+Loc:эрилду%{ː%}	    # ;
+эр+Det+Pl+All:эрилдулэ%{ː%}	    # ;
+эр+Det+Pl+Prl:эрилтыки%{ː%}	    # ;
+эр+Det+Pl+Ter:эрили%{ː%}	    # ;
+эр+Det+Pl+Dir:эриликлэ%{ː%}	    # ;
+эр+Det+Pl+Abl:эриликли%{ː%}	    # ;
+эр+Det+Pl+Abl:эрилдук	    # ;
+эр+Det+Pl+Ela:эрилгит	    # ;
+эр+Det+Pl+Ins:эрилди	    # ;
+эр+Det+Pl+Com:эрилнун	    # ;
+
+тар+Det+Sg+Nom:тар	    # ;
+тар+Det+Sg+Acc+Def:тарва # ;
+тар+Det+Sg+Dat:тара	    # ;
+тар+Det+Sg+Loc:тарду%{ː%}	    # ;
+тар+Det+Sg+All:тарда%{ː%}	    # ;
+тар+Det+Sg+Prl:тартыки%{ː%}	    # ;
+тар+Det+Sg+Ter:тарли%{ː%}	    # ;
+тар+Det+Sg+Dir:тарикла%{ː%}	    # ;
+тар+Det+Sg+Abl:тарикли%{ː%}	    # ;
+тар+Det+Sg+Abl:тадук	    # ;
+тар+Det+Sg+Ela:таргит	    # ;
+тар+Det+Sg+Ins:тарит	    # ;
+тар+Det+Sg+Com:тарнун	    # ;
+
+тар+Det+Pl+Nom:тарил	    # ;
+тар+Det+Pl+Acc+Def:тарилва # ;
+тар+Det+Pl+Dat:тарила	    # ;
+тар+Det+Pl+Loc:тарилду%{ː%}	    # ;
+тар+Det+Pl+All:тарилдула%{ː%}	    # ;
+тар+Det+Pl+Prl:тарилтыки%{ː%}	    # ;
+тар+Det+Pl+Ter:тарилли%{ː%}	    # ;
+тар+Det+Pl+Dir:тариликла%{ː%}	    # ;
+тар+Det+Pl+Abl:тариликли%{ː%}	    # ;
+тар+Det+Pl+Abl:тадук	    # ;
+тар+Det+Pl+Ela:тарилгит	    # ;
+тар+Det+Pl+Ins:тарилит	    # ;
+тар+Det+Pl+Com:тарилнун	    # ;
+
+упкат+Det:упкат # ;
+ӈи-вэл+Det:ӈи-вэл # ; !"somebody"
+экун-мал+Det:экун-мал # ; !"something"
+
+
+LEXICON Interrogative
+ӈӣ+Pron+Interr:ӈи%{ː%} PronV ; !"who"
+экун+Pron+Pers:экун PronR ; !"what"
+экур+Pron+Pers:экур PronN ; !"what"
+
+LEXICON PronV
+
++Sg+Nom:	    # ;
++Sg+Acc+Def:вэ # ;
++Sg+Acc:e # ;
++Sg+Dat:ду%{ː%}	    # ;
++Sg+Loc:ла%{ː%}	    # ;
++Sg+All:тки%{ː%}	    # ;
++Sg+Prl:ли%{ː%}	    # ;
++Sg+Ter:кла%{ː%}	    # ;
++Sg+Dir:кли%{ː%}	    # ;
++Sg+Abl:дук	    # ;
++Sg+Ela:гит	    # ;
++Sg+Ins:т	    # ;
++Sg+Com:нун	    # ;
++Pl+Nom:л	    # ;
++Pl+Acc+Def:лвэ # ;
++Pl+Acc:лe # ;
++Pl+Dat:лду%{ː%}	    # ;
++Pl+Loc:лла%{ː%}	    # ;
++Pl+All:лтыки%{ː%}	    # ;
++Pl+Prl:лдули%{ː%}	    # ;
++Pl+Ter:ликла%{ː%}	    # ;
++Pl+Dir:ликли%{ː%}	    # ;
++Pl+Abl:лдук	    # ;
++Pl+Ela:лгит	    # ;
++Pl+Ins:лт	    # ;
++Pl+Com:лнун	    # ;
+
+LEXICON PronR
+#;
+LEXICON PronN
+#;
 
 ! vim: set ft=xfst-lexc:

@@ -24,7 +24,7 @@ Alphabet
  
  %{j%}:0  %{j%}:ъ              !!= * @CODE@
  %{i%}:0 %{i%}:и %{i%}:ы          !!= * @CODE@
-
+ %{U%}:и %{U%}:у  %{U%}:0  !!= * @CODE@
  %>:0  ;       !!= * @CODE@
 
 !! !! Sets
@@ -37,14 +37,14 @@ Vow = а е ё и о у ы э ю я 						       !!= * @CODE@
 
 Cns = б в г д ж з й к л м н ӈ п р с т ф х ц ч ш щ      !!= * @CODE@
       Б В Г Д Ж З Й К Л М Н Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;    !!= * @CODE@
-
+ArchiCns = %{D%} %{G%} %{L%} %{R%} %{V%} ;			       !!= * @CODE@
 Nasal = м н ӈ									       !!= * @CODE@
         М Н Ӈ ; 								       !!= * @CODE@
 
 NonLN = б в г д ж з й к м ӈ п р с т ф х ц ч ш щ        !!= * @CODE@
         Б В Г Д Ж З Й К М Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;      !!= * @CODE@
 
-VoicelessCns = к с т п ;    !!= * @CODE@
+UnvoicedCns = к с т п ;    !!= * @CODE@
 VoicedCns1 = б в г д щ з й м р ; 
 
 
@@ -79,7 +79,7 @@ Rules
 
 "Unvoicing assimilation"
 !! __@RULENAME@__  
-%{D%}:т <=> :VoicelessCns %>: _ ; 
+%{D%}:т <=> :UnvoicedCns %>: _ ; 
 
 !€ дэт>{D}ук
 !€ дэт0тук
@@ -87,7 +87,7 @@ Rules
 
 "Voicing assimilation"
 !! __@RULENAME@__  
-!%{D%}:д <=> [:Vow| %{ː%}: | [:Cns - :VoicelessCns]] %>: _ ; 
+!%{D%}:д <=> [:Vow| %{ː%}: | [:Cns - :UnvoicedCns]] %>: _ ; 
 %{D%}:д <=> [Vow|л|р] (%{ː%}:)  %>: _ ; 
 
 !€ ю{ː}>{D}
@@ -107,9 +107,6 @@ Rules
 
 !€ урэ>{i}л>{V}{A}
 !€ урэ00л0вэ
-
-!€ урэ>{i}л>{j}{A}
-!€ урэ00л00е
 
 
 !! !Palatalisation
@@ -144,39 +141,60 @@ Rules
 !€ дю{ː}>{D}у{ː}>{i}в
 !€ дю̄0дӯ00в
 
+!htest с а %{ː%}:̄ >:0 м и %{ː%}:̄
+
+!! !Other vowel rules
+
+"Epenthetic vowel u-i-0 before present tense markers u"
+%{U%}:у <=> :VoicedCns1 _ %>: ;
+
+"Epenthetic vowel u-i-0 before present tense markers i"
+%{U%}:и <=> [:UnvoicedCns|л|м|ӈ|н] _ %>: ;
+
+"Epenthetic vowel u-i-0 before present tense markers 0"
+%{U%}:0 <=> Vow (%{ː%}:) _ %>: ;
+
+!htest с а %{ː%}:̄ %{U%}:0 >:0 
+
+
+!! !!Consonant rules
 
 !! !Other cns
 
 "Present tense realised as ra"
-%{R%}:р <=> [:Vow|:VoicedCns1] %>: _ ;
+%{R%}:р <=> [:Vow (%{ː%}:)|:VoicedCns1] %>: _ ;
 
-!€ са>{R}{A}>н
-!€ са00э0н
+!€ са{ː}>{R}{A}>н
+!€ са̄0ра0н
+!htest с а {ː}:̄ >:0 {R}:р {A}:а >:0 н
 
 "Present tense realised as ta"
-%{R%}:т <=> :VoicelessCns %>: _ ;
+%{R%}:т <=> :UnvoicedCns %>: _ ;
 
 !€ ис>{R}{A}>н
 !€ ис0та0н
+!htest и с >:0 {R}:т {A}:а >:0 н
 
 "Present tense realised as la"
-%{R%}:л <=> л				 %>: _ ;
+%{R%}:л <=> л %>: _ ;
 
 !€ мел>{R}{A}>н
 !€ мел0ла0н
+!htest м е {ː}:̄ л >:0 {R}:л {A}:а >:0 н
 
 "Present tense realised as na"
-%{R%}:н <=> [м|ӈ]				 %>: _ ;
+%{R%}:н <=> [м|ӈ] %>: _ ;
 
 !€ уӈ>{R}{A}>н
 !€ уӈ0нэ0н
+!htest у ӈ >:0 {R}:н {A}:э >:0 н
 
 "Present tense realised as a"
-%{R%}:0 <=> н				 %>: _ ;
+%{R%}:0 <=> н %>: _ ;
 
 !€ гун>{R}{A}>н
 !€ гун00э0н
-
+!htest г у н >:0 {R}:0 {A}:э >:0 н
 
 !! !Vowel harmony
 ! TODO: Short/Long
@@ -187,12 +205,14 @@ Rules
 !               Vy in ( э а о а а э э )
 !         matched ;
 
-"Short vowel harmony for A"
-!! __@RULENAME@__  
-%{A%}:Vy <=> :Vx (%{ː%}:) (:Cns)  %>: ([(%{i%}:) :Cns %>:]) ([%{j%}:|:Cns (:Cns)|(:Cns)])  _ ;
-             :Vx (%{ː%}:) (:Cns) (%>: %{i%}: л) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ; !Pl
-         where Vx in ( а е ё о э я ю )
-               Vy in ( а э о о э а а )
+"Vowel harmony for A, main rule"
+!! __@RULENAME@__  (note е->а)
+%{A%}:Vy <=> :Vx (%{ː%}:) (:Cns)                (%{U%}:) %>: ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
+             :Vx (%{ː%}:) (:Cns) ([:и|:ы] :Cns) (%{U%}:) %>: ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
+             :Vx (%{ː%}:)  :Cns                 (%{U%}:) %>: (ArchiCns:) _ ;
+             :Vx (%{ː%}:) (:Cns) (%>: %{i%}: л) (%{U%}:) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ; !Pl
+         where Vx in ( а е ё у э я ю )
+               Vy in ( а а о э э а а )
          matched ;
 
 !€ урэ>{i}кл{A}{ː}
@@ -204,25 +224,47 @@ Rules
 !€ бэр>{D}ул{A}{ː}
 !€ бэр0дулэ̄
 
-!"Short vowel harmony for {A} following i"
+!€ тэтыврэв
+!€ тэтыврэв
+!htest т э т ы в >:> {R}:р {A}:э в
+
+"Vowel harmony for {A} following i"
 !! __@RULENAME@__  
-!%{A%}:Vy <=> [:и|:у|:ы] (:Cns)  %>:   ( [(%{i%}:) :Cns %>:]) ( [%{j%}: | :Cns (:Cns)] (%>:))  _ ;
-!             :Vx (:Cns) (%>: %{i%}: л) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ;
-!         where Vx in ( а е ё о ы э я )
-!               Vy in ( а э о о э э а )
-!         matched ;
+%{A%}:а <=> .#. Cns:* [:и|:ы] (:Cns)                %>: ([(%{i%}:) :Cns %>:]) (:Cns (:Cns) (%>:))  _ ;
+            .#. Cns:* [:и|:ы] (:Cns) (%>: %{i%}: л) %>:   (%{i%}:) :Cns* :Vow* :Cns*  _ ;
+
+"Vowel harmony for A following o"
+!! __@RULENAME@__  short o gives o
+%{A%}:o <=> о (:Cns)                (%{U%}:) %>: ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
+            о (:Cns) ([:и|:ы] :Cns) (%{U%}:) %>: ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
+            о :Cns                  (%{U%}:) %>: (ArchiCns:) _ ;
+            о (:Cns) (%>: %{i%}: л) (%{U%}:) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ; !Pl
+
+"Vowel harmony for A following long o"
+!! __@RULENAME@__  long o gives a
+%{A%}:а <=> о %{ː%}: (:Cns)                (%{U%}:) %>: ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
+            о %{ː%}: (:Cns) ([:и|:ы] :Cns) (%{U%}:) %>: ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
+            о %{ː%}: :Cns                  (%{U%}:) %>: (ArchiCns:) _ ;
+            о %{ː%}: (:Cns) (%>: %{i%}: л) (%{U%}:) %>: (%{i%}:) :Cns* :Vow* :Cns* _ ; !Pl
 
 
 "Palatalised short vowel harmony for A"
 !! __@RULENAME@__  
-%{A%}:Vy <=> :Vx (%{ː%}:) ([:NonLN]) %>: ([(%{i%}:) :NonLN %>:]) %{j%}:  _ ;
+!%{A%}:Vy <=> :Vx (%{ː%}:) ([:NonLN]) %>: ([(%{i%}:) :NonLN %>:]) %{j%}:  _ ;
+ %{A%}:Vy <=> :Vx (%{ː%}:) ([:NonLN]) %>: ([(%{i%}:) :Cns   %>:]) %{j%}:  _ ;
          where Vx in ( а е ё о э я ю )
                Vy in ( я е ё ё е я я )
          matched ;
-
 
 !€ урэ>{i}л>{j}{A}
 !€ урэ00л00е
 
 !€ орон>{j}{A}
 !€ орон00о
+
+!htest с а {ː}:̄ >:0 м и {ː}:̄
+
+
+!€ test
+!€ fail
+

@@ -29,6 +29,9 @@ Multichar_Symbols
 +Refl   !!= * @CODE@ = 
 +N      !!= * @CODE@ = Noun
 +Num    !!= * @CODE@ = Numeral
++Prop
++Det
++Interr
 
 +Sg     !!= * @CODE@ = Singular
 +Pl     !!= * @CODE@ = Plural
@@ -62,8 +65,12 @@ Multichar_Symbols
 !! !!Verbal forms
 
 +Inf
-IV
-TV
++IV
++TV
+
++Ind
++Imp
++Neg
 
 +Prs
 +Prt
@@ -71,6 +78,7 @@ TV
 +Fut1
 +Fut2
 +Fut3
++Iter
 
 +Sg1  !!= * @CODE@ = 
 +Sg2  !!= * @CODE@ = 
@@ -80,20 +88,24 @@ TV
 +Pl2  !!= * @CODE@ = 
 +Pl3  !!= * @CODE@ = 
 
++PUNCT
++CLB
++RIGHT
++LEFT
 
 
-
-%{j%}                ! -и -ø
-%{i%}                ! -и -ø
-%{A%}                ! -а -э -о
-%{L%}                ! -л -р -н
-%{D%}                ! -д -т
-%{V%}                ! -в -м
-%{R%}                ! -р, 0
-%{G%}                ! -г -к -ӈ
-
-%{ː%}
-%>                   ! 
+%{j%}  !!= * @CODE@ =  -и -ø
+%{i%}  !!= * @CODE@ =  -и -ø
+%{A%}  !!= * @CODE@ =  -а -э -о
+%{L%}  !!= * @CODE@ =  -л -р -н
+%{D%}  !!= * @CODE@ =  -д -т
+%{V%}  !!= * @CODE@ =  -в -м
+%{R%}  !!= * @CODE@ =  -р, 0
+%{G%}  !!= * @CODE@ =  -г -к -ӈ
+%{Я%}  !!= * @CODE@ = 
+%{U%}  !!= * @CODE@ = -у-, -и-
+%{ː%}  !!= * @CODE@ = long vowel (lexc lower side)
+%>     !!= * @CODE@ =  
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -104,7 +116,10 @@ Nouns ;
 Numerals ; 
 Pronouns ;
 Conjunctions ;
+Interjections ;
 Verbs ;
+Propernouns ;
+Punctuation ;
 
 LEXICON K
 # ;

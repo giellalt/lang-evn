@@ -1,32 +1,13 @@
-# Skolt Saami #SoMe spellrelax file.
+# Evenki SoMe spellrelax file.
 
-đ (->)  d ,
-ŋ (->)  n ,
-á (->)  a ,
-Á (->)  A ,
-ä (->)  æ ,
-Ä (->)  Æ ,
-ö (->)  ø ,
-Ö (->)  Ø ,
-â (->)  a ,
-Â (->)  A ,
-õ (->)  o ,
-Õ (->)  O ,
-č (->)  c ,
-Č (->)  C ,
-ǯ (->)  z ,
-Ǯ (->)  Z ,
-ǧ (->)  g ,
-Ǧ (->)  G ,
-ǥ (->)  g ,
-Ǥ (->)  G ,
-ǩ (->)  k ,
-Ǩ (->)  K ,
-š (->)  s ,
-Š (->)  S ,
-ž (->)  z ,
-Ž (->)  Z ;
-
+а̄ (->) а, # Tolerate short vowel for correct long
+е̄ (->) е, # Tolerate short vowel for correct long
+о̄ (->) о, # Tolerate short vowel for correct long
+ӯ (->) у, # Tolerate short vowel for correct long
+ы̄ (->) ы, # Tolerate short vowel for correct long
+ю̄ (->) ю, # Tolerate short vowel for correct long
+я̄ (->) я, # Tolerate short vowel for correct long
+ӣ (->) и; # Tolerate short vowel for correct long
 
 # Explanation:
 # lexical side (->) input 

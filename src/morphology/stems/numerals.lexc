@@ -16,7 +16,12 @@ LEXICON NUM_ORON
 
 
 LEXICON Numerals
+Cardinals ;
+Ordinals ;
+Collective ;
+Numeral_derivations ;
 
+LEXICON Cardinals
 умӯн:уму%{ː%} NUM_ORON ; ! "1 "
 дю̄р:дю%{ː%}р NUM_UMUK ; ! "2 "
 илан:ила NUM_ORON ; ! "3 "
@@ -34,5 +39,31 @@ LEXICON Numerals
 тунӈадя̄р:тунӈадя%{ː%}р NUM_UMUK ; ! "50 "
 
 нямадӣ:нямади%{ː%} NUM_UMUK ; ! "100 "
+
+
+LEXICON Numeral_derivations
+numder_ones ;
+numder_more ;
+
+LEXICON numder_ones 
+ум+Adv:умнэ%{ː%} # ;
+ум+Adv:умутэл # ;
+
+LEXICON numder_more 
+дю̄р:дю%{ː%}  numdertypes ;
+илан:ила 	  numdertypes ;
+дыгин:дыги 	  numdertypes ;
+тунӈа:тунӈа   numdertypes ;
+нюӈун:нюӈу 	  numdertypes ;
+надан:нада 	  numdertypes ;
+дяпкун:дяпку  numdertypes ;
+егин:еги 	  numdertypes ;
+дя̄н:дя%{ː%}  numdertypes ;
+
+LEXICON numdertypes
++Adv:%>гд%{A%} # ;
++Adv:%>р%{A%}%{ː%} # ;
++Adv:%>т%{A%}л # ;
+
 
 ! vim: set ft=xfst-lexc:

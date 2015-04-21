@@ -19,7 +19,7 @@
 
  *  %{j%}:0  %{j%}:ъ              
  *  %{i%}:0 %{i%}:и %{i%}:ы          
-
+ *  %{U%}:и %{U%}:у  %{U%}:0  
  *  %>:0  ;       
 
 Sets
@@ -31,14 +31,14 @@ Sets
 
  * Cns = б в г д ж з й к л м н ӈ п р с т ф х ц ч ш щ      
  *       Б В Г Д Ж З Й К Л М Н Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;    
-
+ * ArchiCns = %{D%} %{G%} %{L%} %{R%} %{V%} ;			       
  * Nasal = м н ӈ									       
  *         М Н Ӈ ; 								       
 
  * NonLN = б в г д ж з й к м ӈ п р с т ф х ц ч ш щ        
  *         Б В Г Д Ж З Й К М Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;      
 
- * VoicelessCns = к с т п ;    
+ * UnvoicedCns = к с т п ;    
 
 
 !!Rules
@@ -70,7 +70,6 @@ __Default realisaton of V __
 
 
 
-
 !Palatalisation
 
 
@@ -86,8 +85,16 @@ __Realising hard sign__
 
 
 
-!Other cns
+!Other vowel rules
 
+
+
+
+
+
+!!Consonant rules
+
+!Other cns
 
 
 
@@ -102,15 +109,23 @@ __Realising hard sign__
 !Vowel harmony
 
 
-__Short vowel harmony for A__  
+__Vowel harmony for A, main rule__  (note е->а)
 
 
 
 
-__Short vowel harmony for A__  
+
+__Vowel harmony for {A} following i__  
+
+__Vowel harmony for A following o__  short o gives o
+
+__Vowel harmony for A following long o__  long o gives a
 
 
 __Palatalised short vowel harmony for A__  
+
+
+
 
 
 
