@@ -1,0 +1,95 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+
+Tests:
+
+  Verb - бимӣ: # быть irregular
+    бимӣ+V+IV+Inf: бимӣ
+    бимӣ+V+IV+Ind+Prs+Sg1: бисим
+
+  Verb - са̄мӣ: # знать vowel
+    са̄мӣ+V+TV+Inf: са̄мӣ
+    са̄мӣ+V+TV+Inf: са̄мӣ
+    са̄мӣ+V+TV+Ind+Prs+Sg1: са̄м
+    са̄мӣ+V+TV+Ind+Prs+Sg2: са̄нни
+    са̄мӣ+V+TV+Ind+Prs+Sg3: са̄ран
+    са̄мӣ+V+TV+Ind+Prs+Pl1: са̄рав
+    са̄мӣ+V+TV+Ind+Prs+Pl12: са̄рап
+    са̄мӣ+V+TV+Ind+Prs+Pl2: са̄рас
+    са̄мӣ+V+TV+Ind+Prs+Pl3: са̄ра
+
+  Verb - тэтывмӣ: # одеть voiced cns
+    тэтывмӣ+V+TV+Inf: тэтывмӣ
+    тэтывмӣ+V+TV+Ind+Prs+Sg1: тэтывум
+    тэтывмӣ+V+TV+Ind+Prs+Sg2: тэтывунни
+    тэтывмӣ+V+TV+Ind+Prs+Sg3: тэтыврэн
+    тэтывмӣ+V+TV+Ind+Prs+Pl1: тэтыврэв
+    тэтывмӣ+V+TV+Ind+Prs+Pl12: тэтыврэп
+    тэтывмӣ+V+TV+Ind+Prs+Pl2: тэтыврэс
+    тэтывмӣ+V+TV+Ind+Prs+Pl3: тэтыврэ
+
+  Verb - исмӣ: # доити voiceless cns
+    исмӣ+V+IV+Inf: исмӣ 
+    исмӣ+V+IV+Ind+Prs+Sg1: исим
+    исмӣ+V+IV+Ind+Prs+Sg2: исинни
+    исмӣ+V+IV+Ind+Prs+Sg3: истан
+    исмӣ+V+IV+Ind+Prs+Pl1: истав
+    исмӣ+V+IV+Ind+Prs+Pl12: истап
+    исмӣ+V+IV+Ind+Prs+Pl2: истас
+    исмӣ+V+IV+Ind+Prs+Pl3: иста
+
+  Verb - ме̄лмӣ: # проснуться л
+    ме̄лмӣ+V+IV+Inf: ме̄лмӣ 
+    ме̄лмӣ+V+IV+Ind+Prs+Sg1: ме̄лим
+    ме̄лмӣ+V+IV+Ind+Prs+Sg2: ме̄линни
+    ме̄лмӣ+V+IV+Ind+Prs+Sg3: ме̄ллан
+    ме̄лмӣ+V+IV+Ind+Prs+Pl1: ме̄ллав
+    ме̄лмӣ+V+IV+Ind+Prs+Pl12: ме̄ллап
+    ме̄лмӣ+V+IV+Ind+Prs+Pl2: ме̄ллас
+    ме̄лмӣ+V+IV+Ind+Prs+Pl3: ме̄лла
+
+  Verb - уӈмӣ: # послать м, ӈ
+    уӈмӣ+V+IV+Inf: уӈмӣ 
+    уӈмӣ+V+IV+Ind+Prs+Sg1: уӈим
+    уӈмӣ+V+IV+Ind+Prs+Sg2: уӈинни
+    уӈмӣ+V+IV+Ind+Prs+Sg3: уӈнэн
+    уӈмӣ+V+IV+Ind+Prs+Pl1: уӈнэв
+    уӈмӣ+V+IV+Ind+Prs+Pl12: уӈнэп
+    уӈмӣ+V+IV+Ind+Prs+Pl2: уӈнэс
+    уӈмӣ+V+IV+Ind+Prs+Pl3: уӈнэ
+
+  Verb - гунмӣ: # сказать voiceless cns
+    гунмӣ+V+TV+Inf: гунмӣ 
+    гунмӣ+V+TV+Ind+Prs+Sg1: гуним
+    гунмӣ+V+TV+Ind+Prs+Sg2: гунинни
+    гунмӣ+V+TV+Ind+Prs+Sg3: гунэн
+    гунмӣ+V+TV+Ind+Prs+Pl1: гунэв
+    гунмӣ+V+TV+Ind+Prs+Pl12: гунэп
+    гунмӣ+V+TV+Ind+Prs+Pl2: гунэс
+    гунмӣ+V+TV+Ind+Prs+Pl3: гунэ
+
+  Verb - о̄мӣ: # делать
+    о̄мӣ+V+TV+Inf: о̄мӣ
+    о̄мӣ+V+TV+Ind+Prt+Sg1: о̄ча̄в
+    о̄мӣ+V+TV+Ind+Prt+Sg2: о̄ча̄с
+    о̄мӣ+V+TV+Ind+Prt+Sg3: о̄ча̄н
+    о̄мӣ+V+TV+Ind+Prt+Pl1: о̄ча̄вун
+    о̄мӣ+V+TV+Ind+Prt+Pl12: о̄ча̄т
+    о̄мӣ+V+TV+Ind+Prt+Pl2: [о̄ча̄сун, о̄ча̄хун]
+    о̄мӣ+V+TV+Ind+Prt+Pl3: о̄ча̄тын
+    о̄мӣ+V+TV+Ind+Prt+Iter+Sg1: о̄ӈкив
+    о̄мӣ+V+TV+Ind+Prt+Iter+Sg2: о̄ӈкис
+    о̄мӣ+V+TV+Ind+Prt+Iter+Sg3: о̄ӈкин
+    о̄мӣ+V+TV+Ind+Prt+Iter+Pl1: о̄ӈкивун
+    о̄мӣ+V+TV+Ind+Prt+Iter+Pl12: о̄ӈкит
+    о̄мӣ+V+TV+Ind+Prt+Iter+Pl2: [о̄ӈкисун, о̄ӈкихун]
+    о̄мӣ+V+TV+Ind+Prt+Iter+Pl3: о̄ӈкитын
+    
+
