@@ -17,8 +17,8 @@ LEXICON NUM_ORON
 
 LEXICON Numerals
 Cardinals ;
-Ordinals ;
-Collective ;
+!Ordinals ;
+!Collective ;
 Numeral_derivations ;
 
 LEXICON Cardinals
