@@ -17,60 +17,14 @@
 
 ####### Source file defs: ########
 
-#! @param GT_TAGSET_SRCS - manually written tagset source files
-#! @param GT_GENERATED_TAGSET_SRCS - automatically generated tagset source files
+#! @param GT_TAGSET_RGX_SRCS     - manually written regex tagset source files
+#! @param GT_TAGSET_RELABEL_SRCS - manually written hfst-relabel tagset sources
 
-GT_TAGSET_SRCS=
-GT_GENERATED_TAGSET_SRCS=
+GT_TAGSET_RGX_SRCS=
+GT_TAGSET_RELABEL_SRCS=
 
-####### Automake targets: ########
+####### Includes: ########
 
-# The transducers we build and don't distribute depend on the configuration:
-GT_TAGSETS=
-
-if CAN_HFST
-GT_TAGSETS+=
-
-if WANT_APERTIUM
-GT_GENERATED_TAGSET_SRCS+=apertium.relabel
-endif WANT_APERTIUM
-endif # CAN_HFST
-
-if CAN_XFST
-GT_TAGSETS+=
-endif # CAN_XFST
-
-GT_REGEX_TARGETS=$(GT_TAGSETS) $(GT_GENERATED_TAGSET_SRCS)
-GT_REGEX_SRCS=$(GT_TAGSET_SRCS)
-
-####### HFST build rules: ########
-
-# Convert GT-tags to Apertium-tags:
-apertiumtags.txt: ../filters/gttags.txt
-	$(AM_V_GEN)tr -d '+' < $< \
-		| tr '#' '+' \
-		| tr '/[:upper:]' '_[:lower:]' \
-		| awk '{print "%<"$$0"%>"}' > $@
-
-# Generate relabel file for replacing GT with Apertium tags:
-apertium.relabel: ../filters/gttags.txt apertiumtags.txt
-	$(AM_V_GEN)paste $^ | tr -d '%' > $@
-	$(AM_V_GEN)printf "#\t+\n" >> $@
-
-# The regex generating rule isn't used for hfst, but the target below can be
-# a useful reference for future Xerox relabeling targets.
-## Generate regex for replacing GT with Apertium tags:
-#apertium.regex: ../filters/gttags.txt apertiumtags.txt
-#	$(AM_V_GEN)paste $^ \
-#		| awk '{print $$0","}' \
-#		| sed 's/_/%_/g' \
-#		| sed 's/-/%-/g' \
-#		| sed 's/\//%\//g' \
-#		| sed '$$ s/,/;/' \
-#		| sed 's/^/%/' \
-#		| sed 's/	/ -> /g' \
-#		> $@
-
-include $(top_srcdir)/am-shared/regex-include.am
+include $(top_srcdir)/am-shared/src-tagsets-dir-include.am
 
 # vim: set ft=automake:

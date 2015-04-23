@@ -10,58 +10,208 @@
 
 This is free and open source South Sámi morphology.
 
-           !!!Evenki morphological analyser                      !
-INTRODUCTION TO MORPHOLOGICAL ANALYSER OF Evenki.
+           !!!Evenki morphological analyser                      
+
+!!Tags
+
+!Parts of speech
+ * +A	     = 
+ * +Adv     = 
+ * +V	     = 
+ * +Pron    = 
+ * +Pers    = 
+ * +Poss    = 
+ * +Refl    = 
+ * +N       = Noun
+ * +Num     = Numeral
+
+ * +Sg      = Singular
+ * +Pl      = Plural
+
+!Cases
+ * +Acc    = Винительный Accusative
+ * +Dat    = Дателный Dative
+ * +Loc    = Местный Locative
+ * +All    = Направителый Allative
+ * +Prl    = Продольный Prolative
+ * +Ter    = Направительно-местный Terminative
+ * +Dir    = Направительно-продольный Directive
+ * +Abl    = Отложительный Ablative
+ * +Ela    = Исходный Elative
+ * +Ins    = Творительный Instrumental
+ * +Com    = Совместный Comitative
+
+ * +Ind     = Винительный-неопределёний Indefinite Accusative
+ * +Def     = ва definite acc
+
+!Possessives
+ * +PxSg1   = 
+ * +PxSg2   = 
+ * +PxSg3   = 
+ * +PxPl1   = 
+ * +PxPl12  = 
+ * +PxPl2   = 
+ * +PxPl3   = 
 
 
- !!!Multichar_Symbols definitions
-
-!!Analysis symbols
-----------------
-The morphological analyses of wordforms of UNDEFINED language are presented
-in this system in terms of following symbols.
-(It is highly suggested to follow existing standards when adding new tags).
-
-The parts-of-speech are:
-
-The parts of speech are further split up into:
-
-The Usage extents are marked using following tags:
-
-The nominals are inflected in the following Case and Number
-
-The possession is marked as such:
-The comparative forms are:
-Numerals are classified under:
-Verb moods are:
-Verb personal forms are:
-Other verb forms are
-
-Special symbols are classified with:
-The verbs are syntactically split according to transitivity:
-Special multiword units are analysed with:
-Non-dictionary words can be recognised with:
-
-Question and Focus particles:
+!!Verbal forms
 
 
-Semantics are classified with
 
 
-Derivations are classified under the morphophonetic form of the suffix, the
-source and target part-of-speech.
+ * +Sg1   = 
+ * +Sg2   = 
+ * +Sg3   = 
+ * +Pl1   = 
+ * +Pl12  = 
+ * +Pl2   = 
+ * +Pl3   = 
 
 
-Morphophonology
----------------
-To represent phonologic variations in word forms we use the following
-symbols in the lexicon files:
 
-And following triggers to control variation
+ * %{j%}   =  -и -ø
+ * %{i%}   =  -и -ø
+ * %{A%}   =  -а -э -о
+ * %{L%}   =  -л -р -н
+ * %{D%}   =  -д -т
+ * %{V%}   =  -в -м
+ * %{R%}   =  -р, 0
+ * %{G%}   =  -г -к -ӈ
+ * %{Я%}   = 
+ * %{U%}   = -у-, -и-
+ * %{ː%}   = long vowel (lexc lower side)
+ * %>      =  
 
-We have manually optimised the structure of our lexicon using following
-flag diacritics to restrict morhpological combinatorics:
 
-The word forms in Evenki start from the lexeme roots of basic
-word classes, or optionally from prefixes:
+
+!!!The Evenki morphophonological/twolc rules file 
+
+!!Alphabet
+
+ *  а б в г д е ё ж з и й к л м н ӈ о п р с т у ф х ц ч ш щ ъ ы ь э ю я  
+ *  А Б В Г Д Е Ё Ж З И Й К Л М Н Ӈ О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я  
+
+
+
+ *  %{ː%}:̄  
+
+ *  %{L%}:л %{L%}:р								     
+ *  %{G%}:г %{G%}:к %{G%}:ӈ						     
+ *  %{D%}:д %{D%}:т 								     
+ *  %{A%}:а %{A%}:э %{A%}:о  						     
+ *  %{Я%}:я %{Я%}:е %{Я%}:ё %{Я%}:а %{Я%}:э %{Я%}:о     
+ *  %{V%}:в %{V%}:м								     
+ *  %{R%}:р %{R%}:0 %{R%}:т %{R%}:л %{R%}:н 		     
+
+ *  %{j%}:0  %{j%}:ъ              
+ *  %{i%}:0 %{i%}:и %{i%}:ы          
+ *  %{U%}:и %{U%}:у  %{U%}:0  
+ *  %>:0  ;       
+
+Sets
+
+ * Vow = а е ё и о у ы э ю я 						       
+ *       А Е Ё И О У Ы Э Ю Я 						       
+ *       а̄ е̄ ӣ э̄ ӯ о̄							       
+ *       А̄ Е̄ Ӣ ¯Э Ӯ О̄ ;						       
+
+ * Cns = б в г д ж з й к л м н ӈ п р с т ф х ц ч ш щ      
+ *       Б В Г Д Ж З Й К Л М Н Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;    
+ * ArchiCns = %{D%} %{G%} %{L%} %{R%} %{V%} ;			       
+ * Nasal = м н ӈ									       
+ *         М Н Ӈ ; 								       
+
+ * NonLN = б в г д ж з й к м ӈ п р с т ф х ц ч ш щ        
+ *         Б В Г Д Ж З Й К М Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;      
+
+ * UnvoicedCns = к с т п ;    
+
+
+!!Rules
+
+!Assimilation rules
+
+__Remove suffix vowel with vowel-ending stem__  
+
+__Realise suffix vowel as y after t__  
+
+__Realise suffix vowel as i after non-t__  
+
+__Assimilate possessive to plural__  
+
+__Consonant assimilation in suffixes__  
+
+__Unvoicing assimilation__  
+
+
+
+__Voicing assimilation__  
+
+
+
+
+__Nasal assimilation of V__  
+
+__Default realisaton of V __  
+
+
+
+!Palatalisation
+
+
+__Not realising hard sign after vowel or n__  
+
+
+__Realising hard sign__  
+
+
+
+
+
+
+
+
+!Other vowel rules
+
+
+
+
+
+
+!!Consonant rules
+
+!Other cns
+
+
+
+
+
+
+
+
+
+
+
+!Vowel harmony
+
+
+__Vowel harmony for A, main rule__  (note е->а)
+
+
+
+
+
+__Vowel harmony for {A} following i__  
+
+__Vowel harmony for A following o__  short o gives o
+
+__Vowel harmony for A following long o__  long o gives a
+
+
+__Palatalised short vowel harmony for A__  
+
+
+
+
+
 

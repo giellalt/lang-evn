@@ -2,7 +2,68 @@
 !  --------
 !! Numerals in Evenki denote numbers.
 
+LEXICON NUM_BIRA
++Num: X_BIRA ;
++Num+Ord:%>ни{ː%} X_BIRA ;
+
+LEXICON NUM_UMUK
++Num: X_UMUK ;
++Num+Ord:%>и{ː%} X_UMUK ;
+
+LEXICON NUM_ORON
++Num: X_ORON ;
++Num+Ord:%>ни{ː%} X_ORON ;
+
+
 LEXICON Numerals
-numeral    Cases   ;
+Cardinals ;
+Ordinals ;
+Collective ;
+Numeral_derivations ;
+
+LEXICON Cardinals
+умӯн:уму%{ː%} NUM_ORON ; ! "1 "
+дю̄р:дю%{ː%}р NUM_UMUK ; ! "2 "
+илан:ила NUM_ORON ; ! "3 "
+дыгин:дыги NUM_ORON ; ! "4 "
+тунӈа:тунӈа NUM_BIRA ; ! "5 "
+нюӈун:нюӈу NUM_ORON ; ! "6 "
+надан:нада NUM_ORON ; ! "7 "
+дяпкун:дяпку NUM_ORON ; ! "8 "
+егин:еги NUM_ORON ; ! "9 "
+дя̄н:дя%{ː%} NUM_ORON ; ! "10 "
+
+дю̄рдя̄р:дю%{ː%}рдя%{ː%}р NUM_UMUK ; ! "20 "
+иландя̄р:иландя%{ː%}р NUM_UMUK ; ! "30 "
+дыгиндя̄р:дыгиндя%{ː%}р NUM_UMUK ; ! "40 "
+тунӈадя̄р:тунӈадя%{ː%}р NUM_UMUK ; ! "50 "
+
+нямадӣ:нямади%{ː%} NUM_UMUK ; ! "100 "
+
+
+LEXICON Numeral_derivations
+numder_ones ;
+numder_more ;
+
+LEXICON numder_ones 
+ум+Adv:умнэ%{ː%} # ;
+ум+Adv:умутэл # ;
+
+LEXICON numder_more 
+дю̄р:дю%{ː%}  numdertypes ;
+илан:ила 	  numdertypes ;
+дыгин:дыги 	  numdertypes ;
+тунӈа:тунӈа   numdertypes ;
+нюӈун:нюӈу 	  numdertypes ;
+надан:нада 	  numdertypes ;
+дяпкун:дяпку  numdertypes ;
+егин:еги 	  numdertypes ;
+дя̄н:дя%{ː%}  numdertypes ;
+
+LEXICON numdertypes
++Adv:%>гд%{A%} # ;
++Adv:%>р%{A%}%{ː%} # ;
++Adv:%>т%{A%}л # ;
+
 
 ! vim: set ft=xfst-lexc:

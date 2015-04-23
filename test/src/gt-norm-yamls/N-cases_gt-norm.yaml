@@ -1,0 +1,161 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+
+Tests:
+
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+
+  Noun - урэ: # vowel
+    урэ+N+Sg+Nom: урэ
+    урэ+N+Sg+Acc+Def: урэвэ
+    урэ+N+Sg+Acc+Ind: урэе
+    урэ+N+Sg+Dat: урэдӯ
+    урэ+N+Sg+Loc: урэлэ̄
+    урэ+N+Sg+All: урэткӣ
+    урэ+N+Sg+Prl: урэлӣ
+    урэ+N+Sg+Ter: урэклэ̄
+    урэ+N+Sg+Dir: урэклӣ
+    урэ+N+Sg+Abl: урэдук
+    урэ+N+Sg+Ela: урэгит
+    урэ+N+Sg+Ins: урэт
+    урэ+N+Sg+Com: урэнун
+    урэ+N+Pl+Nom: урэл
+    урэ+N+Pl+Acc+Def: урэлвэ
+    урэ+N+Pl+Acc+Ind: урэлэ
+    урэ+N+Pl+Dat: урэлдӯ
+    урэ+N+Pl+Loc: урэлдулэ̄
+    урэ+N+Pl+All: урэлтыкӣ
+    урэ+N+Pl+Prl: урэлдулӣ
+    урэ+N+Pl+Ter: урэликлэ̄
+    урэ+N+Pl+Dir: урэликлӣ
+    урэ+N+Pl+Abl: урэлдук
+    урэ+N+Pl+Ela: урэлгит
+    урэ+N+Pl+Ins: урэлди
+    урэ+N+Pl+Com: урэлнун
+
+
+  Noun - бэр: # voiced cns
+    бэр+N+Sg+Nom: бэр
+    бэр+N+Sg+Acc+Def: бэрвэ
+    бэр+N+Sg+Acc+Ind: бэръе
+    бэр+N+Sg+Dat: бэрдӯ
+    бэр+N+Sg+Loc: бэрдулэ̄
+    бэр+N+Sg+All: бэртыкӣ
+    бэр+N+Sg+Prl: бэрдулӣ
+    бэр+N+Sg+Ter: бэриклэ̄
+    бэр+N+Sg+Dir: бэриклӣ
+    бэр+N+Sg+Abl: бэрдук
+    бэр+N+Sg+Ela: бэргит
+    бэр+N+Sg+Ins: бэрит
+    бэр+N+Sg+Com: бэрнун
+    бэр+N+Pl+Nom: бэрил
+    бэр+N+Pl+Acc+Def: бэрилвэ
+    бэр+N+Pl+Acc+Ind: бэрилэ
+    бэр+N+Pl+Dat: бэрилдӯ
+    бэр+N+Pl+Loc: бэрилдулэ̄
+    бэр+N+Pl+All: бэрилтыкӣ
+    бэр+N+Pl+Prl: бэрилдулӣ
+    бэр+N+Pl+Ter: бэриликлэ̄
+    бэр+N+Pl+Dir: бэриликлӣ
+    бэр+N+Pl+Abl: бэрилдук
+    бэр+N+Pl+Ela: бэрилгит
+    бэр+N+Pl+Ins: бэрилди
+    бэр+N+Pl+Com: бэрилнун
+
+
+
+  Noun - дэт: # unvoiced cns
+    дэт+N+Sg+Nom: дэт
+    дэт+N+Sg+Acc+Def: дэтвэ
+    дэт+N+Sg+Acc+Ind: дэтъе
+    дэт+N+Sg+Dat: дэттӯ
+    дэт+N+Sg+Loc: дэттулэ̄
+    дэт+N+Sg+All: дэттыкӣ
+    дэт+N+Sg+Prl: дэттулӣ
+    дэт+N+Sg+Ter: дэтыклэ̄
+    дэт+N+Sg+Dir: дэтыклӣ
+    дэт+N+Sg+Abl: дэттук
+    дэт+N+Sg+Ela: дэткит
+    дэт+N+Sg+Ins: дэтыт
+    дэт+N+Sg+Com: дэтнун
+    дэт+N+Pl+Nom: дэтыл
+    дэт+N+Pl+Acc+Def: дэтылвэ
+    дэт+N+Pl+Acc+Ind: дэтылэ
+    дэт+N+Pl+Dat: дэтылдӯ
+    дэт+N+Pl+Loc: дэтылдулэ̄
+    дэт+N+Pl+All: дэтылтыкӣ
+    дэт+N+Pl+Prl: дэтылдулӣ
+    дэт+N+Pl+Ter: дэтыликлэ̄
+    дэт+N+Pl+Dir: дэтыликлӣ
+    дэт+N+Pl+Abl: дэтылдук
+    дэт+N+Pl+Ela: дэтылгит
+    дэт+N+Pl+Ins: дэтылди
+    дэт+N+Pl+Com: дэтылнун
+
+
+  Noun - орон: # n
+    орон+N+Sg+Nom: орон
+    орон+N+Sg+Acc+Def: оронмо
+    орон+N+Sg+Acc+Ind: ороно
+    орон+N+Sg+Dat: орондӯ
+    орон+N+Sg+Loc: орондула̄
+    орон+N+Sg+All: оронтыкӣ
+    орон+N+Sg+Prl: орондулӣ
+    орон+N+Sg+Ter: ороникла̄
+    орон+N+Sg+Dir: орониклӣ
+    орон+N+Sg+Abl: орондук
+    орон+N+Sg+Ela: оронӈит
+    орон+N+Sg+Ins: оронди
+    орон+N+Sg+Com: ороннун
+    орон+N+Pl+Nom: орор
+    орон+N+Pl+Acc+Def: орорво
+    орон+N+Pl+Acc+Ind: ороро
+    орон+N+Pl+Dat: орордӯ
+    орон+N+Pl+Loc: орордула̄
+    орон+N+Pl+All: орордыкӣ
+    орон+N+Pl+Prl: орордулӣ
+    орон+N+Pl+Ter: орориклэ̄
+    орон+N+Pl+Dir: орориклӣ
+    орон+N+Pl+Abl: орордук
+    орон+N+Pl+Ela: ороргит
+    орон+N+Pl+Ins: орорди
+    орон+N+Pl+Com: орорнун
+
+
+  Noun - дӯннэ: #
+    дӯннэ+N+Sg+Nom : дӯннэ
+    дӯннэ+N+Sg+Acc+Def: дӯннэвэ
+    дӯннэ+N+Sg+Acc+Ind: дӯннэе
+    дӯннэ+N+Sg+Dat: дӯннэдӯ
+    дӯннэ+N+Sg+Loc: дӯннэлэ̄
+    дӯннэ+N+Sg+All: дӯннэткӣ
+    дӯннэ+N+Sg+Prl: дӯннэлӣ
+    дӯннэ+N+Sg+Ter: дӯннэклэ̄
+    дӯннэ+N+Sg+Dir: дӯннэклӣ
+    дӯннэ+N+Sg+Abl: дӯннэдук
+    дӯннэ+N+Sg+Ela: дӯннэгит
+    дӯннэ+N+Sg+Ins: дӯннэт
+    дӯннэ+N+Sg+Com: дӯннэнун
+    дӯннэ+N+Pl+Nom: дӯннэл
+    дӯннэ+N+Pl+Acc+Def: дӯннэлвэ
+    дӯннэ+N+Pl+Acc+Ind: дӯннэлэ
+    дӯннэ+N+Pl+Dat: дӯннэлдӯ
+    дӯннэ+N+Pl+Loc: дӯннэлдулэ̄
+    дӯннэ+N+Pl+All: дӯннэлтыкӣ
+    дӯннэ+N+Pl+Prl: дӯннэлдулӣ
+    дӯннэ+N+Pl+Ter: дӯннэликлэ̄
+    дӯннэ+N+Pl+Dir: дӯннэликлӣ
+    дӯннэ+N+Pl+Abl: дӯннэлдук
+    дӯннэ+N+Pl+Ela: дӯннэлгит
+    дӯннэ+N+Pl+Ins: дӯннэлди
+    дӯннэ+N+Pl+Com: дӯннэлнун

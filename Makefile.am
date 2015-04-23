@@ -7,6 +7,10 @@ SUBDIRS = . src tools doc test
 
 EXTRA_DIST = und.timestamp
 
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = giella-$(GTLANG).pc
+
+
 configure: banner und.timestamp
 
 .PHONY: banner
@@ -28,3 +32,6 @@ und.timestamp: ${GTCORE}/langs-templates/und/und.timestamp
 	@exit 1
 endif
 
+# Remove html tables created by some of the developer tools:
+clean-local:
+	rm -f *.html

@@ -3,6 +3,9 @@
 
 
 LEXICON Adjectives
-adjective    Comparisons   ;
-
-! vim: set ft=xfst-lexc:
+ая:ая A_BIRA ; ! "хороший и добро"
+эрӯ:эру%{ː%} A_BIRA ; ! "плохой и эло"
+гугка:гугда A_BIRA ; ! "высокий высота"
+ӈэ̄ри:ӈэ̄ри A_BIRA ; ! "светлый и свет"
+ала:ала A_BIRA ; ! "вкусный и вкус"
+xэгды:xэгды A_BIRA ; ! "большой и беличика"
