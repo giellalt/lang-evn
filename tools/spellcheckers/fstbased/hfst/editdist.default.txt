@@ -36,3 +36,5 @@
 
 ## Transition pairs + weight:
 @@
+е	э	0.4
+н	ӈ	0.4

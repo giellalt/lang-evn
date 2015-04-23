@@ -1,0 +1,209 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+
+Tests:
+
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+
+  Noun - дю̄: # vowel
+    дю̄+N+Sg+Nom+PxSg1:     дю̄в
+    дю̄+N+Sg+Acc+Def+PxSg1: дю̄вав
+    дю̄+N+Sg+Acc+Ind+PxSg1: дю̄яв
+    дю̄+N+Sg+Dat+PxSg1:     дю̄дӯв
+    дю̄+N+Sg+Loc+PxSg1:     дю̄ла̄в
+    дю̄+N+Sg+All+PxSg1:     дю̄ткӣв
+    дю̄+N+Sg+Prl+PxSg1:     дю̄лӣв
+    дю̄+N+Sg+Ter+PxSg1:     дю̄кла̄в
+    дю̄+N+Sg+Dir+PxSg1:     дю̄клӣв
+    дю̄+N+Sg+Abl+PxSg1:     дю̄дукив
+    дю̄+N+Sg+Ela+PxSg1:     дю̄гидив
+    дю̄+N+Sg+Ins+PxSg1:     дю̄див
+    дю̄+N+Sg+Com+PxSg1:     дю̄нунми
+
+    дю̄+N+Sg+Nom+PxSg2:     дю̄с
+    дю̄+N+Sg+Acc+Def+PxSg2: дю̄вас
+    дю̄+N+Sg+Acc+Ind+PxSg2: дю̄яс
+    дю̄+N+Sg+Dat+PxSg2:     дю̄дӯс
+    дю̄+N+Sg+Loc+PxSg2:     дю̄ла̄с
+    дю̄+N+Sg+All+PxSg2:     дю̄ткӣс
+    дю̄+N+Sg+Prl+PxSg2:     дю̄лӣс
+    дю̄+N+Sg+Ter+PxSg2:     дю̄кла̄с
+    дю̄+N+Sg+Dir+PxSg2:     дю̄клӣс
+    дю̄+N+Sg+Abl+PxSg2:     дю̄дукис
+    дю̄+N+Sg+Ela+PxSg2:     дю̄гидис
+    дю̄+N+Sg+Ins+PxSg2:     дю̄дис
+    дю̄+N+Sg+Com+PxSg2:     дю̄нунис
+
+    дю̄+N+Sg+Nom+PxSg3:     дю̄н
+    дю̄+N+Sg+Acc+Def+PxSg3: дю̄ван
+    дю̄+N+Sg+Acc+Ind+PxSg3: дю̄ян
+    дю̄+N+Sg+Dat+PxSg3:     дю̄дӯн
+    дю̄+N+Sg+Loc+PxSg3:     дю̄ла̄н
+    дю̄+N+Sg+All+PxSg3:     дю̄ткӣн
+    дю̄+N+Sg+Prl+PxSg3:     дю̄лӣн
+    дю̄+N+Sg+Ter+PxSg3:     дю̄кла̄н
+    дю̄+N+Sg+Dir+PxSg3:     дю̄клӣн
+    дю̄+N+Sg+Abl+PxSg3:     дю̄дукин
+    дю̄+N+Sg+Ela+PxSg3:     дю̄гидин
+    дю̄+N+Sg+Ins+PxSg3:     дю̄дин
+    дю̄+N+Sg+Com+PxSg3:     дю̄нунин
+
+    дю̄+N+Sg+Nom+PxPl1:     дю̄в
+    дю̄+N+Sg+Acc+Def+PxPl1: дю̄вав
+    дю̄+N+Sg+Acc+Ind+PxPl1: дю̄яв
+    дю̄+N+Sg+Dat+PxPl1:     дю̄дӯв
+    дю̄+N+Sg+Loc+PxPl1:     дю̄ла̄в
+    дю̄+N+Sg+All+PxPl1:     дю̄ткӣв
+    дю̄+N+Sg+Prl+PxPl1:     дю̄лӣв
+    дю̄+N+Sg+Ter+PxPl1:     дю̄кла̄в
+    дю̄+N+Sg+Dir+PxPl1:     дю̄клӣв
+    дю̄+N+Sg+Abl+PxPl1:     дю̄дукив
+    дю̄+N+Sg+Ela+PxPl1:     дю̄гидив
+    дю̄+N+Sg+Ins+PxPl1:     дю̄див
+    дю̄+N+Sg+Com+PxPl1:     дю̄нунми
+
+    дю̄+N+Sg+Nom+PxPl2:     дю̄с
+    дю̄+N+Sg+Acc+Def+PxPl2: дю̄вас
+    дю̄+N+Sg+Acc+Ind+PxPl2: дю̄яс
+    дю̄+N+Sg+Dat+PxPl2:     дю̄дӯс
+    дю̄+N+Sg+Loc+PxPl2:     дю̄ла̄с
+    дю̄+N+Sg+All+PxPl2:     дю̄ткӣс
+    дю̄+N+Sg+Prl+PxPl2:     дю̄лӣс
+    дю̄+N+Sg+Ter+PxPl2:     дю̄кла̄с
+    дю̄+N+Sg+Dir+PxPl2:     дю̄клӣс
+    дю̄+N+Sg+Abl+PxPl2:     дю̄дукис
+    дю̄+N+Sg+Ela+PxPl2:     дю̄гидис
+    дю̄+N+Sg+Ins+PxPl2:     дю̄дис
+    дю̄+N+Sg+Com+PxPl2:     дю̄нунис
+
+    дю̄+N+Sg+Nom+PxPl3:     дю̄н
+    дю̄+N+Sg+Acc+Def+PxPl3: дю̄ван
+    дю̄+N+Sg+Acc+Ind+PxPl3: дю̄ян
+    дю̄+N+Sg+Dat+PxPl3:     дю̄дӯн
+    дю̄+N+Sg+Loc+PxPl3:     дю̄ла̄н
+    дю̄+N+Sg+All+PxPl3:     дю̄ткӣн
+    дю̄+N+Sg+Prl+PxPl3:     дю̄лӣн
+    дю̄+N+Sg+Ter+PxPl3:     дю̄кла̄н
+    дю̄+N+Sg+Dir+PxPl3:     дю̄клӣн
+    дю̄+N+Sg+Abl+PxPl3:     дю̄дукин
+    дю̄+N+Sg+Ela+PxPl3:     дю̄гидин
+    дю̄+N+Sg+Ins+PxPl3:     дю̄дин
+    дю̄+N+Sg+Com+PxPl3:     дю̄нунин
+
+
+
+
+
+  Noun - бэр: # consonant
+    бэр+N+Sg+Nom+PxSg1:     бэрвэ
+    бэр+N+Sg+Acc+Def+PxSg1: бэрвав
+    бэр+N+Sg+Acc+Ind+PxSg1: бэряв
+    бэр+N+Sg+Dat+PxSg1:     бэрдӯв
+    бэр+N+Sg+Loc+PxSg1:     бэрла̄в
+    бэр+N+Sg+All+PxSg1:     бэрткӣв
+    бэр+N+Sg+Prl+PxSg1:     бэрлӣв
+    бэр+N+Sg+Ter+PxSg1:     бэркла̄в
+    бэр+N+Sg+Dir+PxSg1:     бэрклӣв
+    бэр+N+Sg+Abl+PxSg1:     бэрдукив
+    бэр+N+Sg+Ela+PxSg1:     бэргидив
+    бэр+N+Sg+Ins+PxSg1:     бэрдив
+    бэр+N+Sg+Com+PxSg1:     бэрнунми
+
+    бэр+N+Sg+Nom+PxSg2:     бэрсэ
+    бэр+N+Sg+Acc+Def+PxSg2: бэрвас
+    бэр+N+Sg+Acc+Ind+PxSg2: бэряс
+    бэр+N+Sg+Dat+PxSg2:     бэрдӯс
+    бэр+N+Sg+Loc+PxSg2:     бэрла̄с
+    бэр+N+Sg+All+PxSg2:     бэрткӣс
+    бэр+N+Sg+Prl+PxSg2:     бэрлӣс
+    бэр+N+Sg+Ter+PxSg2:     бэркла̄с
+    бэр+N+Sg+Dir+PxSg2:     бэрклӣс
+    бэр+N+Sg+Abl+PxSg2:     бэрдукис
+    бэр+N+Sg+Ela+PxSg2:     бэргидис
+    бэр+N+Sg+Ins+PxSg2:     бэрдис
+    бэр+N+Sg+Com+PxSg2:     бэрнунис
+
+    бэр+N+Sg+Nom+PxSg3:     бэрнэ
+    бэр+N+Sg+Acc+Def+PxSg3: бэрван
+    бэр+N+Sg+Acc+Ind+PxSg3: бэрян
+    бэр+N+Sg+Dat+PxSg3:     бэрдӯн
+    бэр+N+Sg+Loc+PxSg3:     бэрла̄н
+    бэр+N+Sg+All+PxSg3:     бэрткӣн
+    бэр+N+Sg+Prl+PxSg3:     бэрлӣн
+    бэр+N+Sg+Ter+PxSg3:     бэркла̄н
+    бэр+N+Sg+Dir+PxSg3:     бэрклӣн
+    бэр+N+Sg+Abl+PxSg3:     бэрдукин
+    бэр+N+Sg+Ela+PxSg3:     бэргидин
+    бэр+N+Sg+Ins+PxSg3:     бэрдин
+    бэр+N+Sg+Com+PxSg3:     бэрнунин
+
+    бэр+N+Sg+Nom+PxPl1:     бэрвун
+    бэр+N+Sg+Acc+Def+PxPl1: бэрвав
+    бэр+N+Sg+Acc+Ind+PxPl1: бэряв
+    бэр+N+Sg+Dat+PxPl1:     бэрдӯв
+    бэр+N+Sg+Loc+PxPl1:     бэрла̄в
+    бэр+N+Sg+All+PxPl1:     бэрткӣв
+    бэр+N+Sg+Prl+PxPl1:     бэрлӣв
+    бэр+N+Sg+Ter+PxPl1:     бэркла̄в
+    бэр+N+Sg+Dir+PxPl1:     бэрклӣв
+    бэр+N+Sg+Abl+PxPl1:     бэрдукив
+    бэр+N+Sg+Ela+PxPl1:     бэргидив
+    бэр+N+Sg+Ins+PxPl1:     бэрдив
+    бэр+N+Sg+Com+PxPl1:     бэрнунми
+
+    бэр+N+Sg+Nom+PxPl12:     бэрвун
+    бэр+N+Sg+Acc+Def+PxPl12: бэрвав
+    бэр+N+Sg+Acc+Ind+PxPl12: бэряв
+    бэр+N+Sg+Dat+PxPl12:     бэрдӯв
+    бэр+N+Sg+Loc+PxPl12:     бэрла̄в
+    бэр+N+Sg+All+PxPl12:     бэрткӣв
+    бэр+N+Sg+Prl+PxPl12:     бэрлӣв
+    бэр+N+Sg+Ter+PxPl12:     бэркла̄в
+    бэр+N+Sg+Dir+PxPl12:     бэрклӣв
+    бэр+N+Sg+Abl+PxPl12:     бэрдукив
+    бэр+N+Sg+Ela+PxPl12:     бэргидив
+    бэр+N+Sg+Ins+PxPl12:     бэрдив
+    бэр+N+Sg+Com+PxPl12:     бэрнунми
+
+    бэр+N+Sg+Nom+PxPl2:     бэрсун
+    бэр+N+Sg+Acc+Def+PxPl2: бэрвас
+    бэр+N+Sg+Acc+Ind+PxPl2: бэряс
+    бэр+N+Sg+Dat+PxPl2:     бэрдӯс
+    бэр+N+Sg+Loc+PxPl2:     бэрла̄с
+    бэр+N+Sg+All+PxPl2:     бэрткӣс
+    бэр+N+Sg+Prl+PxPl2:     бэрлӣс
+    бэр+N+Sg+Ter+PxPl2:     бэркла̄с
+    бэр+N+Sg+Dir+PxPl2:     бэрклӣс
+    бэр+N+Sg+Abl+PxPl2:     бэрдукис
+    бэр+N+Sg+Ela+PxPl2:     бэргидис
+    бэр+N+Sg+Ins+PxPl2:     бэрдис
+    бэр+N+Sg+Com+PxPl2:     бэрнунис
+
+    бэр+N+Sg+Nom+PxPl3:     бэртын
+    бэр+N+Sg+Acc+Def+PxPl3: бэрватын
+    бэр+N+Sg+Acc+Ind+PxPl3: бэрятын
+    бэр+N+Sg+Dat+PxPl3:     бэрдӯтын
+    бэр+N+Sg+Loc+PxPl3:     бэрла̄тын
+    бэр+N+Sg+All+PxPl3:     бэрткӣтын
+    бэр+N+Sg+Prl+PxPl3:     бэрлӣтын
+    бэр+N+Sg+Ter+PxPl3:     бэркла̄тын
+    бэр+N+Sg+Dir+PxPl3:     бэрклӣтын
+    бэр+N+Sg+Abl+PxPl3:     бэрдукитын
+    бэр+N+Sg+Ela+PxPl3:     бэргидитын
+    бэр+N+Sg+Ins+PxPl3:     бэрдитын
+    бэр+N+Sg+Com+PxPl3:     бэрнунитын
+
+
+
+
+

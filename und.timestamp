@@ -1,4 +1,1267 @@
-$Rev: 85211 $
+$Rev: 111627 $
+Finally got all weighting to work as intended, including the no-sugg weights.
+
+r111511:
+Further modularisation and improvements to weighted spellers. With hfst3
+revision 4329, using a tab-separated tag reweighting file is working.
+
+r111192:
+Do not remove usage tags when building spellers, speller tags were throwned out.
+
+r111179:
+Added an attempt at normalising the corpus-based weights towards a standard max
+upper weight, to allow a much higher weight for strings not to be suggested.
+Also split the processing of adding corpus-based weights and morphology weights
+into more steps - retaining each intermediate fst - to allow easier debugging
+of the weight assignments.
+
+r110944:
+Xerox composition of weights and lexical fst.
+
+r110791:
+Moved a script for cleaning weighting corpus to the core. Require new core.
+
+r110770:
+Fixed bugs related to the new support for frequency-weighted spellers: missing
+checks for required tools.
+
+r110758:
+Stupid copy-paste error turned the positive test into a negative. Now corrected.
+
+r110747:
+Skip Xerox testing if no test data is found. Added comments.
+
+r110734:
+Added pair-test for hfst, improved pair-testing for Xerox' twolc.
+
+r110661:
+Add a huge weight to words tagged with +Use/SpellNoSugg.
+
+r110646:
+Added support for corpus-based (frequency) weighting of the speller fst's. Also
+reorganised where to specify the tag-based weights (and this is subject to
+change pending a bug fix in hfst-reweight). All languages are given a toy
+corpus, which can be replaced with a real one. This is finally the core of
+Tommi's dissertation applied to all languages.
+
+r110513:
+More robust testing for Xerox fst's - will properly report all generation fails.
+
+r110464:
+Corrected tests for nouns and propernouns. Now nouns behave correctly with hfst,
+and proper nouns have correct tags.
+
+r110331:
+Modernised the generate-noun-lemmas.sh.in script, added similar scripts for adj,
+proper nouns and verbs.
+
+r110301:
+Check that yaml testing is enabled before running yaml tests in test/tools/.
+
+r110208:
+Require new version of the core, updated comments about Err tags.
+
+r109663:
+Removed CmpNP tags from downcase-derived-proper-strings.xfscript.in.
+
+r109310:
+When doing 'make clean', remove generated html files in the root dir.
+
+r109253:
+Removed multichar definition of superfluous flag diacritics.
+
+r109225:
+Added a new directory named devtools/ to each language, with the idea that it
+should contain tools useful for development, but not necessarily suitable for
+automake testing. Initially it contains shell scripts to generate a table of
+generated word forms for each continuation lexicon.
+
+r109112:
+Removed corpus names from tools/spellcheckers/fstbased/hfst/data/Makefile.am. It
+caused the build to stop with an error for all languages except FIN.
+
+r109098:
+Make building the abbr.txt configurable (default=no), check for the existence of
+src/morphology/stems/abbreviations.lexc, and error out if not found.
+
+r109092:
+Forgot to include the new Makefile (r109076) in configure.ac.
+
+r109077:
+Path correction.
+
+r109076:
+Preparations for supporting corpus-based frequency weights, as per TommiP.
+
+r109063:
+Enabled weighting of speller fst's. Adjust weights and tags as needed.
+
+r108914:
+Added support for all languages to generate the abbr.txt file used by
+$GTCORE/scripts/preprocess. At the same time added initial support for
+compiling pmatch scripts into fst's for hfst-proc2, which is the future
+alternative to preprocess.
+
+r108859:
+Forgot to remove some debug statements from the yaml test runner. Now cleaned.
+
+r108840:
+Moved MWE tag processing into the core - we want this for many languages.
+
+r108818:
+Added support for a new type of yaml tests: speller acceptance testing. The
+basic idea is to just give a list of words and word constructions (compounds,
+derivations, etc) the speller should accept or reject, and let the yaml test
+bench verify whether this is actually the case.
+
+r108755:
+Several changes to properly support all position-based +CmpN/XX tags:
+* moved tag path splitting and tag-to-flag conversion into separate regex
+  files in the core.
+* added support for compiling and using the new regexes
+* added support for a new type +CmpN/Suff
+* added the required multichar symbols to the root.lexc files
+* increased required core version number
+
+Fixed a bug in the yaml test bench when both hfst and xfst was enabled, but
+where only one type is built, e.g. for Apertium.
+
+r108692:
+Added build support for alternate orthographies: default fst's, dicts and oapha.
+
+r108675:
+Fixed a bug that caused the wrong fst to be picked in certain cases, which
+caused the test script to fail.
+
+r108646:
+A couple of changes related to testing:
+* require Python 3.3+
+* require new gtcore
+* update YAML test runner to make SMS testing work as intended also with Xerox
+
+r108560:
+Added support for country/region specific proofing tools in configure.ac.
+
+r108404:
+We do not support anything but the latest/newest Voikko now.
+
+r108395:
+Finalised the basic multiple writing system support, by adding support for Oahpa
+and dictionary fst's.
+
+r108384:
+Added a configuration flag to enable two-step compose-intersect. In most cases
+this will not make any difference, but for some languages it will correct a
+bug in compose-intersect that would otherwise create a bad fst, and for other
+languages it will make the operation much slower without changing the fst.
+Disabled by default, whether it is useful must be tested in each case /
+language. Also made the verbosity handling such that when verbosity is
+on (V=1), some tools are now more verbose, for better help when debugging.
+
+r108355:
+Corrected errors in hfst compilation of alternative writing system fst's.
+
+r108322:
+Added test runners for genation and analysis tests only for the descriptive fst.
+
+r108289:
+Compilation of the default set of fst's with alternate writing systems working.
+
+r108187:
+First step in adding support for alternate writing systems and orthographies:
+adding variables to configure.ac. Removed the variable LO_min_version, it
+isn't used.
+
+r108134:
+Split the m4/ax_python_module.m4 file, it contained mostly java autotools stuff.
+Improved the message to update the gtcore.
+
+r107335:
+Added the make-optional-hyph-tags filter to the generators. Fixes bug #1914.
+
+r107310:
+Make use of the new remove-adv_comp filter. Require new core and newest hfst.
+
+r107278:
+Put to use the make-optional-adv_comp filter.
+
+r107272:
+Don't build xerox fst's within the Apertium dir tree - no need for it.
+
+r107222:
+Require new core because of new filters. Use hfst-optimized-lookup in the yaml
+testing, should speed up hfst testing quite a lot.
+
+r107150:
+Put the new optional minip filter to use, and increased required gtcore version.
+
+r107122:
+Replaced all instances of sub and lexsub filters with the new, generated error
+filters.
+
+r107115:
+Added support for extracting error tags and constructing filters for
+manipulating error strings and tags. Updated required version of gtcore.
+
+r107106:
+Remove variant tags in disamb analyser.
+
+r107047:
+Xerox fst's are irrelevant to Apertium, don't even try to build them.
+
+r106998:
+Use the new make-optional-v1-tags filter for apertium generators.
+
+r106982:
+Forgot to include the new regex in the src file listing in the previous commit.
+
+r106973:
+Corrected dictionary generators to require a variant tag except for +v1, which
+is optional.
+
+r106966:
+Removed 'invert net' from a couple of more instances.
+
+r106957:
+Treat Hfst and Xerox the same during *tmp.Xfst and *.Xfst build - invert both
+only in the last step when going from tmp to non-tmp fst (invert the analyser
+for hfst, the generator for xfst). This should remove one more confusing
+difference between the two.
+
+r106951:
+Check that we have at least Python3.1 when enabling Apertium, error out if not.
+Also add AM check for hfst-optimized-lookup.
+
+r106451:
+A small, functionally equivalent change: from suffix rule to pattern rule.
+
+r106428:
+Now +CmpN/Pref is correctly supported (earlier it was treated as +CmpN/First).
+
+r106402:
+Corrected fst file reference in test shell script.
+
+r106398:
+Corrected source file reference in test shell script.
+
+r106356:
+Changes to a couple of Makefile.am files to fix issues with 'make dist'.
+
+r106346:
+The last part of the CmpN location restriction flag diacritics added.
+
+r106245:
+Code cleanup: no use for the M4 part - the null alternative did not work.
+
+r106226:
+Finally nailed all combinations of fst compilator and lexicon minimisation - now
+downcasing of derived proper nouns is working as it should again for both Xerox,
+Hfst hyperminimised and Hfst normal lexc compilation.
+
+r106160:
++CmpN/Only supported, first steps in tag splitting taken.
+
+r106122:
+Moved code common to all yaml testrunner shell scripts to an include file in
+GTCORE to avoid code duplication and reduce the risk for introducing bugs.
+This requires the newest version of the CORE. Because of the inclusion, I had
+to rename the test runner to .sh.in, and added autoconf processing of it. Also
+added a test file for testing the base speller fst (it must be tailored to each
+language of course).
+
+r105950:
+Last change to get hyperminimisation to produce the correct output: made the
+derived-proper downcase script being processed by autoconf, so that we can
+require a symbol in a certain context, and at the same time in the end let
+the symbol be empty if not needed.
+
+r105935:
+Added optional flag diacritic inserted by Hfst hyperminimisation. This resolves
+the remaining cases of errors after the hfst team fixed a bug in lexc
+compilation with hyperminimisation turned on. Since it is optional, it does not
+make any harm when using Xerox or when not using hyperminimisation.
+
+r105926:
+Added xerox variable flag-is-epsilon to the tag reorder regex. This fixes most
+of the cases of errors after the hyperminimisation bug was fixed in hfst-lexc.
+The remaining errors must be fixed in the downcase-derived-proper regex.
+
+r105715:
+Added more silent builds for hfst tools.
+
+r105673:
+Added conversion of tags to flag diacritica for position-restricting tags. These
+are currently used in sma, sme, smj and sje. Together with some additions to the
+R lexicon, the tags will finally do what they are meant to do for hfst-based
+spellers.
+
+r105616:
+Added Multichar symbol definitions for flag diacritica controlling compounding
+based on position tags. Done for most langs, the symbols will be ignored if not
+used.
+
+r105496:
+New: added example test file for the fstspeller fst file (starting point for
+foma and hfst spellers).
+
+r105492:
+Fixed: errors in the yaml test runner when the fst has a suffix 'hfst'.
+
+r105488:
+Fixed: directory and fst names in the yaml runner shell script.
+
+r105484:
+Added support for yaml tests for speller fst's.
+
+r105438:
+Added support for Xerox fst's in tools/spellcheckers/fstbased, mainly to help in
+debugging hfst. Turned out to be very useful. Why can't none of the toolsets
+work properly?
+
+r105424:
+Improved comments to make the lemma generation script easier to adapt.
+
+r105390:
+Additions to generate the inverted fst's, to enable symmetric yaml testing.
+
+r105382:
+Fixed: order of filter application was wrong, causing all Use/-Spell forms to be
+included in the spellers.
+
+r105286:
+Fixed: error in easter egg building after the previous commit.
+
+r105284:
+Make sure the easter egg is rebuilt every time the fst is rebuilt.
+
+r105238:
+Fixed: The MacVoikko target contained one subtarget that built even when
+spellers were not enabled, and thus failed because of a missing dependency.
+
+r105201:
+A number of changes to make the MacVoikko.service build cleanly with proper
+dependency tracking. Also a bit safer cleaning.
+
+r105194:
+Fixed: The MacVoikko target was missing from noinst_DATA, thus it was not built.
+
+r105104:
+Added initial support for building language-specific macosx systemwide spellers.
+
+r104185:
+Added strip function to get rid of extra spaces, resolves bug in abbr.txt build.
+
+r103029:
+Included lexc files in src/morphology/ in the abbr file making.
+
+r103027:
+Expanded the source file base for building the abbr file, more like the old
+infra.
+
+r102952:
+Only delete (aka 'make clean') generated corpus files used for weighting if
+such files exist. Removes a very dangerous 'rm -rf .*' command.
+
+r102809:
+Fixed bug in the phonology building that caused extra source files not to
+be compiled.
+
+r102678:
+Removing Use/LexSub strings from all normative fst's. Fixes bug #1904.
+
+r102214:
+Added support for turning off building of vislcg3/syntactic tools.
+
+r101825:
+Improvements and corrections in the README file.
+
+r101818:
+Changed Hfst configuration:
+* moved xerox check before hfst check to ...
+* automatically enable hfst if the Xerox tools are not found
+* moved minimum version requirement definition to configure.ac
+* removed hfst-foma requirement, instead checking for all required tools
+* removed path check for obsolete hfst tools
+* improved hfst configuration messages
+* updated the summary text to reflect that hfst is automatically enabled
+These changes should ease configuration on systems without Xerox.
+
+r101729:
+Corrected names of compiled twolc files in test/src/phonology/pair-test*.sh.in.
+We need to use the 'compose' fst because compiled twolc files are not treated
+the same as other fst's. We can't just skip the new lookup friendly filenames
+either, because morphophonological rules can be written using xfscript, in
+which case the lookup renaming (and inversion) is essential.
+
+r101575:
+Corrrected references to the new lookup style fst names in the inituppercase
+test. Fixes broken inituppercase tests. Updated config header in initcap yaml
+file correspondingly.
+
+r101554:
+Now both general and language-pair specific relabelling using regexes
+are supported, in addition to using relabel files. The regexes allow
+context-dependent and multisymbol changes, whereas the relabel files only
+cover 1:1 mappings of single symbols. The actual change was to add support
+for regex files in the language-pair independent processing. The
+tools/mt/apertium/tagsets/README.txt file was more or less completely rewritten
+to better document the filenames being recognised, and how they should be used.
+
+r101434:
+Retain the regular non-optimised hfst analyser for easy paradigm generation
+using a regex plus composition.
+
+r101405:
+Fixed a bug in the Apertium build that blocked building of AP-tagged analysers.
+
+r101363:
+Make sure there is always an apertium analyser for 'und' if nothing else.
+
+r101193:
+Do not remove homonymy tags from the apertium fst's. Also simplified the
+automatic conversion by moving all non-automatic changes to a separate file,
+run as a sort of tag conversion postprocessing. Updated the tagset/README.txt
+file to contain info aobut the manually maintained postprocessing relabel file.
+Added an initial postprocessing relabel file containing word boundary and
+homonymy tag changes.
+
+r101189:
+Do not remove homonymy tags from the regular analysers.
+
+r101162:
+Fixed a bug in building Oahpa generators - orig-lang tags were not removed.
+Clean *.hfstol files in tools/mt/apertium/.
+
+r101043:
+Moved Apertium tagset creation and relabeling from src/tagsets/ to
+tools/mt/apertium/tagsets/. This should fix building of apertium fst's for
+fin, smn.
+
+r100989:
+Renamed AWK to GAWK in relevant places to get around another AWK test. Now gawk
+is found properly in all cases.
+
+r100985:
+Improved test for gnu awk.
+
+r100878:
+Require newest core to force people to upgrade to get an important bugfix.
+
+r100786:
+Fixed a bug in the core for generated regexes - a reserved char was not escaped.
+Required core version bumped.
+
+r100719:
+Hfst 3.8.0 is out, with a number of important bug fixes and improvements,
+including new options required to make our code build properly.
+
+r100565:
+Several changes to accomodate a downcaseerror variant of the L2 error fst for
+Oahpa:
+* added configure.ac option --enable-downcaseerror (independent of the L2 opt)
+* a number of changes to the build instructions for Oahpa to support the new fst
+* made the error fst compilation independent of whether an L2 twolc/xfscript
+  file is used - if not, it will just use the ordinary twolc/xfscript file.
+  This way it is possible to 
+* svn-copied regexes from the old to the new infra, including to the core
+* increased gtcore version number and required version number due to new regexes
+
+r100542:
+Corrected wrong filenames and file references that blocked the oahpa L2 build.
+
+r100538:
+Tagset relabeling didn't work for xfst files, now it does. Also generalised the
+use of relabel files (for use with hfst-relabel).
+
+r100499:
+Simplified the building of hfst's with alternative tagsets. Silenced regex
+compilation.
+
+r100478:
+Last part of the lookup & composition cleanup: phonetics and phonology now
+covered. Now all non-lexical and non-filter files have a suffix .compose.*
+or .lookup.* depending on their intended use, and they are all properly
+inverted where needed (i.e. only for Xerox' lookup tool). There might still
+be source files to clean, but that is a separate step.
+
+r100468:
+Corrected a couple of cases where old filenames were still used, and thus
+broke compilation. Also improved filtering of transcriptors, and constructed
+transcriptor target names dynamically based on the source files.
+
+r100453:
+Xfscript and lookup cleanup: now we explicitly build files made for lookup and
+composition marked in the filenames. This is done for hyphenation and for
+orthography, phonology and phonetics still to be done. From now on there should
+be no need to use invert as part of the xfscript code - DON'T DO IT! All
+targets updated to use the new filenames. Removed inversion from the
+hyphenation xfscript.
+
+r100424:
+Use explicit pipe mode with hfst-xfst.
+
+r100413:
+Moved Apertium target language specification from configure.ac to
+tools/mt/apertium/Makefile.am. Changed the target filename construction
+to better follow the Apertium naming scheme. Fixed a bug introduced about
+four weeks ago that destroyed the dependency chain (due to a bug/fragileness
+in GNU make).
+
+r100356:
+Cleaned up building of target fst's using the lookup-include.am file. Now all
+hfst transducers in optimised lookup format have the suffix .hfstol, and
+optimisation should not be hidden or implisit anymore. All test scripts should
+be updated as well. Also move all common targets from src/Makefile.am to
+am-shared/src-dir-include.am and sub-included AM files. This cleans up the
+src/ dir Makefile.am quite a lot.
+
+r100346:
+Added support for additional local lexc files not part of the lexical fst.
+
+r100126:
+Several changes to clean up the mess with the transcriptors:
+* moved transcriptor final builds from src/ to src/transcriptions/
+* renamed transcriptor source files and targets
+* streamlined transcriptor compilation to use lexc-include and lookup-include
+* also silenced xfst in lookup-include.am
+
+r100035:
+There were a couple of issues in the previous commit:
+* vpath directive didn't work reliably
+* L1 and L2 variabless were declared for easy merging, but in a way that
+  AM didn't like
+* forgot to change the name of the lexical fst in the filter processing
+
+r99883:
+Several fixes to accomodate L2 (language learner) analysers for Oahpa:
+* removed silent build instructions from twolc-include (they are taken from the
+  silent-build-include instead)
+* added support for compiling L2 phonology/twolc files when configured to
+* renamed $(GTLANG)-lexc.?fst to just lexicon.?fst.
+* added support for the error analyser in src_oahpa-include.am
+* added configure support for the L2 analyser (off by default)
+* added support for building the L2 lexical fst using L2 source files
+* added variables a.o. to support specifying L2 source files in src/morphology/
+
+r99793:
+Added support for filters written in lexc and xfscript. Renamed variables and
+added a lexc-include.am file to support general lexc compilation.
+
+r99665:
+Fixed an unfortunate AM syntax error that blocked Automake, and thus all builds.
+
+r99587:
+Another filter build cleanup: all filter regexes in core are now built for all
+languages. One obsolete filter was removed.
+
+r99584:
+Fixed a problem with MT filter compilation that only revealed itself in sme.
+
+r99579:
+Cleaned the filter build files even more. Now only local / language specific
+regex source files need to be listed in the local Makefile.am.
+
+r99574:
+Added a new filter to the filter compilation. Used the new filter to build
+correct fst's for dictionary analysis and generation. Increased the version
+number of the required gtd core version, due to the new and required filter
+in the core.
+
+r99544:
+Major cleanup of filter and tagset compilation:
+* moved all non-local data and build instructions into am-shared/
+* created dir-specific am-include files
+* clean use of regex-include.am
+* removed sme-specific source files from tools/mt/apertium/tagsets/Makefile.am
+* switched the apertium filter use to use the one built in src/filters/ instead
+  of rebuilding it
+
+r99473:
+analyser-oahpa-gt-desc should be analyser-oahpa-gt-norm. Now renamed.
+
+r99462:
+The listbased speller fst is now generated properly using both Xerox and Hfst.
+
+r99451:
+Fixed a logical error that turned off all hfst spellers. Renamed a variable.
+
+r99445:
+Only build Apertium tagsets in tools/mt/ if Apertium is turned on.
+
+r99425:
+Corrected a syntax error in the src_disamb-include.am file. Moved all fst
+trimming of general interest from tools-spellcheckers-listbased to
+tools-spellcheckers. Made the configuration so that list-based spellers will
+only compile if configured to build Hunspell. Also tried to make the
+configuration of other spellers such that they are automatically off
+when spellers are off.
+
+r99366:
+Batch two of the initial letter downcasing fix.
+
+r99350:
+Downcasing of the initial letter of derived proper nouns (Pariisi ->
+pariisilainen) is now finally working with Hfst. It requires Hfst svn rev. 4000.
+
+r99221:
+The first major step for adding support for generating list-based spellers such
+as Hunspell and the PLX (Polderland/MS Word) spellers. The conversion is not
+trivial, since we try to control compounding according to the linguistic
+specifiation in the lexicon (using tags). Although PLX is only for three Sámi
+languages, Hunspell conversion should be useful for all languages in our
+infrastructure. No real Hunspell or PLX files produced yet, only prerequisite
+fst's. - At the same time fixed a glitch in the version checking of VislCG3
+that would turn off support for CG files now that the vislcg3 svn revision
+number has turned 10 000.
+
+r99176:
+Added support for local overrides of the base speller fst.
+
+r99109:
+Generalised and simplified the code for building oxt's - no more hard-coded
+filenames. Now the LO-voikko versions supported as well as the platforms are
+just defined in two variables, and the rest follows from there. The build code
+also handles cases of unsupported combinations of voikko versions and platforms.
+Also silenced the build quite a lot in non-verbose mode.
+
+r98986:
+Switched to universal binary build for the LO41 voikko OXT.
+
+r98767:
+Made the hfst optimised lookup file format explicit by using the .hfstol suffix,
+and by optimising files for lookup in a separate build step, instead of
+implicitly as before. So far only for tools/mt/apertium/, but more will come.
+
+r98696:
+Made speller minimisation default to yes, specified where to push weights.
+
+r98671:
+Added --encode-weights to determinise and minimise. This fixed the never-ending
+compilation of Finnish spellers.
+
+r98633:
+The optimisations that worked for Greenlandic didn't work for Finnish,
+potentially due to Finnish being corpus-weighted and thus posing more
+challenges to determinisation and minimisation. Because of this the
+Greenlandic optimisation is now rolled into the configuration
+option --enable-minimised-spellers.
+
+r98616:
+Added size and speed optimisations to the speller compilation process:
+remove-epsilons, push-weights, determinise and minimise. Together this made
+the KAL speller *much* smaller and *much* faster. It is now as fast and small
+as any other fst-based speller.
+
+r98563:
+Hyperminimisation seems to be stable now, and we offer it as a standard
+configuration option. Also added autoconf support for the preliminary tool
+hfst-proc2, to facilitate easier testing of the tokeniser/analyser.
+
+r98486:
+Updated the tagset targets to support Xerox fst's, and tagset replacement using
+regexes instead of the hfst-only relabel tool. Now all languages can get
+localised analysis and generation tags by adding a regex file and specifying a
+few targets.
+
+r98469:
+Added build step to explicitly convert hfst transducers to optimised lookup
+format. Whitespace changes in the silent rule variables. Included the new
+lookup-include file in src-dir-include.am.
+
+r98459:
+Preparations for better handling of lookup & testing of free-standing lexc and
+rewrite rule transducers: added build rules to do inversion of fst's intended
+for lookup.
+
+r98454:
+Added a test dir for the upcoming hfst-based tokeniser.
+
+r98323:
+Corrected some paths to enable VPATH building of spellers. Added support for
+retaining intermediate files when building using "make --debug".
+
+r98165:
+Added support for building OXT for LO/OOo 3.6-4.0 for Mac. Language support is
+limited.
+
+r98043:
+Properly clean src/morphology/.
+
+r98034:
+Encapsulated most shell variable names in {} to handle hyphens etc in the
+variable names (after merge/update substitution of the __UND__ string).
+
+r98024:
+Added a dir src/morphology/generated_files/ containing files generated during
+the build process. This is done to make a clear separation between files to be
+edited and files to be ignored. Also added a directory src/morphology/incoming/
+to hold incoming lexical resources used to build the lexc or xml source files.
+Both dirs have a 00README.txt file explaining their use.
+
+r97047:
+Added WANT_OAHPA option for analysers for all languages (until now only
+generator)
+
+r97041:
+Added oahpa analyser as target (oahpa here meaning L2 transducer)
+
+r96645:
+Fixed a bug in sigma extraction on certain Linux systems.
+
+r96604:
+Better/more generalised handling of tag modifications.
+
+r96280:
+Added removal of lines marked '#RemoveFromApertium' from the apertium cg3 files.
+
+r96100:
+Removed temporarily the downcasing of derived proper nouns from the hfst
+transducers - it causes them to become malfunctioning.
+
+r96043:
+Fixed bug introduced yesterday that broke compilation of certain xfscript files.
+
+r95955:
+Forgot two files in the previous commit.
+
+r95954:
+Added support for testing the fst for initial upper casing of strings. This also
+includes yaml test support for non-analysing/-genereting fst's.
+
+r95796:
+Properly handle downcasing of derived proper nouns as well as optional initial
+upper case. The optional initial upper-casing doesn't work for derived proper
+nouns when using Hfst because of an unimplemented featuare in hfst-xfst. It is
+reported to the hfst team. Increased gtd core version number due to new scripts
+and possible dependencies in the gtd core.
+
+r94834:
+Extracting flag diacritics, to build regexes that can ignore them in certain
+cases (like optional initial upper case). Requires new version of the gtd core.
+At the same time split tag extraction in two - the first step extracts the whole
+sigma set, and from that we can extract tags, flag diacritics, etc. The sigma
+set extraction was greatly improved, removing a number of small errors due to
+handling of reserved symbols in Hfst and Xfst.
+
+r94398:
+Added test summary for all yaml tests for a given fst.
+
+r94272:
+With feedback from Brendan I finally got the number of tests passed and failed
+printed as part of the YAML testing.
+
+r94267:
+Adaption to a new version of the morph-tester.py script by Brendan Molloy. Small
+adjustments to the yaml test printouts.
+
+r94063:
+Major bug fix to the generate lemma test script. Now it actually checks that the
+generated lemmas correspond to the listed ones.
+
+r94027:
+Bugfix: no hardcoded language codes.
+
+r94017:
+Now also (language pair independent) morphological generators for Apertium are
+installed with their correct Apertium file names.
+
+r94002:
+Added renaming to Apertium style filenames, changed installation file list to
+only include files actually used by Apertium. With this change, everything
+should be in place for a fully automatic integration between the GT-Divvun
+infrastructure and the Apertium infrastructure through the use of pkg-config
+files, with one exception: morphological generators.
+
+r93938:
+A rewritten pc file, with proper paths actually reflecting where things are
+installed, and with a shortened description to better fit the use of it.
+
+r93933:
+We also need to install the pkg-config file...
+
+r93927:
+After a long discussion, the moniker 'giella' was chosen instead of gtdivvun.
+Changed datadir from $(datadir)/gtdivvun/* to $(datadir)/giella/*. Added a
+pkg-config file so that all installed resources can be found automatically.
+
+r93880:
+Changed datadir from $(datadir)/hfst/* to $(datadir)/gtdivvun/*, as it is the
+directory used to install the gtdivvun products, and not only hfst transducers
+are installed.
+
+r93810:
+Require Automake 1.11.6 to avoid errors caused by older Automake's.
+
+r93210:
+Make semantic tags optional also for dict and oahpa generators. Added support
+for hfst fst's for dict and oahpa.
+
+r93205:
+Make semantic tags optional for all generators. Fixes bug
+http://giellatekno.uit.no/bugzilla/show_bug.cgi?id=1854.
+
+r93153:
+Uncommented the cg3-with-apertium-tags targets, increased the gtcore version
+number.
+
+r92913:
+Started work on adding hyphenators. No substantial changes, just Automake
+conditionals.
+
+r92866:
+Actually made the options --disable-analysers and --disable-generators do what
+they should, earlier they had no effect. Also renamed those options. Wrapped the
+filter targets in mt/tools/apertium/filters/ in apertium conditionals, so that
+they will only be built if the apertium option is enabled. Added separate
+configure.ac option to disable the transcriptors (the num2text family).
+
+r92827:
+Make sure all tests are within conditionals - only run them if the fst's have
+been built.
+
+r92650:
+Added conversion of analysis tags from GTDivvun format to Apertium format for
+the vislcg3 files. The generated vislcg3 files are not valid, and the targets
+are thus commented out for now.
+
+r92404:
+Added support for tmp files in the apertium target language specific analysers,
+to allow local processing of those analysers.
+
+r92369:
+Rewrote tag reordering of semantic tags to use a dynamically generated regex,
+and split tag reordering in three: reordering sub-POS tags, semantic tags, and
+language specific tags. The two first reordering operations are done on all
+languages. The reordering is done when building the raw file, to build a fixed
+tag order that other fst operations can rely on. The raw file build had to be
+split in two steps because of this.
+
+r92339:
+Added support for target-language specific filtering for the Apertium analysers.
+
+r92295:
+A major update to the Apertium fst building:
+* corrected broken logic when building the list of tags used by a language
+* build filter to remove derivation strings dynamically from the list of tags
+* added a new taglist2remove...strings-regex.sh file to the core
+* added a new dir filters/ within tools/mt/apertium/ for building apertium
+  specific filters
+* added facility to modify locally remove...strings.regex files by using an
+  exception file
+* build the remove-derivation-strings.regex dynamically also for regular fst's
+
+r92170:
+Now building the remove dialect tag removal filter dynamically, in the same way
+as done for the semantic tags. Requires a new version of the GTD core.
+
+r92144:
+Dialect tags are now removed in the Apertium fst compilation. In addition, tags
+can now be custom changed and reordered on a language pair basis, see README.txt
+in tools/mt/apertium/tagsets/.
+
+r92118:
+Corrected several errors in the MT Apertium fst builds: now removing semantic
+tags and tags for originating language. Silent hfst-invert.
+
+r92100:
+Modified the gttags.txt target to produce output also in cases where no GTD tags
+are defined. Earlier the build would break in this case.
+
+r92029:
+Commented out another debug echo statement.
+
+r91993:
+Commented out a debug echo statement.
+
+r91943:
+Fixed a bug with optional semantic tags: we built the regex, but not the fst's.
+
+r91821:
+Corrected a bug in the lexc yaml testing. Fixed file refs in the dict fst tests.
+
+r91682:
+Moved yaml test scripts for different transducer types up one level, to
+correspond to the parallel location of the fst files in the build tree.
+
+r91672:
+Generalised the yaml test runner code, to identify the relative paths of the
+test scripts and the fst's being tested, so that all sorts of fst's can be
+tested irrespective of where they are built. Added yaml testing for MT/Apertium.
+
+r91623:
+Moved some back-end scripts for yaml testing to the uppermost test directory, to
+ease sharing of the same code across test subdirectories.
+
+r91605:
+Moved all silencing code to a separate include file (except in a few cases of
+double includes). Made the yaml testing a bit more verbose when rerunning
+individual tests (copy-paste testing).
+
+r91581:
+Changed target language specifc analysers to be based off of
+analyser-mt-gt-desc.hfst, instead of the *.tmp.hfst file, to allow local post
+processing to be applied in the step from *.tmp.hfst to the *.hfst file.
+
+r91564:
+Forgot to remove all the targets and build instructions in the old location.
+
+r91559:
+Finalised moving the Apertium MT build code to the new location. All parts have
+been generalised, and the set of target languages to go with a specific source
+language (when analysing) is specified in configure.ac. That is, just list your
+target languages in configure.ac, and off you go. One feature still missing:
+target language derivation (and other) string filtering for the source language
+analyser. Coming soon.
+
+r91448:
+Reorganised MT fst building, moving it to a new dir in tools/. This is done to
+avoid too much stuff in one dir (src/), and to make it easier to extend the MT
+support without making the build files too large for one dir.
+
+r91222:
+Added a tmp-file step for the raw fst, to allow local/language specific
+overrides when building the raw transducer. Required for Estionan.
+
+r91100:
+Added support for dialectal fst's in Oahpa. The dialect tags need only be
+specified in $GTLANG/configure.ac, and all filters and fst's will be constructed
+automatically.
+
+r91028:
+Made generated regex files build and be retained, as well as deleted when using
+'make clean'.
+
+r91021:
+Added missing test runners, and at the same time made the test XFAILS (i.e.
+expected fails due to immature code).
+
+r91015:
+Greatly improved support for the dictionary fst building:
+* filtering semantic tags now work properly (removed for all but Prop)
+* properly silent when using silent builds
+* added dict-specific yaml test files and corresponding test runners
+* removed building of reduntant dictionary fst's since we now can test
+  generation and analysis independently - we only test the fst's we
+  are actually going to use, in the intended "direction"; this should
+  noticably speed up compilation, especially when using hfst
+* all languages now build a dictionary analyser with a mobile phone
+  spell relax
+Also removed semantic tags from the regular analyser, as discussed earlier.
+Increased the required GTD core version, as the new version is required to
+fix the bug mentioned above.
+
+r90845:
+Corrected the test that triggers a FAIL in the twolc negative test script.
+
+r90799:
+Temporarily add the new twolc pair tests to XFAIL-TESTS, to make them pass as
+expected fails. This will let all tests run, but will have to be reverted either
+when all broken twolc tests are fixed, or when the full test suite can be run
+without stopping make.
+
+r90726:
+Rewrote the test for awk to check for a feature found only in GNU awk, and use
+the one found. Will check both awk and gawk, and use whichever supports the
+feature (gawk on some Linux systems is renamed awk). This should make the
+build configuration more robust.
+
+r90692:
+Added twolc pair string testing for Xerox. Hfst requires another type of pair
+strings, and can't easily be tested at present.
+
+r90613:
+Added more tailored silent output, silenced Xerox tools as much as possible (not
+very much).
+
+r90588:
+Made documentation build process work properly when using VPATH builds, and at
+the same time silenced the doc build by default.
+
+r90437:
+Replaced grep in Makefile with a shell script for extracting semantic tags. This
+is done to catch the case where there are no semantic tags to extract. Earlier
+this caused a failed build, now it is handled properly. Required GTD core
+version increased because of the new script is only found in the latest version
+of the core.
+
+r90421:
+Build remove-semantic-tags.regex for all languages, since we now use it when
+building speller files.
+
+r90419:
+Only test spellers if we build spellers.
+
+r90415:
+Moved the new test script processing in configure.ac up a few lines to avoid
+conflicts during template merge.
+
+r90414:
+Added a test to check zhfst file validity. Not functional yet, because of a bug
+in hfst-ospell.
+
+r90368:
+Fixed bug http://giellatekno.uit.no/bugzilla/show_bug.cgi?id=1830. The word
+border mark removal had earlier been moved from a preceding step to the final
+product compilation step. It was added to the foma speller compilation, but not
+included in the hfst speller compilation for some reason. Now it is.
+At the same time removed semantic tags from the speller transducers, to make the
+analysis/generation string more readable when debugging - they are not used by
+the speller builds.
+
+r89769:
+Fixed a build bug: it tried to build oxt files also when hfst support was not
+enabled. Now oxt files will only be built if hfst is on, and spellers have been
+requested.
+
+r89623:
+Fixed a problem with building zhfst files using VPATH builds.
+
+r89587:
+Added convenience upload target to upload the oxt files and make a permanent
+link to the latest version.
+
+r89570:
+Fixed pattern rule error.
+
+r89569:
+Simplified the building of the hfst lexical transducer, and made it easy to use
+the -F option to hyperminimise the lexical fst. Using pattern rules instead of
+fixed filenames.
+
+r89561:
+Added first working build of oxt files. Not yet generalised, but working with
+the paths we have. Will build Windows and Mac OXT files for all languages.
+
+r89338:
+Whitespace change.
+
+r89333:
+Stop with error if --with-hfst was requested but could not be turned on.
+Based on patch by Unhammer.
+
+r88686:
+Really fixed syntax errors, and another old error.
+
+r88684:
+Fixed syntax errors.
+
+r88682:
+More comments and clear separation between the different macro sections. Added
+first components for configuring oxt building - checking whether it is possible
+to sync the oxt template locally from $GTHOME. Added check that all components
+of the Xerox tools are installed before enabling Xerox builds.
+
+r88677:
+Added a variable to hold the LibreOffice version number where speller support
+for a language was initially available.
+
+r88669:
+Made minimisation of speller automatas configurable (default=no), since it can
+be extremely time and resource consuming for some languages, and the size
+difference for the final fst is not very big; we might loose some speed thoug,
+which needs to be tested. Reorganised the configure.ac coce by moving most code
+to the m4/giellatekno.m4 macro file. What remains in configure.ac is pretty
+clean and mostly easily understood.
+
+r88620:
+Renamed the last files in am-shared/ to follow the correct naming scheme.
+
+r88615:
+Removed test-src-morph-include.am - it was in reality empty.
+
+r88596:
+Moved word border removed to each fst-based speller, as we need it in the hfst
+speller production (for word-based weighting) but not in the foma-based speller.
+Rewrote all (fst-)speller build steps to regexes instead of hfst pipelines.
+
+r88584:
+Rewrote the mt build instructions to a regex instead of an hfst pipe.
+
+r88578:
+Renamed doc-include.am to follow the naming scheme.
+
+r88569:
+Renamed hunspell-include and listbased-spellchecker-include.
+
+r88562:
+Deleted unused include file.
+
+r88558:
+Renamed orthography-include.am and hyphenation-include.am to follow the naming
+scheme. Now all src-dir includes are renamed.
+
+r88545:
+Renamed phonetics-include.am to follow the naming scheme.
+
+r88543:
+Renamed syntax-include.am to follow the naming scheme.
+
+r88539:
+Renamed transcriptions-include.am to follow the naming scheme.
+
+r88533:
+Renamed phonology-include.am to follow the naming scheme.
+
+r88531:
+Renamed disamb-include.am to follow the naming scheme.
+
+r88526:
+Removed 130 lines of code, and made the code much more readable by replacing the
+long pipe of hfst commands with one regex pr target. The actual regex is a
+mirror copy of the xfst regex already in the file, which means that it is also
+very easy to maintain functional parity between the two architectures.
+
+r88522:
+Renamed the lexc include file to follow the correct naming convention.
+
+r88520:
+Renamed the main src include file to follow the correct naming convention.
+
+r88405:
+Completed documentation for updating gtcore.
+
+r88390:
+Added support for building disamb-oriented fst's, which include the semantic
+tags.
+
+r87898:
+Corrected VPATH build of lexc files generated from xml. At the same time
+silenced the XSL processing a bit, and corrected a minor configure error for
+VPATH configurations.
+
+r87890:
+It was not a good idea to redefine a variable referencing itself - AM stops.
+
+r87889:
+Enabled compression of zhfst files again, it should now work across all
+platforms. Made filter regex compilation quiter for xfst, and made the silent
+mode more informative for filter compilation.
+
+r87298:
+Make the the xfscript compilers quiet in silent mode, verbose in verbose mode.
+
+r87220:
+When running LexC tests, if no tests were found, the test bench will now report
+that the whole test was skipped. Earlier it reported a pass.
+
+r87212:
+Tailored silent build output for Vislcg3.
+
+r87206:
+Increased the actual and required version number after a small bugfix in
+thespeller version easter egg, to ensure all generated spellers have proper
+version info.
+
+r87099:
+Corrected a fatal bug for non-latin spell checkers: the error model contained
+one letter from the easter egg not found in the acceptor. This symbol mismatch
+is fatal for hfst-ospell, and caused all non-latin spellers to crash (the latin
+spellers would all have this symbol ('p') anyway, so no problem was noticed
+earlier).
+
+r86991:
+Corrected the compilation of xfscript files such that we still have a general
+build rule for xfscript files, but now with a following inversion when needed.
+Also added better feedback on the build steps in silent mode.
+
+r86874:
+Updated required and actual version number of gtdcore. The easter egg creation
+for hfst spellers depends on new files in the core, and also the abbr.txt
+building does so. Without an updated core e.g. speller builds will fail.
+
+r86855:
+Renamed more am-shared files.
+
+r86822:
+Renamed topdir-include.am to src-include.am to follow the correct naming
+pattern.
+
+r86820:
+Experimenting with feedback on silent builds (make V=0). Looks good.
+
+r86806:
+Added Autotools support for building the abbr.txt file. This file is _not_
+included in the regular make commands, one has to cd into the tools/preprocess/
+directory, and to 'make abbr' there. This is on purpose.
+
+r86774:
+Added a new dir tools/preprocess/ to hold resources for the preprocess utility.
+
+r86740:
+Added automatic switch between hfst-foma and hfst-xfst for compiling xfscript
+files into transducers. hfst-foma is the default, with fallback to hfst-xfst if
+hfst-foma is not found. There are still issues with hfst-xfst.
+
+r86734:
+Moved xfscript compilation out of phonetics-include and hyphenation include.
+These am-files contained and invert command that combined with an invert command
+in the actual xfscripts created a meaningless double inversion.
+
+r86719:
+Removed unused twolc.am file. Reorganised the code for twolc and xfscript
+compilation, to avoid duplicate code and prepare for improvements. Added M4
+macro check that either hfst-xfst or hfst-foma is included, hfst compilation is
+turned off if none of them is.
+
+r86655:
+Reduced weights for the easter egg suggestions, to avoid other suggestions to
+come in between.
+
+r86582:
+Easter egg with version info now working in the hfst speller.
+
+r86438:
+Added initial version file for the hfst-based spellers.
+
+r86359:
+Explicit support for local source files and targets for the syntax.
+
+r86355:
+Added support for building (compiling into binary form) cg3 files for syntactic
+functions and dependency graphs. Added a template file for syntactic functions.
+Made the compiled binary files installable through 'make install'.
+
+r86122:
+Added version checking of vislcg3, renamed a couple of variables, and improved
+configuration feedback a bit. Now we require a vislcg3 new enough to not
+complain about recent addition of new features.
+
+r85561:
+Changed the file order when building zhfst files - there are still issues caused
+by the index.xml file being non-first. Now it is always first.
+
+r85550:
+Finally fixed the libvoikko/zhfst spellers. Ready for Windows!
+
+r85468:
+Moved the common src/filters/ inside a common/ dir, to allow for other parallel
+dirs like smi/ and und-Cyrl/ that target only a subset of the languages. At the
+same time renamed gtshared/ to gtdshared/. This change require version 0.2.0 of
+the gtdcore.
+
+r85453:
+Added the requirement to remove orig_lang-tags (OLang/NOB etc) by adding
+filters/remove-orig_lang-tags.xfst also to generator fsts, not only to analyser,
+for the dicts fst-s.
+
+r85430
+Fixed a bug that hindered the GTD core from finding the version info script in
+the core (as opposed to installed).
+
+r85421:
+Added version checking of the GTD core: if the core is too old, configure will
+stop and print an error message with instructions on how to proceed. Added an
+external Autoconf M4 macro for version comparison, and renamed the file of an
+existing module, to be more consistent and explicit in the filenames. This work
+is done in preparations for other changes in the GTD core, which will require
+the core to be updated to not render all languages broken.
+
+r85356:
+Removed the filter "remove-NG-string.regex" from the
+analyser-dict-gt-norm.xfst target, in order to allow Use/NG entries in dict
+fsts.
+
+r85211:
 No PCDATA text elements should be on a line of its own, that seems to trip off
 TinyXML2.
 

@@ -1,16 +1,107 @@
+
 !! Verb inflection
-!! ---------------
-!! The Evenki verbs inflect in persons.
+!  ---------------
 
-LEXICON Persons
-+V+1sg:en   #   ;
-+V+2sg:et   #   ;
-+V+3sg:e    #   ;
-+V+1pl:ien  #   ;
-+V+2pl:iet  #   ;
-+V+3pl:iet  #   ;
-+V+inf:0    #   ;
-#:0   Nouns   ;
+LEXICON BIMII
++V+IV+Inf:%>ми{ː%} # ;
++V+IV+Ind+Prs+Sg1:сим # ;
++V+IV+Ind+Prs+Sg2:синни # ;
++V+IV+Ind+Prs+Sg3:син # ;
++V+IV+Ind+Prs+Pl1:сив # ;
++V+IV+Ind+Prs+Pl12:сип # ;
++V+IV+Ind+Prs+Pl1:сис # ;
++V+IV+Ind+Prs+Pl1:си # ;
 
-! vim: set ft=xfst-lexc:
+LEXICON EMII
++V+Neg+Inf:%>ми{ː%} # ;
++V+Neg+Ind+Prs+Sg1:сим # ;
++V+Neg+Ind+Prs+Sg2:синни # ;
++V+Neg+Ind+Prs+Sg3:син # ;
++V+Neg+Ind+Prs+Pl1:сивун # ;
++V+Neg+Ind+Prs+Pl12:сип # ;
++V+Neg+Ind+Prs+Pl1:сис # ;
++V+Neg+Ind+Prs+Pl1:си # ;
+
++V+Neg+Ind+Prt:%>ч%{A%}%{ː%} PERS_B ; 
++V+Neg+Ind+Prt+Iter:%>ӈки PERS_B ; 
+
++V+Neg+Ind+Fut1:%>д%{Я%}ӈ%{A%}%{ː%}  PERS_B ; 
++V+Neg+Ind+Fut2:%>д%{Я%}ли PERS_A_SG12 ;
++V+Neg+Ind+Fut2:%>д%{Я%}лл%{A%} PERS_A_REST ;
++V+Neg+Ind+Fut3:%>д%{Я%}%{ː%} PERS_B ;
+
+
+
+LEXICON V_MOD 
++V+Inf:%>ми%{ː%} # ;
++V: ACCIDENTS ;
+
+
+LEXICON V_IV 
++V+IV+Inf:%>ми%{ː%} # ;
++V+IV: ACCIDENTS ;
+
+LEXICON V_TV 
++V+TV+Inf:%>ми%{ː%} # ;
++V+TV: ACCIDENTS ;
+
+LEXICON ACCIDENTS
+
++Ind+Prs:%{U%} PERS_A_SG12 ; 
++Ind+Prs:%>%{R%}%{A%} PERS_A_REST ; 
++Ind+Prt:%>ч%{A%}%{ː%} PERS_B ; 
++Ind+Prt+Iter:%>ӈки PERS_B ; 
++Ind+Prt+Pl2:%>ч%{A%}%{ː%}хун # ; 
++Ind+Prt+Iter+Pl2:%>ӈкихун # ; 
++Ind+Fut1:%>д%{Я%}ӈ%{A%}%{ː%}  PERS_B ; 
++Ind+Fut2:%>д%{Я%}ли PERS_A_SG12 ;
++Ind+Fut2:%>д%{Я%}лл%{A%} PERS_A_REST ;
++Ind+Fut3:%>д%{Я%}%{ː%} PERS_B ;
++Ind+ConNeg:%>%{R%}%{A%} # ; 
++Imp: PERSIMP_A ;
++Imp: PERSIMP_B ;
+
+LEXICON PERSIMP_A
++Sg1:%>кт%{A%} # ;
++Sg2:%>к%{A%}л # ;
++Sg3:%>гин # ;
++Pl1:%>квун # ;
++Pl12:%>г%{A%}т # ;
++Pl2:%>к%{A%}ллу # ;
++Pl3:%>ктын # ;
+
+
+LEXICON PERSIMP_B
++Sg1:%>ӈн%{A%}м # ;
++Sg2:%>д%{A%}ви # ;
++Sg3:%>ӈн%{A%}н # ;
++Pl1:%>ӈн%{A%}вун # ;
++Pl12:%>ӈн%{A%}т # ;
++Pl2:%>д%{A%}в%{A%} # ;
++Pl3:%>ӈн%{A%}тын # ;
+
+
+LEXICON PERS_A_SG12
+
++Sg1:%>м # ; ! %> in previous lexicon 
++Sg2:%>нни # ; 
+
+LEXICON PERS_A_REST
++Sg3:%>н # ; 
+
++Pl1:%>в # ; 
++Pl12:%>п # ; 
++Pl2:%>с # ; 
++Pl3: # ; 
+
+LEXICON PERS_B
+
++Sg1:%>в # ; 
++Sg2:%>с # ; 
++Sg3:%>н # ; 
+
++Pl1:%>вун # ; 
++Pl12:%>т # ; 
++Pl2:%>сун # ; 
++Pl3:%>тын # ; 
 

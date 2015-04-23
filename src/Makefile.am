@@ -7,52 +7,11 @@ SUBDIRS = phonology morphology filters phonetics hyphenation orthography syntax 
 
 ####### Automake targets: ########
 
-if CAN_HFST
-GT_ANALYSERS_HFST=analyser-gt-desc.hfst analyser-gt-norm.hfst
-GT_GENERATORS_HFST=generator-gt-desc.hfst generator-gt-norm.hfst
-GT_TRANSFORMERS_HFST=transcriptor-clock2text-desc.hfst \
-					 transcriptor-date2text-desc.hfst \
-					 transcriptor-numbers2text-desc.hfst \
-					 transcriptor-text2clock-desc.hfst \
-					 transcriptor-text2date-desc.hfst \
-					 transcriptor-text2numbers-desc.hfst
-
-if WANT_APERTIUM
-# This is just a generic analyser. You need to add pair-specific analysers to
-# the language-specific part further down.
-APERTIUM_ANALYSERS_HFST=analyser-mt-gt-desc.hfst
-APERTIUM_GENERATORS_HFST=generator-mt-gt-norm.hfst \
-						generator-mt-apertium-norm.hfst \
-						generator-mt-apertium-norm.att.gz
-endif # WANT_APERTIUM
-endif # CAN_HFST
-
-if CAN_XFST
-GT_ANALYSERS_XFST=analyser-gt-desc.xfst analyser-gt-norm.xfst
-GT_GENERATORS_XFST=generator-gt-desc.xfst generator-gt-norm.xfst
-GT_TRANSFORMERS_XFST=transcriptor-clock2text-desc.xfst \
-					 transcriptor-date2text-desc.xfst \
-					 transcriptor-numbers2text-desc.xfst \
-					 transcriptor-text2clock-desc.xfst \
-					 transcriptor-text2date-desc.xfst \
-					 transcriptor-text2numbers-desc.xfst
-
-if WANT_DICTIONARIES
-GT_ANALYSERS_XFST+=analyser-dict-gt-desc.xfst \
-					analyser-dict-gt-norm.xfst
-GT_GENERATORS_XFST+=generator-dict-gt-norm.xfst \
-					generator-dict-gt-desc.xfst
-endif # WANT_DICTIONARIES
-endif # CAN_XFST
-
-if WANT_OAHPA
-if CAN_HFST
-GT_GENERATORS_HFST+=generator-oahpa-gt-norm.hfst
-endif # CAN_HFST
-if CAN_XFST
-GT_GENERATORS_XFST+=generator-oahpa-gt-norm.xfst
-endif # CAN_XFST
-endif # WANT_OAHPA
+# Define target variables first, before assigning to them:
+GT_ANALYSERS_HFST=
+GT_GENERATORS_HFST=
+GT_ANALYSERS_XFST=
+GT_GENERATORS_XFST=
 
 #### Local modifications in *fst processing: ####
 ####
@@ -87,27 +46,18 @@ endif # WANT_OAHPA
 
 #### Xerox transducers:
 if CAN_XFST
-endif
+GT_ANALYSERS_XFST+=
+GT_GENERATORS_XFST+=
+endif # CAN_XFST
 
 #### HFST transducers
 if CAN_HFST
 GT_ANALYSERS_HFST+=
 GT_GENERATORS_HFST+=
-if WANT_APERTIUM
-APERTIUM_ANALYSERS_HFST+=analyser-mt-apertium-desc.und.hfst \
-						 analyser-mt-apertium-desc.und.att.gz
-APERTIUM_GENERATORS_HFST+=
-
-endif
-endif
+endif # CAN_HFST
 
 #################################################
 #### Add language-specific build rules here: ####
-
-# Apertium-related language-specific targets - modify to suit each language:
-analyser-mt-%.und.hfst: analyser-mt-%.tmp.hfst
-	$(AM_V_GEN)$(HFST_INVERT) $< \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -t -o $@
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
@@ -115,17 +65,23 @@ analyser-mt-%.und.hfst: analyser-mt-%.tmp.hfst
 
 #### HFST transducer fallback target:
 #### - inversion is needed FOR THE ANALYSER because the hfst model is upside
-#### down compared to Xerox AT APPLICATION TIME. The other command makes the
-#### final transducer ready for use.
+#### down compared to Xerox AT APPLICATION TIME.
 analyser%.hfst: analyser%.tmp.hfst
-	$(AM_V_GEN)$(HFST_INVERT) $< \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+	$(AM_V_INVERT)$(HFST_INVERT) -i $< -o $@
 
 generator%.hfst: generator%.tmp.hfst
-	$(AM_V_GEN)$(HFST_FST2FST) $(HFST_FLAGS) -t -i $< -o $@
+	$(AM_V_CP)cp -f $< $@
 
 #### Xerox transducer fallback target:
-%.xfst: %.tmp.xfst
-	$(AM_V_GEN)cp -f $< $@
+#### - inversion is needed in the final step for the GENERATOR.
+analyser%.xfst: analyser%.tmp.xfst
+	$(AM_V_CP)cp -f $< $@
 
-include $(top_srcdir)/am-shared/topdir-include.am
+generator%.xfst: generator%.tmp.xfst
+	$(AM_V_XFST)$(PRINTF) "\
+		 load stack $<\n\
+		 invert net\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
+
+include $(top_srcdir)/am-shared/src-dir-include.am

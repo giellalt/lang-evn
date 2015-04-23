@@ -4,26 +4,16 @@
 
 ####### Source file defs: ########
 
-# set this to names of available orthographic rules in regex and xfst format
-GT_ORTHOGRAPHIC_SRCS=inituppercase.regex \
-					 allcaps.xfscript    \
-					 spellrelax.regex    \
-					 spellrelax-mobile-keyboard.regex
+# Set these to names of available orthographic rules in regex and
+# xfscript formats
+GT_ORTHOGRAPHIC_REGEX_SRCS=\
+		inituppercase.regex \
+		spellrelax.regex    \
+		spellrelax-mobile-keyboard.regex
 
-####### Automake targets: ########
+GT_ORTHOGRAPHIC_XFSCRIPT_SRCS=\
+		allcaps.xfscript      \
+		downcase-derived_proper-strings.xfscript
 
-GT_ORTHOGRAPHIC_FSTS=
-if CAN_HFST
-GT_ORTHOGRAPHIC_FSTS+=allcaps.hfst \
-					  inituppercase.hfst \
-					  spellrelax.hfst \
-					  spellrelax-mobile-keyboard.hfst
-endif
-if CAN_XFST
-GT_ORTHOGRAPHIC_FSTS+=allcaps.xfst \
-					  inituppercase.xfst \
-					  spellrelax.xfst \
-					  spellrelax-mobile-keyboard.xfst
-endif
-
-include $(top_srcdir)/am-shared/orthography-include.am
+# General build rules included from here:
+include $(top_srcdir)/am-shared/src-orthography-dir-include.am

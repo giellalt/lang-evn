@@ -1,11 +1,12 @@
-!! !!!Proper noun inflection
-!! ----------------------
-!! The Evenki proper nouns inflect in the same cases as regular
-!! nouns
+!! Evenki Propernoun inflection
+! --------------------
 
-LEXICON ProperNounCases
-+N+Prop:   Cases  ;
-        -    Nouns  ;
+!! The Evenki propernouns agree with nouns in case and number
+!! They are thus sent to common nominal lexica X_BIRA etc.  
+!! after having got their +N+Prop tag.
+
+LEXICON PROP_BIRA
++N+Prop: X_BIRA ;
 
 ! vim: set ft=xfst-lexc:
 

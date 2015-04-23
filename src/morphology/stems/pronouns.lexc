@@ -2,7 +2,238 @@
 ! --------
 !! Pronouns in Evenki denote references to things.
 
+! э̄ а̄ ӣ о̄ ӯ ю̄ я̄ е̄
 LEXICON Pronouns
-pronoun    Cases   ;
+
+Personal ;
+Reflexive ;
+Possessive ;
+Determinative ;
+Interrogative ;
+
+LEXICON Personal 
+ pers_nom ;
+ pers_obl ;
+      
+LEXICON pers_nom
+бӣ+Pron+Pers+Sg1+Nom:би%{ː%} # ;
+бӯ+Pron+Pers+Pl1+Nom:бу%{ː%} # ;
+мит+Pron+Pers+Pl12+Nom:мит # ;
+сӣ+Pron+Pers+Sg2+Nom:си%{ː%} # ;
+сӯ+Pron+Pers+Pl2+Nom:су%{ː%} # ;
+нуӈан+Pron+Pers+Sg3+Nom:нуӈан # ;
+нуӈартын+Pron+Pers+Pl3+Nom:нуӈартын # ;
+
+LEXICON pers_acc
+бӣ+Pron+Pers+Sg1+Acc+Def:минэвэ 	 # ;
+бӯ+Pron+Pers+Pl1+Acc+Def:мунэвэ 	 # ;
+мит+Pron+Pers+Pl21+Acc+Def:митвэ 	 # ;
+сӣ+Pron+Pers+Sg2+Acc+Def:синэвэ 	 # ;
+сӯ+Pron+Pers+Pl2+Acc+Def:сунэвэ 	 # ;
+нуӈан+Pron+Pers+Sg3+Acc+Def:нуӈанма̄н  #  ;
+нуӈартан+Pron+Pers+Pl3+Acc+Def:нуӈарватын  # ;
+
+LEXICON pers_obl
+бӣ+Pron+Pers+Sg1:мин 	PERS_CASE_OBL_LN ;
+бӣ+Pron+Pers+Pl1:мун 	PERS_CASE_OBL_LN ;
+мит+Pron+Pers+Pl12:мит 	PERS_CASE_OBL_MIT ;
+сӣ+Pron+Pers+Sg2:син 	PERS_CASE_OBL_LN ;
+сӯ+Pron+Pers+Pl2:сун 	PERS_CASE_OBL_LN ;
+нуӈан+Pron+Pers+Sg3:нуӈан  PERS_CASE_OBL_3SG ;
+нуӈартан+Pron+Pers+Pl3:нуӈар  PERS_CASE_OBL_3PL ;
+
+LEXICON PERS_CASE_OBL_MIT
++Acc+Def:%>вэ # ;
++Acc+Ind:%>ъэ # ;
+PERS_CASE_OBL_COMMON; 
+
+LEXICON PERS_CASE_OBL_LN 
++Acc+Def:%>эвэ # ;
++Acc+Ind:%>э # ;
+PERS_CASE_OBL_COMMON; 
+
+LEXICON PERS_CASE_OBL_COMMON
++Dat:%>%{D%}у%{ː%} # ;		 ! Дателный Dative
++Loc:%>лэ{ː%} # ;         ! Местный Locative
++All:%>тки{ː%} # ;            ! Направителый Allative
++Prl:%>%{D%}ули{ː%} # ;            ! Продольный Prolative
++Ter:%>%{i%}клэ%{ː%} # ;    ! Направительно-местный Terminative
++Dir:%>%{i%}кли%{ː%} # ;        ! Направительно-продольный Directive
++Abl:%>%{D%}ук # ;		 ! Отложительный Ablative
++Ela:%>%{G%}ит # ;		 ! Исходный Elative
++Com:%>нун # ;        ! Совместный Comitative
+
+LEXICON PERS_CASE_OBL_3SG 
++Acc+Def:%>ма%{ː%}н # ;
++Acc+Ind:%>а # ;
++Dat:%>ду%{ː%}н # ;		 ! Дателный Dative
++Loc:%>дул%а{ː%}н # ;         ! Местный Locative
++All:%>тыки{ː%}н # ;            ! Направителый Allative
++Prl:%>дули{ː%}н # ;            ! Продольный Prolative
++Ter:%>икла%{ː%}н # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}н # ;        ! Направительно-продольный Directive
++Abl:%>дукин # ;		 ! Отложительный Ablative
++Ela:%>ӈидин # ;		 ! Исходный Elative
++Ins:%>дин # ;		 ! Творительный Instrumental
++Com:%>нунин # ;        ! Совместный Comitative
+
+LEXICON PERS_CASE_OBL_3PL 
++Acc+Def:%>vа%{ː%}тын # ;
++Acc+Ind:%>ъя # ;
++Dat:%>ду%{ː%}тын # ;		 ! Дателный Dative
++Loc:%>дул%а{ː%}тын # ;         ! Местный Locative
++All:%>тыки{ː%}тын # ;            ! Направителый Allative
++Prl:%>дули{ː%}тын # ;            ! Продольный Prolative
++Ter:%>икла%{ː%}тын # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}тын # ;        ! Направительно-продольный Directive
++Abl:%>дукитын # ;		 ! Отложительный Ablative
++Ela:%>ӈидитын # ;		 ! Исходный Elative
++Ins:%>дитын # ;		 ! Творительный Instrumental
++Com:%>нунитын # ;        ! Совместный Comitative
+
+LEXICON Reflexive
+мэ%{ː%}нми%{ː%}+Pers+Refl+Sg:мэ%{ː%}н reflcasesg ;
+мэ%{ː%}рвэр+Pers+Refl+Sg:мэ%{ː%}р reflcasepl ;
+
+LEXICON reflcasesg
++Acc+Def:%>м%{ː%} # ;
++Dat:%>%{D%}у%{ː%}ви%{ː%} # ;		 ! Дателный Dative
++Loc:%>л%{A%}{ː%}ви%{ː%} # ;         ! Местный Locative
++All:%>тки{ː%}ви%{ː%} # ;            ! Направителый Allative
++Prl:%>%{D%}ули{ː%}ви%{ː%} # ;            ! Продольный Prolative
++Ter:%>иклэ%{ː%}ви%{ː%} # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}ви%{ː%} # ;        ! Направительно-продольный Directive
++Abl:%>%{D%}укви%{ː%} # ;		 ! Отложительный Ablative
++Abl:%>%{D%}укки%{ː%} # ;		 ! Отложительный Ablative
++Ela:%>ӈитпи%{ː%} # ;		 ! Исходный Elative
++Ins:%>дивии%{ː%} # ;		 ! Творительный Instrumental
++Com:%>нунми%{ː%} # ;        ! Совместный Comitative
+
+LEXICON reflcasepl
++Acc+Def:%>вэр # ;
++Dat:%>%{D%}у%{ː%}вэр # ;		 ! Дателный Dative
++Loc:%>л%{A%}{ː%}вэр # ;         ! Местный Locative
++All:%>тки{ː%}вэр # ;            ! Направителый Allative
++Prl:%>%{D%}ули{ː%}вэр # ;            ! Продольный Prolative
++Ter:%>иклэ%{ː%}вэр # ;    ! Направительно-местный Terminative
++Dir:%>икли%{ː%}вэр # ;        ! Направительно-продольный Directive
++Abl:%>%{D%}уквэр # ;		 ! Отложительный Ablative
++Abl:%>%{D%}уккэр # ;		 ! Отложительный Ablative
++Ela:%>ӈитпэр # ;		 ! Исходный Elative
++Ins:%>дивиэр # ;		 ! Творительный Instrumental
++Com:%>нунмэр # ;        ! Совместный Comitative
+
+LEXICON Possessive
+минӈӣ+Pron+Poss+Sg1:минӈи%{ː%} # ;
+мунӈӣ+Pron+Poss+Pl1:мунӈи%{ː%} # ;
+митӈӣ+Pron+Poss+Pl12:митӈи%{ː%} # ;
+синӈӣ+Pron+Poss+Sg2:синӈи%{ː%} # ;
+сунӈӣ+Pron+Poss+Pl2:сунӈи%{ː%} # ;
+
+LEXICON Determinative
+
+а̄ды̄+Det:а%{ː%}ды%{ː%} # ; !"сколько"
+асӯн+Det:асу%{ː%}н # ; !"сколько"
+
+
+эр+Det+Sg+Nom:эр	    # ;
+эр+Det+Sg+Acc+Def:эрэвэ # ;
+эр+Det+Sg+Dat:эрэ	    # ;
+эр+Det+Sg+Loc:эду%{ː%}	    # ;
+эр+Det+Sg+All:элэ%{ː%}	    # ;
+эр+Det+Sg+Prl:эртыки%{ː%}	    # ;
+эр+Det+Sg+Ter:эли%{ː%}	    # ;
+эр+Det+Sg+Dir:эриклэ%{ː%}	    # ;
+эр+Det+Sg+Abl:эрикли%{ː%}	    # ;
+эр+Det+Sg+Abl:эдук	    # ;
+эр+Det+Sg+Ela:эргит	    # ;
+эр+Det+Sg+Ins:эрит	    # ;
+эр+Det+Sg+Com:эрнун	    # ;
+
+эр+Det+Pl+Nom:эрил	    # ;
+эр+Det+Pl+Acc+Def:эрилвэ # ;
+эр+Det+Pl+Dat:эрилэ	    # ;
+эр+Det+Pl+Loc:эрилду%{ː%}	    # ;
+эр+Det+Pl+All:эрилдулэ%{ː%}	    # ;
+эр+Det+Pl+Prl:эрилтыки%{ː%}	    # ;
+эр+Det+Pl+Ter:эрили%{ː%}	    # ;
+эр+Det+Pl+Dir:эриликлэ%{ː%}	    # ;
+эр+Det+Pl+Abl:эриликли%{ː%}	    # ;
+эр+Det+Pl+Abl:эрилдук	    # ;
+эр+Det+Pl+Ela:эрилгит	    # ;
+эр+Det+Pl+Ins:эрилди	    # ;
+эр+Det+Pl+Com:эрилнун	    # ;
+
+тар+Det+Sg+Nom:тар	    # ;
+тар+Det+Sg+Acc+Def:тарва # ;
+тар+Det+Sg+Dat:тара	    # ;
+тар+Det+Sg+Loc:тарду%{ː%}	    # ;
+тар+Det+Sg+All:тарда%{ː%}	    # ;
+тар+Det+Sg+Prl:тартыки%{ː%}	    # ;
+тар+Det+Sg+Ter:тарли%{ː%}	    # ;
+тар+Det+Sg+Dir:тарикла%{ː%}	    # ;
+тар+Det+Sg+Abl:тарикли%{ː%}	    # ;
+тар+Det+Sg+Abl:тадук	    # ;
+тар+Det+Sg+Ela:таргит	    # ;
+тар+Det+Sg+Ins:тарит	    # ;
+тар+Det+Sg+Com:тарнун	    # ;
+
+тар+Det+Pl+Nom:тарил	    # ;
+тар+Det+Pl+Acc+Def:тарилва # ;
+тар+Det+Pl+Dat:тарила	    # ;
+тар+Det+Pl+Loc:тарилду%{ː%}	    # ;
+тар+Det+Pl+All:тарилдула%{ː%}	    # ;
+тар+Det+Pl+Prl:тарилтыки%{ː%}	    # ;
+тар+Det+Pl+Ter:тарилли%{ː%}	    # ;
+тар+Det+Pl+Dir:тариликла%{ː%}	    # ;
+тар+Det+Pl+Abl:тариликли%{ː%}	    # ;
+тар+Det+Pl+Abl:тадук	    # ;
+тар+Det+Pl+Ela:тарилгит	    # ;
+тар+Det+Pl+Ins:тарилит	    # ;
+тар+Det+Pl+Com:тарилнун	    # ;
+
+упкат+Det:упкат # ;
+ӈи-вэл+Det:ӈи-вэл # ; !"somebody"
+экун-мал+Det:экун-мал # ; !"something"
+
+
+LEXICON Interrogative
+ӈӣ+Pron+Interr:ӈи%{ː%} PronV ; !"who"
+экун+Pron+Pers:экун PronR ; !"what"
+экур+Pron+Pers:экур PronN ; !"what"
+
+LEXICON PronV
+
++Sg+Nom:	    # ;
++Sg+Acc+Def:вэ # ;
++Sg+Acc:e # ;
++Sg+Dat:ду%{ː%}	    # ;
++Sg+Loc:ла%{ː%}	    # ;
++Sg+All:тки%{ː%}	    # ;
++Sg+Prl:ли%{ː%}	    # ;
++Sg+Ter:кла%{ː%}	    # ;
++Sg+Dir:кли%{ː%}	    # ;
++Sg+Abl:дук	    # ;
++Sg+Ela:гит	    # ;
++Sg+Ins:т	    # ;
++Sg+Com:нун	    # ;
++Pl+Nom:л	    # ;
++Pl+Acc+Def:лвэ # ;
++Pl+Acc:лe # ;
++Pl+Dat:лду%{ː%}	    # ;
++Pl+Loc:лла%{ː%}	    # ;
++Pl+All:лтыки%{ː%}	    # ;
++Pl+Prl:лдули%{ː%}	    # ;
++Pl+Ter:ликла%{ː%}	    # ;
++Pl+Dir:ликли%{ː%}	    # ;
++Pl+Abl:лдук	    # ;
++Pl+Ela:лгит	    # ;
++Pl+Ins:лт	    # ;
++Pl+Com:лнун	    # ;
+
+LEXICON PronR
+#;
+LEXICON PronN
+#;
 
 ! vim: set ft=xfst-lexc:

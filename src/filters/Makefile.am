@@ -15,92 +15,39 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# List any local additions here:
-GT_FILTER_SRCS=
+#########################################################
+############## BEGIN: Local modifications ###############
 
-# The common filter targets (don't change locally):
-GT_FILTER_TARGETS=
-if CAN_HFST
-GT_FILTER_TARGETS+=\
-				   make-optional-homonymy-tags.hfst       \
-				   make-optional-transitivity-tags.hfst   \
-				   make-optional-variant-tags.hfst        \
-				   remove-derivation-position-tags.hfst   \
-				   remove-dialect-tags.hfst               \
-				   remove-homonymy-tags.hfst              \
-				   remove-norm-comp-tags.hfst             \
-				   remove-number-string-tags.hfst         \
-				   remove-orig_lang-tags.hfst             \
-				   remove-orthography-tags.hfst           \
-				   remove-usage-tags.hfst                 \
-				   remove-variant-tags.hfst               \
-				   remove-hyphenation-marks.hfst          \
-				   remove-infl_deriv-borders.hfst         \
-				   remove-word-boundary.hfst              \
-				   remove-sub-forms.hfst                  \
-				   remove-ABBR-strings.hfst               \
-				   remove-ACR-strings.hfst                \
-				   remove-CLB-strings.hfst                \
-				   remove-derivation-strings.hfst         \
-				   remove-lexsub-strings.hfst             \
-				   remove-MinusSpell-strings.hfst         \
-				   remove-NA-strings.hfst                 \
-				   remove-NG-strings.hfst                 \
-				   remove-NGminip-strings.hfst            \
-				   remove-Orth_IPA-strings.hfst           \
-				   remove-Orth_Strd-strings.hfst          \
-				   remove-PUNCT-strings.hfst              \
-				   remove-UseCirc-strings.hfst            \
-				   remove-variant-strings.hfst
-endif
+# List any local filter regex files here:
+GIELLA_FILTER_LOCAL_REGEX_SRCS=\
+					downcase_UCletters.regex
 
-if CAN_XFST
-GT_FILTER_TARGETS+=\
-				   make-optional-homonymy-tags.xfst       \
-				   make-optional-transitivity-tags.xfst   \
-				   make-optional-variant-tags.xfst        \
-				   remove-derivation-position-tags.xfst   \
-				   remove-dialect-tags.xfst               \
-				   remove-homonymy-tags.xfst              \
-				   remove-norm-comp-tags.xfst             \
-				   remove-number-string-tags.xfst         \
-				   remove-orig_lang-tags.xfst             \
-				   remove-orthography-tags.xfst           \
-				   remove-usage-tags.xfst                 \
-				   remove-variant-tags.xfst               \
-				   remove-hyphenation-marks.xfst          \
-				   remove-infl_deriv-borders.xfst         \
-				   remove-word-boundary.xfst              \
-				   remove-sub-forms.xfst                  \
-				   remove-ABBR-strings.xfst               \
-				   remove-ACR-strings.xfst                \
-				   remove-CLB-strings.xfst                \
-				   remove-derivation-strings.xfst         \
-				   remove-lexsub-strings.xfst             \
-				   remove-MinusSpell-strings.xfst         \
-				   remove-NA-strings.xfst                 \
-				   remove-NG-strings.xfst                 \
-				   remove-NGminip-strings.xfst            \
-				   remove-Orth_IPA-strings.xfst           \
-				   remove-Orth_Strd-strings.xfst          \
-				   remove-PUNCT-strings.xfst              \
-				   remove-UseCirc-strings.xfst            \
-				   remove-variant-strings.xfst
-endif
+# List any local filter xfscript files here:
+GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
 
-# Add the target of local additions here:
-# HFST targets here:
-if CAN_HFST
-GT_FILTER_TARGETS+=
+# List any local filter lexc files here:
+GIELLA_FILTER_LOCAL_LEXC_SRCS=
 
-endif
+# List any locally generated regex source files here:
+GIELLA_FILTER_LOCAL_GENERATED_REGEX_SRCS=
 
-# And Xerox targets here:
-if CAN_XFST
-GT_FILTER_TARGETS+=
+# List any locally generated xfscript source files here:
+GIELLA_FILTER_LOCAL_GENERATED_XFSCRIPT_SRCS=
 
-endif
+# List any locally generated lexc source files here:
+GIELLA_FILTER_LOCAL_GENERATED_LEXC_SRCS=
 
-include $(top_srcdir)/am-shared/filters-include.am
+# List any additional source files here, so that they are included in the dist.
+# Source files that are not directly compiled to fst's but are instead used as
+# part of a local build step should be listed here.
+EXTRA_SRCS=
+
+########## Add local build rules below here: ############
+
+############### END: Local modifications ################
+#########################################################
+
+# Included build file, where the actual build instructions are:
+include $(top_srcdir)/am-shared/src-filters-dir-include.am
 
 # vim: set ft=automake:

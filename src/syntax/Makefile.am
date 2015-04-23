@@ -2,13 +2,37 @@
 ## Copyright: Sámediggi/Divvun/UiT
 ## Licence: GPL v3+
 
-# set this to name of cg3 dependency rules
-GT_DEPENDENCY=dependency.cg3
+##################################################################
+#### BEGIN: Add local processing instructions BELOW this line ####
+##################################################################
 
-# set this to name of cg3 disambiguation rules
-GT_DISAMBIGUATION=disambiguation.cg3
+#############################################
+#### Add language-specific sources here: ####
+GT_CG_LOCAL_SRCS=
 
-# set this to names of cg3 binaries 
-GT_CG_TARGETS=disambiguation.bin
+#############################################################
+#### Add language-specific targets to be installed here: ####
+if WANT_SYNTAX
+GT_CG_LOCAL_INST_TARGETS=
+endif # WANT_SYNTAX
 
-include $(top_srcdir)/am-shared/syntax-include.am
+#################################################################
+#### Add language-specific targets NOT to be installed here: ####
+if WANT_SYNTAX
+GT_CG_LOCAL_NOINST_TARGETS=
+endif # WANT_SYNTAX
+
+#################################################
+#### Add language-specific build rules here: ####
+
+##################################################################
+#### END: Add local processing instructions ABOVE this line ######
+##################################################################
+
+####### Other targets: ###########
+clean-local:
+	-rm -f *.bin
+
+####### Build rules via include: ########
+
+include $(top_srcdir)/am-shared/src-syntax-dir-include.am
