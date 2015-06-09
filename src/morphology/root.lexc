@@ -1,5 +1,5 @@
 ! Divvun & Giellatekno - open source grammars for Evenki
-! Copyright © 2012 The University of Tromsø & Buryaad state university
+! Copyright © 2015 The University of Tromsø & Buryaad state university
 ! http://giellatekno.uit.no & http://divvun.no
 !
 ! This program is free software; you can redistribute and/or modify
@@ -10,7 +10,7 @@
 ! also available in the file $GTHOME/LICENSE.txt.
 !
 ! Other licensing options are available upon request, please contact
-! giellatekno@hum.uit.no or feedback@divvun.no
+! giellatekno@uit.no or feedback@divvun.no
 
 ! ========================================================================== !
 !!            !!!Evenki morphological analyser                      
