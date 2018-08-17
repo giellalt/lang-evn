@@ -1,42 +1,52 @@
-!! Noun inflection
-! =======
+!! !!!Noun inflection
+!     ================
 
 ! э̄ а̄ ӣ о̄ ӯ ю̄ я̄ е̄
-LEXICON Cases ! to be removed.
-  # ;
-
-LEXICON POSS_SG_CNS_NOM
-                   # ;
-  +PxSg1:%>в%{A%}  # ;
-  +PxSg2:%>с%{A%}  # ;
-  +PxSg3:%>н%{A%}  # ;
-  +PxPl1:%>%{V%}ун # ;
- +PxPl12:%>%{V%}ун # ;
-  +PxPl2:%>сун     # ;
-  +PxPl3:%>тын     # ;
-
-LEXICON POSS_SG_OTHER
-                    # ;
-  +PxSg1:%>%{i%}в   # ;
-  +PxSg2:%>%{i%}с   # ;
-  +PxSg3:%>%{i%}н   # ;
-  +PxPl1:%>%{V%}ун  # ;
- +PxPl12:%>%{i%}т   # ;
-  +PxPl2:%>%{i%}сун # ;
-  +PxPl3:%>%{i%}тын # ;
-
-LEXICON POSS_LN
-                       # ;
-  +PxSg1:%>%{V%}и%{ː%} # ;
-  +PxSg2:%>%{L%}и      # ;
-  +PxSg3:%>ин          # ;
-  +PxPl1:%>%{V%}ун     # ;
- +PxPl12:%>%{V%}ун     # ;
-  +PxPl2:%>%{D%}ы      # ;
-  +PxPl3:%>%{L%}ун     # ;
-
-
 ! stem _ [alienable poss.] _ number _ case _ [pers/refl. poss.]
+
+!! !!Stem classes
+
+LEXICON N_BIRA
+ +N: X_BIRA ;
+
+LEXICON X_BIRA
+ +Sg+Nom:         POSS_SG_OTHER ; 
+ +Sg+Acc:         CASE_ACC_SG ;
+     +Sg:         CASE_OBL_VOW  ;
+ +Pl+Nom:%>%{i%}л POSS_LN       ;
+ +Pl+Acc:%>%{i%}л CASE_ACC_PL ;
+     +Pl:%>%{i%}л CASE_OBL_LN   ;
+
+LEXICON N_UMUK
+ +N: X_UMUK ;
+
+LEXICON X_UMUK
+ +Sg+Nom:         POSS_SG_CNS_NOM ;
+ +Sg+Acc:         CASE_ACC_SG ;
+     +Sg:         CASE_OBL_CNS    ;
+ +Pl+Nom:%>%{i%}л POSS_LN         ;
+ +Pl+Acc:%>%{i%}л CASE_ACC_PL ;
+     +Pl:%>%{i%}л CASE_OBL_LN     ;
+
+LEXICON N_ORON
+ +N: X_ORON ;
+
+LEXICON X_ORON
+ +Sg+Nom:   POSS_LN     ;
+ +Sg+Acc+Def:%>%{V%}%{A%} POSS_SG_OTHER ; ! Винительный 
+ +Sg+Acc+Ind:%>%{A%}        POSS_SG_OTHER ; ! Вин.-неопред.
+         CASE_ACC_SG ;
+     +Sg:   CASE_OBL_LN ;
+ +Pl+Nom: POSS_LN     ;
+ +Pl+Acc+Def:%{V%}%{A%}        POSS_SG_OTHER ; ! Винительный Accusative
+ +Pl+Acc+Ind:%{A%}        POSS_SG_OTHER ; ! Винительный-неопределёний Indefinite Acc
+
++Pl: CASE_OBL_LN ;
+
+LEXICON N_XXX                               ! Pending categorisation
+ +N+Sg+Nom: # ;
+
+!! !!Stem subclasses
 
 LEXICON CASE_OBL_VOW
   CASE_OBL_VOW_ONLY ;
@@ -53,7 +63,7 @@ LEXICON CASE_OBL_LN
   CASE_OBL_COMMON   ;
   INS_LN            ;
 
-
+!! !!Case morphology
 
 LEXICON CASE_OBL_VOW_ONLY
  +Loc:%>л%{A%}{ː%} POSS_SG_OTHER ; ! Местный Locative
@@ -65,9 +75,16 @@ LEXICON CASE_OBL_CNS_ONLY
  +All:%>тыки{ː%}         POSS_SG_OTHER ; ! Направителый Allative
  +Prl:%>%{D%}ули{ː%}     POSS_SG_OTHER ; ! Продольный Prolative
 
+
+LEXICON CASE_ACC_SG
+ +Def:%>%{V%}%{A%}        POSS_SG_OTHER ; ! Винительный Accusative
+ +Ind:%>%{j%}%{A%}        POSS_SG_OTHER ; ! Винительный-неопределёний Indefinite Acc
+
+LEXICON CASE_ACC_PL
+ +Def:%>%{V%}%{A%}        POSS_SG_OTHER ; ! Винительный Accusative
+ +Ind:%>%{A%}        POSS_SG_OTHER ; ! Винительный-неопределёний Indefinite Acc
+
 LEXICON CASE_OBL_COMMON
- +Acc+Def:%>%{V%}%{A%}        POSS_SG_OTHER ; ! Винительный Accusative
- +Acc+Ind:%>%{j%}%{A%}        POSS_SG_OTHER ; ! Винительный-неопределёний Indefinite Acc
      +Dat:%>%{D%}у%{ː%}       POSS_SG_OTHER ; ! Дателный Dative
      +Ter:%>%{i%}кл%{A%}%{ː%} POSS_SG_OTHER ; ! Направительно-местный Terminative
      +Dir:%>%{i%}кли%{ː%}     POSS_SG_OTHER ; ! Направительно-продольный Directive
@@ -84,41 +101,44 @@ LEXICON INS_OTHER
 
 
 
-LEXICON N_BIRA
- +N: X_BIRA ;
 
-LEXICON X_BIRA
- +Sg+Nom:         #             ;
- +Sg+Nom:         POSS_SG_OTHER ;
-     +Sg:         CASE_OBL_VOW  ;
- +Pl+Nom:%>%{i%}л #             ;
- +Pl+Nom:%>%{i%}л POSS_LN       ;
-     +Pl:%>%{i%}л CASE_OBL_LN   ;
 
-LEXICON N_UMUK
- +N: X_UMUK ;
+!! Possessive suffix morphology
 
-LEXICON X_UMUK
- +Sg+Nom:         POSS_SG_CNS_NOM ;
-     +Sg:         CASE_OBL_CNS    ;
- +Pl+Nom:%>%{i%}л #               ;
- +Pl+Nom:%>%{i%}л POSS_LN         ;
-     +Pl:%>%{i%}л CASE_OBL_LN     ;
+!! Different suffixes for consonant final,
+!! LN nouns, and others. The three lexica
+!! do also point directly to #.
 
-LEXICON N_ORON
- +N: X_ORON ;
+LEXICON POSS_SG_CNS_NOM
+                   # ;
+  +PxSg1:%>в%{A%}  # ;
+  +PxSg2:%>с%{A%}  # ;
+  +PxSg3:%>н%{A%}  # ;
+  +PxPl1:%>%{V%}ун # ;
+ +PxPl12:%>%{V%}ун # ;
+  +PxPl2:%>сун     # ;
+  +PxPl3:%>тын     # ;
 
-LEXICON X_ORON
- +Sg+Nom:н   #           ;
- +Sg+Nom:н   POSS_LN     ;
-     +Sg:н   CASE_OBL_LN ;
- +Pl+Nom:%>р #           ;
- +Pl+Nom:%>р POSS_LN     ;
-     +Pl:%>р CASE_OBL_LN ;
+LEXICON POSS_LN
+                       # ;
+  +PxSg1:%>%{V%}и%{ː%} # ;
+  +PxSg2:%>%{L%}и      # ;
+  +PxSg3:%>ин          # ;
+  +PxPl1:%>%{V%}ун     # ;
+ +PxPl12:%>%{V%}ун     # ;
+  +PxPl2:%>%{D%}ы      # ;
+  +PxPl3:%>%{L%}ун     # ;
 
-LEXICON N_XXX                               ! Pending categorisation
+LEXICON POSS_SG_OTHER
+                    # ;
+  +PxSg1:%>%{i%}в   # ;
+  +PxSg2:%>%{i%}с   # ;
+  +PxSg3:%>%{i%}н   # ;
+  +PxPl1:%>%{V%}ун  # ;
+ +PxPl12:%>%{i%}т   # ;
+  +PxPl2:%>%{i%}сун # ;
+  +PxPl3:%>%{i%}тын # ;
 
- +N+Sg+Nom: # ;
 
 
 
