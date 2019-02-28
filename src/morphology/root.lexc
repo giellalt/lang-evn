@@ -32,6 +32,7 @@ Multichar_Symbols
 +Prop
 +Det
 +Interr
++Symbol !!≈ * @CODE@ = independent symbols in the text stream, like £, €, ©
 
 +Sg     !!= * @CODE@ = Singular
 +Pl     !!= * @CODE@ = Plural
