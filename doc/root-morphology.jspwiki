@@ -13,6 +13,7 @@
  * +Refl    = 
  * +N       = Noun
  * +Num     = Numeral
+ * +Symbol = independent symbols in the text stream, like £, €, ©
 
  * +Sg      = Singular
  * +Pl      = Plural
