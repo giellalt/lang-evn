@@ -24,6 +24,7 @@ This is free and open source Evenki morphology.
  * +Refl    = 
  * +N       = Noun
  * +Num     = Numeral
+ * +Symbol = independent symbols in the text stream, like £, €, ©
 
  * +Sg      = Singular
  * +Pl      = Plural
