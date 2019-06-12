@@ -94,6 +94,9 @@ Multichar_Symbols
 +RIGHT
 +LEFT
 
+ «7     !!≈ ; @CODE@ : Literal «
+ »7     !!≈ ; @CODE@ : Literal «
+  
 
 %{j%}  !!= * @CODE@ =  -и -ø
 %{i%}  !!= * @CODE@ =  -и -ø
