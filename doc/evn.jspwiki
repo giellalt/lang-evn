@@ -24,6 +24,9 @@ This is free and open source Evenki morphology.
  * +Refl    = 
  * +N       = Noun
  * +Num     = Numeral
+ * +Prop    = 
+ * +Det    = 
+ * +Interr    = 
  * +Symbol = independent symbols in the text stream, like £, €, ©
 
  * +Sg      = Singular
@@ -57,8 +60,21 @@ This is free and open source Evenki morphology.
 
 !!Verbal forms
 
+ * +Inf    = 
+ * +IV    = 
+ * +TV    = 
 
+ * +Ind    = 
+ * +Imp    = 
+ * +Neg    = 
 
+ * +Prs    = 
+ * +Prt    = 
+ * +Hab    = 
+ * +Fut1    = 
+ * +Fut2    = 
+ * +Fut3    = 
+ * +Iter    = 
 
  * +Sg1   = 
  * +Sg2   = 
@@ -68,6 +84,10 @@ This is free and open source Evenki morphology.
  * +Pl2   = 
  * +Pl3   = 
 
+ * +PUNCT    = 
+ * +CLB    = 
+ * +RIGHT    = 
+ * +LEFT    = 
 
  ; «7 : Literal «
  ; »7 : Literal «
