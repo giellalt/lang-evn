@@ -29,9 +29,9 @@ Multichar_Symbols
 +Refl   !!= * @CODE@ = 
 +N      !!= * @CODE@ = Noun
 +Num    !!= * @CODE@ = Numeral
-+Prop
-+Det
-+Interr
++Prop   !!= * @CODE@ = 
++Det   !!= * @CODE@ = 
++Interr   !!= * @CODE@ = 
 +Symbol !!≈ * @CODE@ = independent symbols in the text stream, like £, €, ©
 
 +Sg     !!= * @CODE@ = Singular
@@ -65,21 +65,21 @@ Multichar_Symbols
 
 !! !!Verbal forms
 
-+Inf
-+IV
-+TV
++Inf   !!= * @CODE@ = 
++IV   !!= * @CODE@ = 
++TV   !!= * @CODE@ = 
 
-+Ind
-+Imp
-+Neg
++Ind   !!= * @CODE@ = 
++Imp   !!= * @CODE@ = 
++Neg   !!= * @CODE@ = 
 
-+Prs
-+Prt
-+Hab
-+Fut1
-+Fut2
-+Fut3
-+Iter
++Prs   !!= * @CODE@ = 
++Prt   !!= * @CODE@ = 
++Hab   !!= * @CODE@ = 
++Fut1   !!= * @CODE@ = 
++Fut2   !!= * @CODE@ = 
++Fut3   !!= * @CODE@ = 
++Iter   !!= * @CODE@ = 
 
 +Sg1  !!= * @CODE@ = 
 +Sg2  !!= * @CODE@ = 
@@ -89,10 +89,10 @@ Multichar_Symbols
 +Pl2  !!= * @CODE@ = 
 +Pl3  !!= * @CODE@ = 
 
-+PUNCT
-+CLB
-+RIGHT
-+LEFT
++PUNCT   !!= * @CODE@ = 
++CLB   !!= * @CODE@ = 
++RIGHT   !!= * @CODE@ = 
++LEFT   !!= * @CODE@ = 
 
  «7     !!≈ ; @CODE@ : Literal «
  »7     !!≈ ; @CODE@ : Literal «
