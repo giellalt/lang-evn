@@ -4,15 +4,15 @@
 !!! Dynamic documentation
 
 * [Links to generated source file documentation|Links.html]
-* Source files: [stems|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/morphology/stems/]   
-  / [affixes|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/morphology/affixes/] 
+* Source files: [stems|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/fst/stems/]   
+  / [affixes|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/fst/affixes/] 
   / [syntax|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/syntax] 
   / [twolc|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/phonology/evn-phon.twolc]   
-  / [yaml|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/test/src/morphology/]
+  / [yaml|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/test/src/fst/]
 
 !!! Grammatical issues
 
-* [The tags that are in use|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/morphology/root.lexc]   
+* [The tags that are in use|https://gtsvn.uit.no/langtech/trunk/startup-langs/evn/src/fst/root.lexc]   
 * [A list of morphological tags|/lang/common/MorphologicalTags.html]
 
 
