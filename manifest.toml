@@ -1,0 +1,9 @@
+name = "Evenki"
+version = "0.1.0"
+
+[macos]
+system_pkg_id = "no.divvun.MacDivvun.evn"
+
+[windows]
+system_product_code = "CDD14853-8AD0-4A3C-BC4D-FE3E991DD145"
+msoffice_product_code = "6C9404F7-0611-4523-B563-F8AA7AFDD865"
