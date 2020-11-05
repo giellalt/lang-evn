@@ -21,7 +21,7 @@ Documentation
 
 Documentation can be found at:
 
--   <https://giellalt.uit.no/lang/evndoc/index.html>
+-   <https://giellalt.uit.no/lang/evn/EvenkiDocumentation.html>
 -   <https://giellalt.uit.no/index.html>
 
 Core dependencies
