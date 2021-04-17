@@ -13,13 +13,13 @@
 ! giellatekno@uit.no or feedback@divvun.no
 
 ! ========================================================================== !
-!!            !!!Evenki morphological analyser                      
+!! # Evenki morphological analyser                      
 ! ========================================================================== !
 Multichar_Symbols
 
-!! !!Tags
+!! ## Tags
 
-!! !Parts of speech
+!! ### Parts of speech
 +A	    !!= * @CODE@ = 
 +Adv    !!= * @CODE@ = 
 +V	    !!= * @CODE@ = 
@@ -37,7 +37,7 @@ Multichar_Symbols
 +Sg     !!= * @CODE@ = Singular
 +Pl     !!= * @CODE@ = Plural
 
-!! !Cases
+!! ### Cases
 +Acc   !!= * @CODE@ = Винительный Accusative
 +Dat   !!= * @CODE@ = Дателный Dative
 +Loc   !!= * @CODE@ = Местный Locative
@@ -53,7 +53,7 @@ Multichar_Symbols
 +Ind    !!= * @CODE@ = Винительный-неопределёний Indefinite Accusative
 +Def    !!= * @CODE@ = ва definite acc
 
-!! !Possessives
+!! ### Possessives
 +PxSg1  !!= * @CODE@ = 
 +PxSg2  !!= * @CODE@ = 
 +PxSg3  !!= * @CODE@ = 
@@ -63,7 +63,7 @@ Multichar_Symbols
 +PxPl3  !!= * @CODE@ = 
 
 
-!! !!Verbal forms
+!! ## Verbal forms
 
 +Inf   !!= * @CODE@ = 
 +IV   !!= * @CODE@ = 
@@ -94,8 +94,8 @@ Multichar_Symbols
 +RIGHT   !!= * @CODE@ = 
 +LEFT   !!= * @CODE@ = 
 
- «7     !!≈ ; @CODE@ : Literal «
- »7     !!≈ ; @CODE@ : Literal «
+ «7     !!≈ * **@CODE@**:  Literal «
+ »7     !!≈ * **@CODE@**:  Literal «
   
 
 %{j%}  !!= * @CODE@ =  -и -ø

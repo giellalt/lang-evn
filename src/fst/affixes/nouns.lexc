@@ -1,10 +1,10 @@
-!! !!!Noun inflection
+!! # Noun inflection
 !     ================
 
 ! э̄ а̄ ӣ о̄ ӯ ю̄ я̄ е̄
 ! stem _ [alienable poss.] _ number _ case _ [pers/refl. poss.]
 
-!! !!Stem classes
+!! ## Stem classes
 
 LEXICON N_BIRA
  +N: X_BIRA ;
@@ -46,7 +46,7 @@ LEXICON X_ORON
 LEXICON N_XXX                               ! Pending categorisation
  +N+Sg+Nom: # ;
 
-!! !!Stem subclasses
+!! ## Stem subclasses
 
 LEXICON CASE_OBL_VOW
   CASE_OBL_VOW_ONLY ;
@@ -63,7 +63,7 @@ LEXICON CASE_OBL_LN
   CASE_OBL_COMMON   ;
   INS_LN            ;
 
-!! !!Case morphology
+!! ## Case morphology
 
 LEXICON CASE_OBL_VOW_ONLY
  +Loc:%>л%{A%}{ː%} POSS_SG_OTHER ; ! Местный Locative
