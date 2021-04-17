@@ -1,8 +1,8 @@
 ! ================================================== !
-!! !!!The Evenki morphophonological/twolc rules file 
+!! # The Evenki morphophonological/twolc rules file 
 ! ================================================== !
 
-!! !!Alphabet
+!! ## Alphabet
 Alphabet
 
  а б в г д е ё ж з и й к л м н ӈ о п р с т у ф х ц ч ш щ ъ ы ь э ю я  !!= * @CODE@
@@ -23,7 +23,7 @@ Alphabet
  %{U%}:и %{U%}:у  %{U%}:0  	!!= * @CODE@
  %>  ;       	  		!!= * @CODE@
 
-!! !! Sets
+!! Sets
 Sets
 
 Vow = а е ё и о у ы э ю я 						       !!= * @CODE@
@@ -45,44 +45,44 @@ VoicedCns1 = б в г д щ з й р ; !!= * @CODE@
 !VoicedCns1 = б в г д щ з й м р ; 
 
 
-!! !!Rules
+!! ## Rules
 Rules 
 
-!! !Assimilation rules
+!! ### Assimilation rules
 
 "Remove suffix vowel with vowel-ending stem"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{i%}:0 <=>  :Vow (%{ː%}:) %> _ ;
 
 "Realise suffix vowel as y after t"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{i%}:ы <=> :т %> _ ;
 
 "Realise suffix vowel as i after non-t"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{i%}:и <=> [:Cns - :т] %> _ ;
 
 "Assimilate possessive to plural"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{L%}:Cx <=> Cx %> _ ;
        where Cx in ( л р ) ;
 
 "Consonant assimilation in suffixes"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{G%}:Cx <=> Cy %> _ ;
        where Cy in ( к с т п м н ӈ ) 
              Cx in ( к к к к ӈ ӈ ӈ ) 
        matched ; 
 
 "Unvoicing assimilation"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{D%}:т <=> :UnvoicedCns %> _ ; 
 
 !!€ дэт>{D}ук
 !!€ дэт>тук
 
 "Voicing assimilation"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 !%{D%}:д <=> [:Vow| %{ː%}: | [:Cns - :UnvoicedCns]] %> _ ; 
 %{D%}:д <=> [Vow|л|н|р] (%{ː%}:)  %> _ ; 
 
@@ -96,11 +96,11 @@ Rules
 !!€ урэ>дук
 
 "Nasal assimilation of V"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{V%}:м <=> :Nasal %> _ ; 
 
 "Default realisaton of V" 
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{V%}:в <=> [ :Vow | %{ː%}: | [:Cns - :Nasal]]  %> _ ; 
 
 !!€ урэ>{i}л>{V}{A}
@@ -112,10 +112,10 @@ Rules
 !!€ орон>{V}{A}
 !!€ орор>во
 
-!! !Palatalisation
+!! ### Palatalisation
 
 "Not realising hard sign after vowel or n"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{j%}:0 <=> [ Vow | н | л | %{ː%}: ] %> _ ;
 
 !!€ дю{ː}>{j}{A}>{i}в
@@ -125,7 +125,7 @@ Rules
 !!€ урэ>0л>э
 
 "Realising hard sign"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{j%}:ъ <=> NonLN %> _ [ Vow | %{A%}: ] ;
 
 !!€ урэ>{j}{A}
@@ -148,7 +148,7 @@ Rules
 
 !htest с а %{ː%}:̄ >:> м и %{ː%}:̄
 
-!! !Other vowel rules
+!! ### Other vowel rules
 
 "Epenthetic vowel u-i-0 before present tense markers u"
 %{U%}:у <=> :VoicedCns1 _ %> ;
@@ -163,9 +163,9 @@ Rules
 !htest с а %{ː%}:̄ %{U%}:0 >:>
 
 
-!! !!Consonant rules
+!! ## Consonant rules
 
-!! !Other cns
+!! ### Other cns
 
 "Present tense realised as ra"
 %{R%}:р <=> [:Vow (%{ː%}:)|:VoicedCns1] %> _ ;
@@ -202,12 +202,12 @@ Rules
 !!€ гун>0э>н
 !htest г у н >:> {R}:0 {A}:э >:> н
 
-!! !!Vowel rules
+!! ## Vowel rules
 
-!! !Vowel harmony for а
+!! ### Vowel harmony for а
 
 "Vowel harmony for A to а, main rule"
-!! __@RULENAME@__  (note е->а)
+!! **@RULENAME@**  (note е->а)
 %{A%}:а <=> :Vx (%{ː%}:) (:Cns)                (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
              :Vx (%{ː%}:) (:Cns) ([:и|:ы] :Cns) (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
              :Vx (%{ː%}:) (:Cns) (%> %{i%}: л)  (%{U%}:) %>   (%{i%}:) :Cns* :Vow* :Cns*                  _ ; !Pl
@@ -215,20 +215,20 @@ Rules
          where Vx in ( а е я ю ) ;
 
 "Vowel harmony for {A} following i"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 %{A%}:а <=> .#. Cns:* [:и|:ы] (:Cns)                %> ([(%{i%}:) :Cns %>:]) (:Cns (:Cns) (%>:))  _ ;
             .#. Cns:* [:и|:ы] (:Cns) (%> %{i%}: л) %>   (%{i%}:) :Cns* :Vow* :Cns*  _ ;
 
 									      
 "Vowel harmony for A following long o"
-!! __@RULENAME@__  long o gives a
+!! **@RULENAME@**  long o gives a
 %{A%}:а <=> о %{ː%}: (:Cns)                (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
             о %{ː%}: (:Cns) ([:и|:ы] :Cns) (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
             о %{ː%}: :Cns                  (%{U%}:) %> (ArchiCns:) _ ;
             о %{ː%}: (:Cns) (%> %{i%}: л)  (%{U%}:) %> (%{i%}:) :Cns* :Vow* :Cns* _ ; !Pl
 
 "Vowel harmony for A to о, main rule"
-!! __@RULENAME@__  (note е->а)
+!! **@RULENAME@**  (note е->а)
 %{A%}:о <=> [о|:ё] (:Cns)                (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
             [о|:ё] (:Cns) ([:и|:ы] :Cns) (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
             [о|:ё] (:Cns) (%> %{i%}: л)  (%{U%}:) %>   (%{i%}:) :Cns* :Vow*  :Cns*            _ ; !Pl
@@ -237,7 +237,7 @@ Rules
             [о|:ё] н:                             %> р :Cns*    _ ;
 	    
 "Palatalised short vowel harmony for A"
-!! __@RULENAME@__  
+!! **@RULENAME@**  
 !%{A%}:Vy <=> :Vx (%{ː%}:) ([:NonLN]) %> ([(%{i%}:) :NonLN %>:]) %{j%}:  _ ;
  %{A%}:Vy <=> :Vx (%{ː%}:) ([:NonLN]) %> ([(%{i%}:) :Cns   %>:]) %{j%}:  _ ;
          where Vx in ( а е э я ю )
@@ -249,7 +249,7 @@ Rules
 !!€ орон>0о
 
 "Vowel harmony for A to э, main rule"
-!! __@RULENAME@__  (note е->а)
+!! **@RULENAME@**  (note е->а)
 %{A%}:э <=> [:э|у] (%{ː%}:) (:Cns)                (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
             [:э|у] (%{ː%}:) (:Cns) ([:и|:ы] :Cns) (%{U%}:) %> ([(%{i%}:) :Cns %>:]) ([:Cns (:Cns)|(:Cns)])  _ ;
             [:э|у] (%{ː%}:) (:Cns) (%> %{i%}: л)  (%{U%}:) %>   (%{i%}:) :Cns* :Vow* :Cns*                  _ ; !Pl
