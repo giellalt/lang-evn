@@ -1,99 +1,95 @@
-
-# Evenki morphological analyser                      
-
-## Tags
-
-### Parts of speech
- * +A	     = 
- * +Adv     = 
- * +V	     = 
- * +Pron    = 
- * +Pers    = 
- * +Poss    = 
- * +Refl    = 
- * +N       = Noun
- * +Num     = Numeral
- * +Prop    = 
- * +Det    = 
- * +Interr    = 
- * +Symbol = independent symbols in the text stream, like £, €, ©
-
- * +Sg      = Singular
- * +Pl      = Plural
-
-### Cases
- * +Acc    = Винительный Accusative
- * +Dat    = Дателный Dative
- * +Loc    = Местный Locative
- * +All    = Направителый Allative
- * +Prl    = Продольный Prolative
- * +Ter    = Направительно-местный Terminative
- * +Dir    = Направительно-продольный Directive
- * +Abl    = Отложительный Ablative
- * +Ela    = Исходный Elative
- * +Ins    = Творительный Instrumental
- * +Com    = Совместный Comitative
-
- * +Ind     = Винительный-неопределёний Indefinite Accusative
- * +Def     = ва definite acc
-
-### Possessives
- * +PxSg1   = 
- * +PxSg2   = 
- * +PxSg3   = 
- * +PxPl1   = 
- * +PxPl12  = 
- * +PxPl2   = 
- * +PxPl3   = 
+# Noun inflection
 
 
-## Verbal forms
-
- * +Inf    = 
- * +IV    = 
- * +TV    = 
-
- * +Ind    = 
- * +Imp    = 
- * +Neg    = 
-
- * +Prs    = 
- * +Prt    = 
- * +Hab    = 
- * +Fut1    = 
- * +Fut2    = 
- * +Fut3    = 
- * +Iter    = 
-
- * +Sg1   = 
- * +Sg2   = 
- * +Sg3   = 
- * +Pl1   = 
- * +Pl12  = 
- * +Pl2   = 
- * +Pl3   = 
-
- * +PUNCT    = 
- * +CLB    = 
- * +RIGHT    = 
- * +LEFT    = 
-
- * **«7**:  Literal «
- * **»7**:  Literal «
+## Stem classes
 
 
- * %{j%}   =  -и -ø
- * %{i%}   =  -и -ø
- * %{A%}   =  -а -э -о
- * %{L%}   =  -л -р -н
- * %{D%}   =  -д -т
- * %{V%}   =  -в -м
- * %{R%}   =  -р, 0
- * %{G%}   =  -г -к -ӈ
- * %{Я%}   = 
- * %{U%}   = -у-, -и-
- * %{ː%}   = long vowel (lexc lower side)
- * %>      =  
+
+
+
+
+
+
+
+## Stem subclasses
+
+
+
+
+## Case morphology
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Possessive suffix morphology
+
+Different suffixes for consonant final,
+LN nouns, and others. The three lexica
+do also point directly to #.
+
+
+
+
+
+
+
+
+Evenki Propernoun inflection
+
+The Evenki propernouns agree with nouns in case and number
+They are thus sent to common nominal lexica X_BIRA etc.
+after having got their +N+Prop tag.
+
+
+
+
+# Symbol affixes
+
+
+
+
+
+Evenki adjective inflection
+
+The Evenki adjectives agree with nouns in case and number
+They are thus sent to common nominal lexica X_BIRA etc.
+after having got their +A tag.
+
+
+
+
+Verb inflection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -302,5 +298,252 @@ Sets
 
 
 
+
+
+
+# Evenki morphological analyser                      
+
+## Tags
+
+### Parts of speech
+ * +A	     = 
+ * +Adv     = 
+ * +V	     = 
+ * +Pron    = 
+ * +Pers    = 
+ * +Poss    = 
+ * +Refl    = 
+ * +N       = Noun
+ * +Num     = Numeral
+ * +Prop    = 
+ * +Det    = 
+ * +Interr    = 
+ * +Symbol = independent symbols in the text stream, like £, €, ©
+
+ * +Sg      = Singular
+ * +Pl      = Plural
+
+### Cases
+ * +Acc    = Винительный Accusative
+ * +Dat    = Дателный Dative
+ * +Loc    = Местный Locative
+ * +All    = Направителый Allative
+ * +Prl    = Продольный Prolative
+ * +Ter    = Направительно-местный Terminative
+ * +Dir    = Направительно-продольный Directive
+ * +Abl    = Отложительный Ablative
+ * +Ela    = Исходный Elative
+ * +Ins    = Творительный Instrumental
+ * +Com    = Совместный Comitative
+
+ * +Ind     = Винительный-неопределёний Indefinite Accusative
+ * +Def     = ва definite acc
+
+### Possessives
+ * +PxSg1   = 
+ * +PxSg2   = 
+ * +PxSg3   = 
+ * +PxPl1   = 
+ * +PxPl12  = 
+ * +PxPl2   = 
+ * +PxPl3   = 
+
+
+## Verbal forms
+
+ * +Inf    = 
+ * +IV    = 
+ * +TV    = 
+
+ * +Ind    = 
+ * +Imp    = 
+ * +Neg    = 
+
+ * +Prs    = 
+ * +Prt    = 
+ * +Hab    = 
+ * +Fut1    = 
+ * +Fut2    = 
+ * +Fut3    = 
+ * +Iter    = 
+
+ * +Sg1   = 
+ * +Sg2   = 
+ * +Sg3   = 
+ * +Pl1   = 
+ * +Pl12  = 
+ * +Pl2   = 
+ * +Pl3   = 
+
+ * +PUNCT    = 
+ * +CLB    = 
+ * +RIGHT    = 
+ * +LEFT    = 
+
+ * **«7**:  Literal «
+ * **»7**:  Literal «
+
+
+ * %{j%}   =  -и -ø
+ * %{i%}   =  -и -ø
+ * %{A%}   =  -а -э -о
+ * %{L%}   =  -л -р -н
+ * %{D%}   =  -д -т
+ * %{V%}   =  -в -м
+ * %{R%}   =  -р, 0
+ * %{G%}   =  -г -к -ӈ
+ * %{Я%}   = 
+ * %{U%}   = -у-, -и-
+ * %{ː%}   = long vowel (lexc lower side)
+ * %>      =  
+
+
+
+# Nouns
+Nouns in Evenki have four sets of suffixes. 
+Here we divide them in two groups: V- and C-final ones.
+
+Three stem types
+
+* N_BIRA vowel stems
+* N_UMUK consonant stems (voiced and unvoiced)
+* N_ORON stems ending in n
+
+
+
+
+
+
+
+Prefixes
+Prefixes in the Evenki language are bound to beginning of other words.
+
+
+
+# Pronouns
+Pronouns in Evenki denote references to things.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Adjectives
+
+
+# Verbs
+
+
+
+
+
+# Numerals
+Numerals in Evenki denote numbers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% komma% :,      Root ;
+% tjuohkkis% :%. Root ;
+% kolon% :%:     Root ;
+% sárggis% :%-   Root ; 
+% násti% :%*     Root ; 
+
+
+
+
+We describe here how abbreviations are in Evenki are read out, e.g.
+for text-to-speech systems.
+
+For example:
+
+ * s.:syntynyt # ;  
+ * os.:omaa% sukua # ;  
+ * v.:vuosi # ;  
+ * v.:vuonna # ;  
+ * esim.:esimerkki # ; 
+ * esim.:esimerkiksi # ; 
 
 

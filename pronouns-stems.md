@@ -1,0 +1,31 @@
+# Pronouns
+Pronouns in Evenki denote references to things.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
