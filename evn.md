@@ -1,24 +1,21 @@
-# Noun inflection
+# Nouns
+Nouns in Evenki have four sets of suffixes. 
+Here we divide them in two groups: V- and C-final ones.
 
+Three stem types
 
-## Stem classes
-
-
-
-
-
-
-
-
-
-## Stem subclasses
+* N_BIRA vowel stems
+* N_UMUK consonant stems (voiced and unvoiced)
+* N_ORON stems ending in n
 
 
 
 
-## Case morphology
 
 
+
+# Numerals
+Numerals in Evenki denote numbers.
 
 
 
@@ -31,44 +28,30 @@
 
 
 
-Possessive suffix morphology
 
-Different suffixes for consonant final,
-LN nouns, and others. The three lexica
-do also point directly to #.
 
+
+# Verbs
 
 
 
 
 
-
-
-Evenki Propernoun inflection
-
-The Evenki propernouns agree with nouns in case and number
-They are thus sent to common nominal lexica X_BIRA etc.
-after having got their +N+Prop tag.
+Prefixes
+Prefixes in the Evenki language are bound to beginning of other words.
 
 
 
+## Adjectives
 
-# Symbol affixes
+
+# Pronouns
+Pronouns in Evenki denote references to things.
 
 
 
 
 
-Evenki adjective inflection
-
-The Evenki adjectives agree with nouns in case and number
-They are thus sent to common nominal lexica X_BIRA etc.
-after having got their +A tag.
-
-
-
-
-Verb inflection
 
 
 
@@ -301,6 +284,101 @@ Sets
 
 
 
+# Symbol affixes
+
+
+
+
+
+# Noun inflection
+
+
+## Stem classes
+
+
+
+
+
+
+
+
+
+## Stem subclasses
+
+
+
+
+## Case morphology
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Possessive suffix morphology
+
+Different suffixes for consonant final,
+LN nouns, and others. The three lexica
+do also point directly to #.
+
+
+
+
+
+
+
+
+Evenki Propernoun inflection
+
+The Evenki propernouns agree with nouns in case and number
+They are thus sent to common nominal lexica X_BIRA etc.
+after having got their +N+Prop tag.
+
+
+
+
+Verb inflection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Evenki adjective inflection
+
+The Evenki adjectives agree with nouns in case and number
+They are thus sent to common nominal lexica X_BIRA etc.
+after having got their +A tag.
+
+
+
+
 # Evenki morphological analyser                      
 
 ## Tags
@@ -399,82 +477,20 @@ Sets
 
 
 
-# Nouns
-Nouns in Evenki have four sets of suffixes. 
-Here we divide them in two groups: V- and C-final ones.
-
-Three stem types
-
-* N_BIRA vowel stems
-* N_UMUK consonant stems (voiced and unvoiced)
-* N_ORON stems ending in n
 
 
 
+We describe here how abbreviations are in Evenki are read out, e.g.
+for text-to-speech systems.
 
+For example:
 
-
-
-Prefixes
-Prefixes in the Evenki language are bound to beginning of other words.
-
-
-
-# Pronouns
-Pronouns in Evenki denote references to things.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Adjectives
-
-
-# Verbs
-
-
-
-
-
-# Numerals
-Numerals in Evenki denote numbers.
-
-
-
-
-
-
-
-
-
-
-
-
-
+ * s.:syntynyt # ;  
+ * os.:omaa% sukua # ;  
+ * v.:vuosi # ;  
+ * v.:vuonna # ;  
+ * esim.:esimerkki # ; 
+ * esim.:esimerkiksi # ; 
 
 
 
@@ -530,20 +546,4 @@ Numerals in Evenki denote numbers.
 % kolon% :%:     Root ;
 % sárggis% :%-   Root ; 
 % násti% :%*     Root ; 
-
-
-
-
-We describe here how abbreviations are in Evenki are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
- * s.:syntynyt # ;  
- * os.:omaa% sukua # ;  
- * v.:vuosi # ;  
- * v.:vuonna # ;  
- * esim.:esimerkki # ; 
- * esim.:esimerkiksi # ; 
-
 
