@@ -5,11 +5,11 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-evn)](https://github.com/giellalt/lang-evn/issues)
 [![Build status](https://github.com/giellalt/lang-evn/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-evn/actions)
 
-This page documents the work on the **Evenki language model**. 
+This page documents the work on the Evenki language model](http://github.com/giellalt/lang-evn). 
 
 # Project documentation
 
-* Add links to project specific documentation here as needed. Keep the documentation in the `docs/` directory.
+* (Add links to project specific documentation here as needed. Keep the documentation in the `docs/` directory.)
 
 # In-source documentation
 
