@@ -199,7 +199,7 @@
 * Sets for verbs
 
 
-    - V is all readings with a V tag in them, REAL-V should
+- V is all readings with a V tag in them, REAL-V should
 be the ones without an N tag following the V.  
 The REAL-V set thus awaits a fix to the preprocess V ... N bug.
 
@@ -605,33 +605,108 @@ These were the set types.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-evn/blob/main/../src/cg3/functions.cg3)</small>
+# Evenki morphological analyser                      
 
-Verb inflection
+## Tags
+
+### Parts of speech
+ * +A	     = 
+ * +Adv     = 
+ * +V	     = 
+ * +Pron    = 
+ * +Pers    = 
+ * +Poss    = 
+ * +Refl    = 
+ * +N       = Noun
+ * +Num     = Numeral
+ * +Prop    = 
+ * +Det    = 
+ * +Interr    = 
+ * +Symbol = independent symbols in the text stream, like £, €, ©
+
+ * +Sg      = Singular
+ * +Pl      = Plural
+
+### Cases
+ * +Acc    = Винительный Accusative
+ * +Dat    = Дателный Dative
+ * +Loc    = Местный Locative
+ * +All    = Направителый Allative
+ * +Prl    = Продольный Prolative
+ * +Ter    = Направительно-местный Terminative
+ * +Dir    = Направительно-продольный Directive
+ * +Abl    = Отложительный Ablative
+ * +Ela    = Исходный Elative
+ * +Ins    = Творительный Instrumental
+ * +Com    = Совместный Comitative
+
+ * +Ind     = Винительный-неопределёний Indefinite Accusative
+ * +Def     = ва definite acc
+
+### Possessives
+ * +PxSg1   = 
+ * +PxSg2   = 
+ * +PxSg3   = 
+ * +PxPl1   = 
+ * +PxPl12  = 
+ * +PxPl2   = 
+ * +PxPl3   = 
+
+
+## Verbal forms
+
+ * +Inf    = 
+ * +IV    = 
+ * +TV    = 
+
+ * +Ind    = 
+ * +Imp    = 
+ * +Neg    = 
+
+ * +Prs    = 
+ * +Prt    = 
+ * +Hab    = 
+ * +Fut1    = 
+ * +Fut2    = 
+ * +Fut3    = 
+ * +Iter    = 
+
+ * +Sg1   = 
+ * +Sg2   = 
+ * +Sg3   = 
+ * +Pl1   = 
+ * +Pl12  = 
+ * +Pl2   = 
+ * +Pl3   = 
+
+ * +PUNCT    = 
+ * +CLB    = 
+ * +RIGHT    = 
+ * +LEFT    = 
+
+ * **«7**:  Literal «
+ * **»7**:  Literal «
+
+
+ * %{j%}   =  -и -ø
+ * %{i%}   =  -и -ø
+ * %{A%}   =  -а -э -о
+ * %{L%}   =  -л -р -н
+ * %{D%}   =  -д -т
+ * %{V%}   =  -в -м
+ * %{R%}   =  -р, 0
+ * %{G%}   =  -г -к -ӈ
+ * %{Я%}   = 
+ * %{U%}   = -у-, -и-
+ * %{ː%}   = long vowel (lexc lower side)
+ * %>      =  
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Evenki Propernoun inflection
+* * *
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/root.lexc)</small>Evenki Propernoun inflection
 
 The Evenki propernouns agree with nouns in case and number
 They are thus sent to common nominal lexica X_BIRA etc.
@@ -639,15 +714,8 @@ after having got their +N+Prop tag.
 
 
 
-Evenki adjective inflection
-
-The Evenki adjectives agree with nouns in case and number
-They are thus sent to common nominal lexica X_BIRA etc.
-after having got their +A tag.
-
-
-
-# Noun inflection
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/propernouns.lexc)</small># Noun inflection
 
 
 ## Stem classes
@@ -693,14 +761,136 @@ do also point directly to #.
 
 
 
-
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/nouns.lexc)</small>
 # Symbol affixes
 
 
 
 
 
-# The Evenki morphophonological/twolc rules file 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/symbols.lexc)</small>Evenki adjective inflection
+
+The Evenki adjectives agree with nouns in case and number
+They are thus sent to common nominal lexica X_BIRA etc.
+after having got their +A tag.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/adjectives.lexc)</small>
+Verb inflection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/verbs.lexc)</small># Pronouns
+Pronouns in Evenki denote references to things.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/pronouns.lexc)</small>Prefixes
+Prefixes in the Evenki language are bound to beginning of other words.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/prefixes.lexc)</small># Nouns
+Nouns in Evenki have four sets of suffixes. 
+Here we divide them in two groups: V- and C-final ones.
+
+Three stem types
+
+* N_BIRA vowel stems
+* N_UMUK consonant stems (voiced and unvoiced)
+* N_ORON stems ending in n
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/nouns.lexc)</small>## Adjectives
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/adjectives.lexc)</small># Verbs
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/verbs.lexc)</small># Numerals
+Numerals in Evenki denote numbers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/numerals.lexc)</small># The Evenki morphophonological/twolc rules file 
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-evn/blob/main/src/fst/phonology.twolc) 
 
@@ -909,184 +1099,8 @@ Sets
 
 
 
-# Verbs
-
-
-
-
-
-# Pronouns
-Pronouns in Evenki denote references to things.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Numerals
-Numerals in Evenki denote numbers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Adjectives
-
-
-Prefixes
-Prefixes in the Evenki language are bound to beginning of other words.
-
-
-
-# Nouns
-Nouns in Evenki have four sets of suffixes. 
-Here we divide them in two groups: V- and C-final ones.
-
-Three stem types
-
-* N_BIRA vowel stems
-* N_UMUK consonant stems (voiced and unvoiced)
-* N_ORON stems ending in n
-
-
-
-
-
-
-
-
-# Evenki morphological analyser                      
-
-## Tags
-
-### Parts of speech
- * +A	     = 
- * +Adv     = 
- * +V	     = 
- * +Pron    = 
- * +Pers    = 
- * +Poss    = 
- * +Refl    = 
- * +N       = Noun
- * +Num     = Numeral
- * +Prop    = 
- * +Det    = 
- * +Interr    = 
- * +Symbol = independent symbols in the text stream, like £, €, ©
-
- * +Sg      = Singular
- * +Pl      = Plural
-
-### Cases
- * +Acc    = Винительный Accusative
- * +Dat    = Дателный Dative
- * +Loc    = Местный Locative
- * +All    = Направителый Allative
- * +Prl    = Продольный Prolative
- * +Ter    = Направительно-местный Terminative
- * +Dir    = Направительно-продольный Directive
- * +Abl    = Отложительный Ablative
- * +Ela    = Исходный Elative
- * +Ins    = Творительный Instrumental
- * +Com    = Совместный Comitative
-
- * +Ind     = Винительный-неопределёний Indefinite Accusative
- * +Def     = ва definite acc
-
-### Possessives
- * +PxSg1   = 
- * +PxSg2   = 
- * +PxSg3   = 
- * +PxPl1   = 
- * +PxPl12  = 
- * +PxPl2   = 
- * +PxPl3   = 
-
-
-## Verbal forms
-
- * +Inf    = 
- * +IV    = 
- * +TV    = 
-
- * +Ind    = 
- * +Imp    = 
- * +Neg    = 
-
- * +Prs    = 
- * +Prt    = 
- * +Hab    = 
- * +Fut1    = 
- * +Fut2    = 
- * +Fut3    = 
- * +Iter    = 
-
- * +Sg1   = 
- * +Sg2   = 
- * +Sg3   = 
- * +Pl1   = 
- * +Pl12  = 
- * +Pl2   = 
- * +Pl3   = 
-
- * +PUNCT    = 
- * +CLB    = 
- * +RIGHT    = 
- * +LEFT    = 
-
- * **«7**:  Literal «
- * **»7**:  Literal «
-
-
- * %{j%}   =  -и -ø
- * %{i%}   =  -и -ø
- * %{A%}   =  -а -э -о
- * %{L%}   =  -л -р -н
- * %{D%}   =  -д -т
- * %{V%}   =  -в -м
- * %{R%}   =  -р, 0
- * %{G%}   =  -г -к -ӈ
- * %{Я%}   = 
- * %{U%}   = -у-, -и-
- * %{ː%}   = long vowel (lexc lower side)
- * %>      =  
-
-
-
-
+* * *
+<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/phonology.twolc)</small>
 
 
 
@@ -1140,7 +1154,8 @@ Three stem types
 % sárggis% :%-   Root ; 
 % násti% :%*     Root ; 
 
-
+* * *
+<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-numbers-digit2text.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
 
 
 We describe here how abbreviations are in Evenki are read out, e.g.
@@ -1156,8 +1171,9 @@ For example:
  * esim.:esimerkiksi # ; 
 
 
-
-      [ L A N G U A G E ]  G R A M M A R   C H E C K E R
+* * *
+<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+[ L A N G U A G E ]  G R A M M A R   C H E C K E R
 
 
 
@@ -1567,3 +1583,5 @@ expression **WORD - premodifiers**.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-evn/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>

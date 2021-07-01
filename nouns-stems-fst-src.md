@@ -14,3 +14,5 @@ Three stem types
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/nouns.lexc)</small>
