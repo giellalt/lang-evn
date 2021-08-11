@@ -3,7 +3,7 @@ The Evenki morphology and tools
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-evn)](https://github.com/giellalt/lang-evn/issues)
 [![Build Status](https://github.com/giellalt/lang-evn/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-evn/actions)
-[![License](https://img.shields.io/github/license/giellalt/lang-evn)](https://raw.githubusercontent.com/giellalt/lang-evn/main/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-evn)](https://github.com/giellalt/lang-evn/blob/main/LICENSE)
 
 This repository contains finite state source files for the Evenki language,
 for building morphological analysers, proofing tools
