@@ -606,7 +606,91 @@ These were the set types.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-evn/blob/main/../src/cg3/functions.cg3)</small># The Evenki morphophonological/twolc rules file 
+<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-evn/blob/main/../src/cg3/functions.cg3)</small># Nouns
+Nouns in Evenki have four sets of suffixes. 
+Here we divide them in two groups: V- and C-final ones.
+
+Three stem types
+
+* N_BIRA vowel stems
+* N_UMUK consonant stems (voiced and unvoiced)
+* N_ORON stems ending in n
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/nouns.lexc)</small>Prefixes
+Prefixes in the Evenki language are bound to beginning of other words.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/prefixes.lexc)</small>## Adjectives
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/adjectives.lexc)</small># Verbs
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/verbs.lexc)</small># Numerals
+Numerals in Evenki denote numbers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/numerals.lexc)</small># Pronouns
+Pronouns in Evenki denote references to things.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/pronouns.lexc)</small># The Evenki morphophonological/twolc rules file 
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-evn/blob/main/src/fst/phonology.twolc) 
 
@@ -863,16 +947,24 @@ do also point directly to #.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/nouns.lexc)</small>Evenki Propernoun inflection
+<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/nouns.lexc)</small>
+# Symbol affixes
 
-The Evenki propernouns agree with nouns in case and number
-They are thus sent to common nominal lexica X_BIRA etc.
-after having got their +N+Prop tag.
+
 
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/propernouns.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/symbols.lexc)</small>Evenki adjective inflection
+
+The Evenki adjectives agree with nouns in case and number
+They are thus sent to common nominal lexica X_BIRA etc.
+after having got their +A tag.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/adjectives.lexc)</small>
 Verb inflection
 
 
@@ -899,24 +991,16 @@ Verb inflection
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/verbs.lexc)</small>Evenki adjective inflection
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/verbs.lexc)</small>Evenki Propernoun inflection
 
-The Evenki adjectives agree with nouns in case and number
+The Evenki propernouns agree with nouns in case and number
 They are thus sent to common nominal lexica X_BIRA etc.
-after having got their +A tag.
+after having got their +N+Prop tag.
 
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/adjectives.lexc)</small>
-# Symbol affixes
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/symbols.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/propernouns.lexc)</small>
 # Evenki morphological analyser                      
 
 ## Tags
@@ -1016,91 +1100,24 @@ after having got their +A tag.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/root.lexc)</small># Nouns
-Nouns in Evenki have four sets of suffixes. 
-Here we divide them in two groups: V- and C-final ones.
-
-Three stem types
-
-* N_BIRA vowel stems
-* N_UMUK consonant stems (voiced and unvoiced)
-* N_ORON stems ending in n
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/root.lexc)</small>
 
 
+We describe here how abbreviations are in Evenki are read out, e.g.
+for text-to-speech systems.
 
+For example:
 
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/nouns.lexc)</small># Verbs
-
-
-
+ * s.:syntynyt # ;  
+ * os.:omaa% sukua # ;  
+ * v.:vuosi # ;  
+ * v.:vuonna # ;  
+ * esim.:esimerkki # ; 
+ * esim.:esimerkiksi # ; 
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/verbs.lexc)</small>## Adjectives
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/adjectives.lexc)</small># Numerals
-Numerals in Evenki denote numbers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/numerals.lexc)</small>Prefixes
-Prefixes in the Evenki language are bound to beginning of other words.
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/prefixes.lexc)</small># Pronouns
-Pronouns in Evenki denote references to things.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/pronouns.lexc)</small>
+<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 
 
 
@@ -1156,23 +1173,6 @@ Pronouns in Evenki denote references to things.
 
 * * *
 <small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-numbers-digit2text.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
-
-
-We describe here how abbreviations are in Evenki are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
- * s.:syntynyt # ;  
- * os.:omaa% sukua # ;  
- * v.:vuosi # ;  
- * v.:vuonna # ;  
- * esim.:esimerkki # ; 
- * esim.:esimerkiksi # ; 
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 [ L A N G U A G E ]  G R A M M A R   C H E C K E R
 
 
