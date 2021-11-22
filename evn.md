@@ -606,91 +606,7 @@ These were the set types.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-evn/blob/main/../src/cg3/functions.cg3)</small># Nouns
-Nouns in Evenki have four sets of suffixes. 
-Here we divide them in two groups: V- and C-final ones.
-
-Three stem types
-
-* N_BIRA vowel stems
-* N_UMUK consonant stems (voiced and unvoiced)
-* N_ORON stems ending in n
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/nouns.lexc)</small>Prefixes
-Prefixes in the Evenki language are bound to beginning of other words.
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/prefixes.lexc)</small>## Adjectives
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/adjectives.lexc)</small># Verbs
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/verbs.lexc)</small># Numerals
-Numerals in Evenki denote numbers.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/numerals.lexc)</small># Pronouns
-Pronouns in Evenki denote references to things.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/pronouns.lexc)</small># The Evenki morphophonological/twolc rules file 
+<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-evn/blob/main/../src/cg3/functions.cg3)</small># The Evenki morphophonological/twolc rules file 
 
 This file documents the [phonology.twolc file](http://github.com/giellalt/lang-evn/blob/main/src/fst/phonology.twolc) 
 
@@ -900,7 +816,43 @@ Sets
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/phonology.twolc)</small># Noun inflection
+<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/phonology.twolc)</small>
+Verb inflection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/verbs.lexc)</small>Evenki Propernoun inflection
+
+The Evenki propernouns agree with nouns in case and number
+They are thus sent to common nominal lexica X_BIRA etc.
+after having got their +N+Prop tag.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/propernouns.lexc)</small># Noun inflection
 
 
 ## Stem classes
@@ -964,8 +916,13 @@ after having got their +A tag.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/adjectives.lexc)</small>
-Verb inflection
+<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/adjectives.lexc)</small># Pronouns
+Pronouns in Evenki denote references to things.
+
+
+
+
+
 
 
 
@@ -991,16 +948,59 @@ Verb inflection
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/verbs.lexc)</small>Evenki Propernoun inflection
+<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/pronouns.lexc)</small># Numerals
+Numerals in Evenki denote numbers.
 
-The Evenki propernouns agree with nouns in case and number
-They are thus sent to common nominal lexica X_BIRA etc.
-after having got their +N+Prop tag.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/affixes/propernouns.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/numerals.lexc)</small># Verbs
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/verbs.lexc)</small>Prefixes
+Prefixes in the Evenki language are bound to beginning of other words.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/prefixes.lexc)</small># Nouns
+Nouns in Evenki have four sets of suffixes. 
+Here we divide them in two groups: V- and C-final ones.
+
+Three stem types
+
+* N_BIRA vowel stems
+* N_UMUK consonant stems (voiced and unvoiced)
+* N_ORON stems ending in n
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/nouns.lexc)</small>## Adjectives
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/stems/adjectives.lexc)</small>
 # Evenki morphological analyser                      
 
 ## Tags
