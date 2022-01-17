@@ -16,7 +16,7 @@
  * +Prop    = 
  * +Det    = 
  * +Interr    = 
- * +Symbol = independent symbols in the text stream, like £, €, ©
+* +Symbol© = independent symbols in the text stream, like £, €, ©
 
  * +Sg      = Singular
  * +Pl      = Plural
@@ -78,8 +78,8 @@
  * +RIGHT    = 
  * +LEFT    = 
 
- * **«7**:  Literal «
- * **»7**:  Literal «
+* **«7«**:  Literal «
+* **»7«**:  Literal «
 
 
  * %{j%}   =  -и -ø
