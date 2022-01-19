@@ -7,6 +7,9 @@
 
 This page documents the work on the Evenki language model](http://github.com/giellalt/lang-evn). 
 
+The model contains appr 550 stems, and a ruleset
+covering the main  morphophonological processes.
+
 # Project documentation
 
 * (Add links to project specific documentation here as needed. Keep the documentation in the `docs/` directory.)

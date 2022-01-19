@@ -612,96 +612,96 @@ These were the set types.
 ## Tags
 
 ### Parts of speech
- * +A	     = 
- * +Adv     = 
- * +V	     = 
- * +Pron    = 
- * +Pers    = 
- * +Poss    = 
- * +Refl    = 
- * +N       = Noun
- * +Num     = Numeral
- * +Prop    = 
- * +Det    = 
- * +Interr    = 
-* +Symbol© = independent symbols in the text stream, like £, €, ©
+* +A	     = 
+* +Adv     = 
+* +V	     = 
+* +Pron    = 
+* +Pers    = 
+* +Poss    = 
+* +Refl    = 
+* +N       = Noun
+* +Num     = Numeral
+* +Prop    = 
+* +Det    = 
+* +Interr    = 
+* +Symbol = independent symbols in the text stream, like £, €, ©
 
- * +Sg      = Singular
- * +Pl      = Plural
+* +Sg      = Singular
+* +Pl      = Plural
 
 ### Cases
- * +Acc    = Винительный Accusative
- * +Dat    = Дателный Dative
- * +Loc    = Местный Locative
- * +All    = Направителый Allative
- * +Prl    = Продольный Prolative
- * +Ter    = Направительно-местный Terminative
- * +Dir    = Направительно-продольный Directive
- * +Abl    = Отложительный Ablative
- * +Ela    = Исходный Elative
- * +Ins    = Творительный Instrumental
- * +Com    = Совместный Comitative
+* +Acc    = Винительный Accusative
+* +Dat    = Дателный Dative
+* +Loc    = Местный Locative
+* +All    = Направителый Allative
+* +Prl    = Продольный Prolative
+* +Ter    = Направительно-местный Terminative
+* +Dir    = Направительно-продольный Directive
+* +Abl    = Отложительный Ablative
+* +Ela    = Исходный Elative
+* +Ins    = Творительный Instrumental
+* +Com    = Совместный Comitative
 
- * +Ind     = Винительный-неопределёний Indefinite Accusative
- * +Def     = ва definite acc
+* +Ind     = Винительный-неопределёний Indefinite Accusative
+* +Def     = ва definite acc
 
 ### Possessives
- * +PxSg1   = 
- * +PxSg2   = 
- * +PxSg3   = 
- * +PxPl1   = 
- * +PxPl12  = 
- * +PxPl2   = 
- * +PxPl3   = 
+* +PxSg1   = 
+* +PxSg2   = 
+* +PxSg3   = 
+* +PxPl1   = 
+* +PxPl12  = 
+* +PxPl2   = 
+* +PxPl3   = 
 
 
 ## Verbal forms
 
- * +Inf    = 
- * +IV    = 
- * +TV    = 
+* +Inf    = 
+* +IV    = 
+* +TV    = 
 
- * +Ind    = 
- * +Imp    = 
- * +Neg    = 
+* +Ind    = 
+* +Imp    = 
+* +Neg    = 
 
- * +Prs    = 
- * +Prt    = 
- * +Hab    = 
- * +Fut1    = 
- * +Fut2    = 
- * +Fut3    = 
- * +Iter    = 
+* +Prs    = 
+* +Prt    = 
+* +Hab    = 
+* +Fut1    = 
+* +Fut2    = 
+* +Fut3    = 
+* +Iter    = 
 
- * +Sg1   = 
- * +Sg2   = 
- * +Sg3   = 
- * +Pl1   = 
- * +Pl12  = 
- * +Pl2   = 
- * +Pl3   = 
+* +Sg1   = 
+* +Sg2   = 
+* +Sg3   = 
+* +Pl1   = 
+* +Pl12  = 
+* +Pl2   = 
+* +Pl3   = 
 
- * +PUNCT    = 
- * +CLB    = 
- * +RIGHT    = 
- * +LEFT    = 
+* +PUNCT    = 
+* +CLB    = 
+* +RIGHT    = 
+* +LEFT    = 
 
-* **«7«**:  Literal «
-* **»7«**:  Literal «
+* **«7**:  Literal «
+* **»7**:  Literal «
 
 
- * %{j%}   =  -и -ø
- * %{i%}   =  -и -ø
- * %{A%}   =  -а -э -о
- * %{L%}   =  -л -р -н
- * %{D%}   =  -д -т
- * %{V%}   =  -в -м
- * %{R%}   =  -р, 0
- * %{G%}   =  -г -к -ӈ
- * %{Я%}   = 
- * %{U%}   = -у-, -и-
- * %{ː%}   = long vowel (lexc lower side)
- * %>      =  
+* %{j%}   =  -и -ø
+* %{i%}   =  -и -ø
+* %{A%}   =  -а -э -о
+* %{L%}   =  -л -р -н
+* %{D%}   =  -д -т
+* %{V%}   =  -в -м
+* %{R%}   =  -р, 0
+* %{G%}   =  -г -к -ӈ
+* %{Я%}   = 
+* %{U%}   = -у-, -и-
+* %{ː%}   = long vowel (lexc lower side)
+* %>      =  
 
 
 
@@ -812,42 +812,42 @@ This file documents the [phonology.twolc file](http://github.com/giellalt/lang-e
 
 ## Alphabet
 
- *  а б в г д е ё ж з и й к л м н ӈ о п р с т у ф х ц ч ш щ ъ ы ь э ю я  
- *  А Б В Г Д Е Ё Ж З И Й К Л М Н Ӈ О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я  
+*  а б в г д е ё ж з и й к л м н ӈ о п р с т у ф х ц ч ш щ ъ ы ь э ю я  
+*  А Б В Г Д Е Ё Ж З И Й К Л М Н Ӈ О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я  
 
- *  %{ː%}:̄  
+*  %{ː%}:̄  
 
- *  %{L%}:л %{L%}:р							     
- *  %{G%}:г %{G%}:к %{G%}:ӈ						     
- *  %{D%}:д %{D%}:т 							     
- *  %{A%}:а %{A%}:э %{A%}:о  						     
- *  %{Я%}:я %{Я%}:е %{Я%}:ё %{Я%}:а %{Я%}:э %{Я%}:о     			     
- *  %{V%}:в %{V%}:м							     
- *  %{R%}:р %{R%}:0 %{R%}:т %{R%}:л %{R%}:н 				     
+*  %{L%}:л %{L%}:р							     
+*  %{G%}:г %{G%}:к %{G%}:ӈ						     
+*  %{D%}:д %{D%}:т 							     
+*  %{A%}:а %{A%}:э %{A%}:о  						     
+*  %{Я%}:я %{Я%}:е %{Я%}:ё %{Я%}:а %{Я%}:э %{Я%}:о     			     
+*  %{V%}:в %{V%}:м							     
+*  %{R%}:р %{R%}:0 %{R%}:т %{R%}:л %{R%}:н 				     
 
- *  %{j%}:0  %{j%}:ъ		
- *  %{i%}:0 %{i%}:и %{i%}:ы        
- *  %{U%}:и %{U%}:у  %{U%}:0  	
- *  %>  ;       	  		
+*  %{j%}:0  %{j%}:ъ		
+*  %{i%}:0 %{i%}:и %{i%}:ы        
+*  %{U%}:и %{U%}:у  %{U%}:0  	
+*  %>  ;       	  		
 
 Sets
 
- * Vow = а е ё и о у ы э ю я 						       
- *       А Е Ё И О У Ы Э Ю Я 						       
- *       а̄ е̄ ӣ э̄ ӯ о̄							       
- *       А̄ Е̄ Ӣ ¯Э Ӯ О̄ ;						       
+* Vow = а е ё и о у ы э ю я 						       
+*       А Е Ё И О У Ы Э Ю Я 						       
+*       а̄ е̄ ӣ э̄ ӯ о̄							       
+*       А̄ Е̄ Ӣ ¯Э Ӯ О̄ ;						       
 
- * Cns = б в г д ж з й к л м н ӈ п р с т ф х ц ч ш щ      
- *       Б В Г Д Ж З Й К Л М Н Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;    
- * ArchiCns = %{D%} %{G%} %{L%} %{R%} %{V%} ;			       
- * Nasal = м н ӈ									       
- *         М Н Ӈ ; 								       
+* Cns = б в г д ж з й к л м н ӈ п р с т ф х ц ч ш щ      
+*       Б В Г Д Ж З Й К Л М Н Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;    
+* ArchiCns = %{D%} %{G%} %{L%} %{R%} %{V%} ;			       
+* Nasal = м н ӈ									       
+*         М Н Ӈ ; 								       
 
- * NonLN = б в г д ж з й к м ӈ п р с т ф х ц ч ш щ        
- *         Б В Г Д Ж З Й К М Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;      
+* NonLN = б в г д ж з й к м ӈ п р с т ф х ц ч ш щ        
+*         Б В Г Д Ж З Й К М Ӈ П Р С Т Ф Х Ц Ч Ш Щ ;      
 
- * UnvoicedCns = к с т п ;    
- * VoicedCns1 = б в г д щ з й р ; 
+* UnvoicedCns = к с т п ;    
+* VoicedCns1 = б в г д щ з й р ; 
 
 
 ## Rules
@@ -1108,12 +1108,12 @@ for text-to-speech systems.
 
 For example:
 
- * s.:syntynyt # ;  
- * os.:omaa% sukua # ;  
- * v.:vuosi # ;  
- * v.:vuonna # ;  
- * esim.:esimerkki # ; 
- * esim.:esimerkiksi # ; 
+* s.:syntynyt # ;  
+* os.:omaa% sukua # ;  
+* v.:vuosi # ;  
+* v.:vuonna # ;  
+* esim.:esimerkki # ; 
+* esim.:esimerkiksi # ; 
 
 
 * * *
