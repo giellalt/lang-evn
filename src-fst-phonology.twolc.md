@@ -41,7 +41,6 @@ Sets
 * UnvoicedCns = к с т п ;    
 * VoicedCns1 = б в г д щ з й р ; 
 
-
 ## Rules
 
 ### Assimilation rules
@@ -79,7 +78,6 @@ Sets
 * *урэ>{i}л>{V}{A}*
 * *урэ>0л>вэ*
 
-
 * *орон>{V}{A}*
 * *орор>во*
 
@@ -113,34 +111,23 @@ Sets
 * *дю{ː}>{D}у{ː}>{i}в*
 * *дю̄>дӯ>0в*
 
-
 ### Other vowel rules
-
-
-
-
-
 
 ## Consonant rules
 
 ### Other cns
 
-
 * *са{ː}>{R}{A}>н*
 * *са̄>ра0н*
-
 
 * *ис>{R}{A}>н*
 * *ис>та0н*
 
-
 * *мел>{R}{A}>н*
 * *мел>ла>н*
 
-
 * *уӈ>{R}{A}>н*
 * *уӈ0нэ>н*
-
 
 * *гун>{R}{A}>н*
 * *гун>0э>н*
@@ -153,13 +140,11 @@ Sets
 
 **Vowel harmony for {A} following i**  
 
-
 **Vowel harmony for A following long o**  long o gives a
 
 **Vowel harmony for A to о, main rule**  (note е->а)
 
 **Palatalised short vowel harmony for A**  
-
 
 * *орон>{j}{A}*
 * *орон>0о*
@@ -178,10 +163,6 @@ Sets
 * *тэтыврэв*
 * *тэтыврэв*
 
-
-
-
-
 * *урэ>{i}л>{A}*
 * *урэ>0л0э*
 
@@ -197,15 +178,9 @@ Sets
 * *test*
 * *fail*
 
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/phonology.twolc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-evn/blob/main/src/fst/phonology.twolc)</small>
+
+---
+

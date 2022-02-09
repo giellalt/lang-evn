@@ -46,7 +46,6 @@
 * +PxPl2   = 
 * +PxPl3   = 
 
-
 ## Verbal forms
 
 * +Inf    = 
@@ -81,7 +80,6 @@
 * **«7**:  Literal «
 * **»7**:  Literal «
 
-
 * %{j%}   =  -и -ø
 * %{i%}   =  -и -ø
 * %{A%}   =  -а -э -о
@@ -95,7 +93,9 @@
 * %{ː%}   = long vowel (lexc lower side)
 * %>      =  
 
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-evn/blob/main/../src/fst/root.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-evn/blob/main/src/fst/root.lexc)</small>
+
+---
+
