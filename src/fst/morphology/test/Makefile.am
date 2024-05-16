@@ -13,9 +13,9 @@ TESTS_ENVIRONMENT = export GIELLA_CORE=$(GIELLA_CORE);
 TESTS=tag_test.sh
 
 # Add your shell scripts for running tests requiring only a generator:
-GENERATION_TESTS_IN=generate-noun-lemmas.sh.in       
+GENERATION_TESTS_IN=generate-noun-lemmas.sh.in
                     
-GENERATION_TESTS=$(basename $(GENERATION_TESTS_IN))
+GENERATION_TESTS=generate-noun-lemmas.sh
 
 if WANT_GENERATION
 TESTS+=$(GENERATION_TESTS)
