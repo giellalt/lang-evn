@@ -528,7 +528,7 @@ Sets
 
 * +PUNCT    = 
 * +CLB    = 
-* +RIGHT    = 
+* +RIGHT +MIDDLE  = 
 * +LEFT    = 
 
 * **«7**:  Literal «
