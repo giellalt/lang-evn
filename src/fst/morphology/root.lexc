@@ -91,7 +91,7 @@ Multichar_Symbols
 
 +PUNCT   !!= * @CODE@ = 
 +CLB   !!= * @CODE@ = 
-+RIGHT   !!= * @CODE@ = 
++RIGHT +MIDDLE !!= * @CODE@ = 
 +LEFT   !!= * @CODE@ = 
 
  «7     !!≈ * **@CODE@**:  Literal «
