@@ -4,7 +4,8 @@
 ![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-evn%2Fgh-pages%2Flemmacount.json)
 [![License](https://img.shields.io/github/license/giellalt/lang-evn)](https://github.com/giellalt/lang-evn/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-evn)](https://github.com/giellalt/lang-evn/issues)
-[![Build Status](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-evn/main/badge.svg)](https://github.com/giellalt/lang-evn/actions)
+[![Build Status](https://builds.giellalt.org/api/badge/lang-evn?label=CI)](https://builds.giellalt.org/pipelines/lang-evn/builds/latest)
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/even1259)
 
 This page documents the work on the Evenki language model](http://github.com/giellalt/lang-evn). 
 
