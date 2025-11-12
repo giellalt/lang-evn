@@ -1,6 +1,3 @@
-spellername = "Evenki"
-spellerversion = "0.1.1"
-
 # Name of the speller package in various languages.
 # The default is English + autonym:
 [speller.name]
@@ -22,3 +19,15 @@ legacy_product_codes = [
     { value = "CDD14853-8AD0-4A3C-BC4D-FE3E991DD145", kind = "nsis" },
     { value = "6C9404F7-0611-4523-B563-F8AA7AFDD865", kind = "nsis" }
 ]
+
+[package.speller]
+name = "Evenki"
+version = "0.1.1"
+
+[package.grammar]
+name = "Evenki"
+version = "0.1.0"
+
+[package.tts-text-proc]
+name = "Evenki"
+version = "0.1.0"
