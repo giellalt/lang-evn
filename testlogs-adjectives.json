@@ -1,0 +1,1 @@
+{"id":"adjectives","kind":"lemma","failures":[{"lemma":"гугка","no_generation":[],"wrong_generation":[{"expected":"гугка+A+Sg+Nom","got":"гугда"}],"analyses":[]}]}
